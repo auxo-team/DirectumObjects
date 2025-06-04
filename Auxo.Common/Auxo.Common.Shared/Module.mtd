@@ -1,0 +1,191 @@
+{
+  "$type": "Sungero.Metadata.ModuleMetadata, Sungero.Metadata",
+  "NameGuid": "e41cb0de-0ad5-41f4-84a1-4b124e898c92",
+  "Name": "Common",
+  "AsyncHandlers": [],
+  "ClientAssemblyName": "Auxo.Common.Client",
+  "ClientBaseAssemblyName": "Auxo.Common.ClientBase",
+  "ClientBaseNamespace": "Auxo.Common.ClientBase",
+  "ClientNamespace": "Auxo.Common.Client",
+  "Code": "NcCmn",
+  "CompanyCode": "Auxo",
+  "Cover": {
+    "NameGuid": "6c39200a-a920-451e-8cda-78184ab7adc8",
+    "Actions": [],
+    "Background": null,
+    "Footer": {
+      "NameGuid": "1d4ac2aa-273a-4876-95ff-2be3c457cee4",
+      "BackgroundPosition": "Stretch"
+    },
+    "Groups": [],
+    "Header": {
+      "NameGuid": "2ab43e44-b9dd-4aab-9810-8288d5e4fdde",
+      "BackgroundPosition": "Stretch"
+    },
+    "RemoteControls": [],
+    "Tabs": []
+  },
+  "Dependencies": [
+    {
+      "Id": "89878343-4df9-4bd8-ac47-7a9a0d57718a",
+      "IsSolutionModule": true,
+      "MaxVersion": "",
+      "MinVersion": ""
+    },
+    {
+      "Id": "ec7b606a-21ee-4f16-aba8-ab8c2af76d12",
+      "MaxVersion": "",
+      "MinVersion": "0.0.1.0"
+    },
+    {
+      "Id": "92491aa6-c4df-4f46-a807-ebdd337bda74",
+      "MaxVersion": "",
+      "MinVersion": "1.1.0.0"
+    }
+  ],
+  "ExplorerTreeOrder": [
+    {
+      "ItemId": "cf6c5541-a733-4d30-9810-453454a03811"
+    },
+    {
+      "ItemId": "89c6dc08-dd81-48e2-a327-707dd86a64cd",
+      "PreviousItemId": "cf6c5541-a733-4d30-9810-453454a03811"
+    },
+    {
+      "IsVisible": false,
+      "ItemId": "2fe780df-2961-49f9-823d-1fcf175a813d",
+      "PreviousItemId": "89c6dc08-dd81-48e2-a327-707dd86a64cd"
+    },
+    {
+      "IsVisible": false,
+      "ItemId": "e6a11255-1dce-4b2f-84ad-95b002f5f678",
+      "PreviousItemId": "2fe780df-2961-49f9-823d-1fcf175a813d"
+    }
+  ],
+  "HandledEvents": [
+    "InitializingServer"
+  ],
+  "IconResourcesKeys": [],
+  "Importance": "Medium",
+  "InitializationFunctions": [
+    {
+      "Name": "CreateTable",
+      "Parameters": [
+        {
+          "Name": "sourceTableName",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "query",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "isDrop",
+          "ParameterType": "global::System.Boolean",
+          "ParameterTypeFullName": "System.Boolean"
+        }
+      ],
+      "ReturnType": "void",
+      "ReturnTypeFullName": "System.Void"
+    },
+    {
+      "Name": "ExecuteScalarSQLCommand",
+      "Parameters": [
+        {
+          "Name": "commandText",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        }
+      ],
+      "ReturnType": "global::System.String",
+      "ReturnTypeFullName": "System.String"
+    }
+  ],
+  "InterfaceAssemblyName": "Sungero.Domain.Interfaces",
+  "InterfaceNamespace": "Auxo.Common",
+  "IsolatedAssemblyName": "Auxo.Common.Isolated",
+  "IsolatedNamespace": "Auxo.Common.Isolated",
+  "IsVisible": false,
+  "PublicFunctions": [
+    {
+      "Name": "DeclensionObject",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "objectName",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "declensionCase",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "objectType",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "global::System.String",
+      "ReturnTypeFullName": "System.String"
+    },
+    {
+      "Name": "GetEntityById",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "typeGuid",
+          "ParameterType": "global::System.Guid",
+          "ParameterTypeFullName": "System.Guid"
+        },
+        {
+          "Name": "entityId",
+          "ParameterType": "global::System.Int64",
+          "ParameterTypeFullName": "System.Int64"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "global::Sungero.Domain.Shared.IEntity",
+      "ReturnTypeFullName": "Sungero.Domain.Shared.IEntity, Sungero.Domain.Shared"
+    },
+    {
+      "Name": "GetEntityByTypeGuid",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "typeGuid",
+          "ParameterType": "global::System.Guid",
+          "ParameterTypeFullName": "System.Guid"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "global::System.Linq.IQueryable<global::Sungero.Domain.Shared.IEntity>",
+      "ReturnTypeFullName": "System.Linq.IQueryable"
+    }
+  ],
+  "PublicStructures": [],
+  "ResourceInterfaceAssemblyName": "Sungero.Domain.Interfaces",
+  "ResourceInterfaceNamespace": "Auxo.Common",
+  "ResourcesKeys": [],
+  "ServerAssemblyName": "Auxo.Common.Server",
+  "ServerNamespace": "Auxo.Common.Server",
+  "SharedAssemblyName": "Auxo.Common.Shared",
+  "SharedNamespace": "Auxo.Common.Shared",
+  "SpecialFolders": [],
+  "Version": "0.0.1.0",
+  "Widgets": [],
+  "Versions": [
+    {
+      "Type": "ModuleMetadata",
+      "Number": 8
+    },
+    {
+      "Type": "DomainApi",
+      "Number": 3
+    }
+  ]
+}

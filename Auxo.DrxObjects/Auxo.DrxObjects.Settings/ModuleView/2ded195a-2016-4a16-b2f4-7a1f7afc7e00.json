@@ -1,0 +1,1564 @@
+{
+  "$type": "Sungero.DataExport.ExportingObject, Sungero.DataExport",
+  "Cover": {
+    "$type": "Sungero.NoCode.Settings.Interfaces.Models.Cover.CoverSettings, Sungero.NoCode.Settings.Interfaces",
+    "NameGuid": "cc01c6fc-4f0f-45ca-abdd-f82d059323b3",
+    "Header": {
+      "$type": "Sungero.NoCode.Settings.Interfaces.Models.Cover.CoverHeaderSettings, Sungero.NoCode.Settings.Interfaces",
+      "NameGuid": "d40f0581-2a1d-49da-b7e9-7583e0a23032",
+      "Name": null,
+      "LocalizationStrings": [
+        {
+          "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+          "StringCode": "Header_Title_d40f05812a1d49dab7e97583e0a23032",
+          "Hash": null,
+          "LocalizationValues": {
+            "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+            "en-US": "Administration",
+            "ru-RU": "Администрирование"
+          }
+        },
+        {
+          "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+          "StringCode": "Header_Description_d40f05812a1d49dab7e97583e0a23032",
+          "Hash": null,
+          "LocalizationValues": {
+            "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+            "en-US": "This module is where you can perform various administrative tasks such as register new users, manage user substitution and set access rights.",
+            "ru-RU": "Модуль предназначен для выполнения административных задач, таких как регистрация нового пользователя или настройка прав доступа."
+          }
+        }
+      ],
+      "IconName": null,
+      "Background": null,
+      "BackgroundPosition": 1
+    },
+    "Footer": {
+      "$type": "Sungero.NoCode.Settings.Interfaces.Models.Cover.CoverFooterSettings, Sungero.NoCode.Settings.Interfaces",
+      "NameGuid": "c727e40a-cebe-4b14-8093-3bbd1204561e",
+      "Name": null,
+      "LocalizationStrings": [],
+      "IconName": null,
+      "Background": null,
+      "BackgroundPosition": 1
+    },
+    "Tabs": {
+      "$type": "System.Collections.Generic.List`1[[Sungero.NoCode.Settings.Interfaces.Models.Cover.CoverTabSettings, Sungero.NoCode.Settings.Interfaces]], System.Private.CoreLib",
+      "$values": [
+        {
+          "$type": "Sungero.NoCode.Settings.Interfaces.Models.Cover.CoverTabSettings, Sungero.NoCode.Settings.Interfaces",
+          "TabId": "9d1a463f-df1e-405b-814a-1c3f875f60c3",
+          "NameGuid": "9d1a463f-df1e-405b-814a-1c3f875f60c3",
+          "Name": null,
+          "LocalizationStrings": [
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "Tab_Title_9d1a463fdf1e405b814a1c3f875f60c3",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "Tab"
+              }
+            }
+          ],
+          "Index": 0,
+          "ParentId": "00000000-0000-0000-0000-000000000000"
+        }
+      ]
+    },
+    "Groups": {
+      "$type": "System.Collections.Generic.List`1[[Sungero.NoCode.Settings.Interfaces.Models.Cover.CoverGroupSettings, Sungero.NoCode.Settings.Interfaces]], System.Private.CoreLib",
+      "$values": [
+        {
+          "$type": "Sungero.NoCode.Settings.Interfaces.Models.Cover.CoverGroupSettings, Sungero.NoCode.Settings.Interfaces",
+          "GroupId": "ed6da497-627b-4a6d-8a71-c80286a178dd",
+          "ColumnNumber": 0,
+          "IconName": "590a5051-d5c5-45d8-90a5-4823918d7740.svg",
+          "NameGuid": "ed6da497-627b-4a6d-8a71-c80286a178dd",
+          "Name": null,
+          "LocalizationStrings": [
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "Group_Title_ed6da497627b4a6d8a71c80286a178dd",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "Users and groups",
+                "ru-RU": "Пользователи и группы"
+              }
+            }
+          ],
+          "Index": 0,
+          "ParentId": "9d1a463f-df1e-405b-814a-1c3f875f60c3"
+        },
+        {
+          "$type": "Sungero.NoCode.Settings.Interfaces.Models.Cover.CoverGroupSettings, Sungero.NoCode.Settings.Interfaces",
+          "GroupId": "a48b71c0-17e7-42e4-a5b0-1d39bbd24dde",
+          "ColumnNumber": 0,
+          "IconName": "1e3f7336-d86f-47d8-81fe-e883606f47a6.svg",
+          "NameGuid": "a48b71c0-17e7-42e4-a5b0-1d39bbd24dde",
+          "Name": null,
+          "LocalizationStrings": [
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "Group_Title_a48b71c017e742e4a5b01d39bbd24dde",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "Jobs",
+                "ru-RU": "Фоновые процессы"
+              }
+            }
+          ],
+          "Index": 1,
+          "ParentId": "9d1a463f-df1e-405b-814a-1c3f875f60c3"
+        },
+        {
+          "$type": "Sungero.NoCode.Settings.Interfaces.Models.Cover.CoverGroupSettings, Sungero.NoCode.Settings.Interfaces",
+          "GroupId": "33ac7c5c-653f-4d62-9b17-263271af7927",
+          "ColumnNumber": 0,
+          "IconName": "972cc5ba-292f-4724-b1cf-2fd097b60e46.png",
+          "NameGuid": "33ac7c5c-653f-4d62-9b17-263271af7927",
+          "Name": null,
+          "LocalizationStrings": [
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "Group_Title_33ac7c5c653f4d629b17263271af7927",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "Access rights",
+                "ru-RU": "Права доступа"
+              }
+            }
+          ],
+          "Index": 2,
+          "ParentId": "9d1a463f-df1e-405b-814a-1c3f875f60c3"
+        },
+        {
+          "$type": "Sungero.NoCode.Settings.Interfaces.Models.Cover.CoverGroupSettings, Sungero.NoCode.Settings.Interfaces",
+          "GroupId": "c363fa8d-2d99-4abc-beb7-021699c30d18",
+          "ColumnNumber": 0,
+          "IconName": "68ae395a-5c35-4386-9f34-d725d87fea8b.svg",
+          "NameGuid": "c363fa8d-2d99-4abc-beb7-021699c30d18",
+          "Name": "Group",
+          "LocalizationStrings": [
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "Group_Title_c363fa8d2d994abcbeb7021699c30d18",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "Localization of Settings",
+                "ru-RU": "Локализация настроек"
+              }
+            }
+          ],
+          "Index": 3,
+          "ParentId": "9d1a463f-df1e-405b-814a-1c3f875f60c3"
+        },
+        {
+          "$type": "Sungero.NoCode.Settings.Interfaces.Models.Cover.CoverGroupSettings, Sungero.NoCode.Settings.Interfaces",
+          "GroupId": "624be04f-9b79-494d-aa84-a3af4cc2c544",
+          "ColumnNumber": 0,
+          "IconName": "ce182b03-b430-421a-97b2-8b33f94af5fa.svg",
+          "NameGuid": "624be04f-9b79-494d-aa84-a3af4cc2c544",
+          "Name": "Group",
+          "LocalizationStrings": [
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "Group_Title_624be04f9b79494daa84a3af4cc2c544",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "Editable constants",
+                "ru-RU": "Редактируемые константы"
+              }
+            }
+          ],
+          "Index": 4,
+          "ParentId": "9d1a463f-df1e-405b-814a-1c3f875f60c3"
+        },
+        {
+          "$type": "Sungero.NoCode.Settings.Interfaces.Models.Cover.CoverGroupSettings, Sungero.NoCode.Settings.Interfaces",
+          "GroupId": "8424b252-cc6f-49e4-a8e2-b39b9079df3d",
+          "ColumnNumber": 1,
+          "IconName": "a4992f88-4272-47fd-b1e4-7afe1dedc180.svg",
+          "NameGuid": "8424b252-cc6f-49e4-a8e2-b39b9079df3d",
+          "Name": null,
+          "LocalizationStrings": [
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "Group_Title_8424b252cc6f49e4a8e2b39b9079df3d",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "Processes and Interface",
+                "ru-RU": "Процессы и интерфейс"
+              }
+            }
+          ],
+          "Index": 5,
+          "ParentId": "9d1a463f-df1e-405b-814a-1c3f875f60c3"
+        },
+        {
+          "$type": "Sungero.NoCode.Settings.Interfaces.Models.Cover.CoverGroupSettings, Sungero.NoCode.Settings.Interfaces",
+          "GroupId": "a84852fa-faff-418d-923a-3be03335c128",
+          "ColumnNumber": 1,
+          "IconName": "aba02a23-0b93-4990-a82c-a1c1719d6207.svg",
+          "NameGuid": "a84852fa-faff-418d-923a-3be03335c128",
+          "Name": "Group",
+          "LocalizationStrings": [
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "Group_Title_a84852fafaff418d923a3be03335c128",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "Expanding No-Code tools",
+                "ru-RU": "Расширение инструментов No-Code"
+              }
+            }
+          ],
+          "Index": 6,
+          "ParentId": "9d1a463f-df1e-405b-814a-1c3f875f60c3"
+        },
+        {
+          "$type": "Sungero.NoCode.Settings.Interfaces.Models.Cover.CoverGroupSettings, Sungero.NoCode.Settings.Interfaces",
+          "GroupId": "36b75684-773a-4e88-a82f-d130b68ef0e3",
+          "ColumnNumber": 1,
+          "IconName": "6acae49c-6581-4f7e-a2da-9b9303ad36a6.svg",
+          "NameGuid": "36b75684-773a-4e88-a82f-d130b68ef0e3",
+          "Name": null,
+          "LocalizationStrings": [
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "Group_Title_36b75684773a4e88a82fd130b68ef0e3",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "License",
+                "ru-RU": "Лицензия"
+              }
+            }
+          ],
+          "Index": 7,
+          "ParentId": "9d1a463f-df1e-405b-814a-1c3f875f60c3"
+        },
+        {
+          "$type": "Sungero.NoCode.Settings.Interfaces.Models.Cover.CoverGroupSettings, Sungero.NoCode.Settings.Interfaces",
+          "GroupId": "f95b63b1-ff36-4e51-b19f-15230824b9e6",
+          "ColumnNumber": 1,
+          "IconName": "b961d290-527e-40d2-a70e-7c1322840921.svg",
+          "NameGuid": "f95b63b1-ff36-4e51-b19f-15230824b9e6",
+          "Name": null,
+          "LocalizationStrings": [
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "Group_Title_f95b63b1ff364e51b19f15230824b9e6",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "Encryption",
+                "ru-RU": "Шифрование"
+              }
+            }
+          ],
+          "Index": 8,
+          "ParentId": "9d1a463f-df1e-405b-814a-1c3f875f60c3"
+        }
+      ]
+    },
+    "Actions": {
+      "$type": "System.Collections.Generic.List`1[[Sungero.NoCode.Settings.Interfaces.Models.Cover.CoverActionSettingsBase, Sungero.NoCode.Settings.Interfaces]], System.Private.CoreLib",
+      "$values": [
+        {
+          "$type": "Sungero.NoCode.Settings.Interfaces.Models.Cover.CoverEntityListActionSettings, Sungero.NoCode.Settings.Interfaces",
+          "EntityTypeId": "5e9b55c2-c1f5-4e4f-aa09-7b6d461d87ed",
+          "ActionId": "ada3ccc9-e5f5-45d7-8835-739c239f3e7a",
+          "NameGuid": "ada3ccc9-e5f5-45d7-8835-739c239f3e7a",
+          "Name": null,
+          "LocalizationStrings": [
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "Action_Title_ada3ccc9e5f545d78835739c239f3e7a",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "Roles",
+                "ru-RU": "Роли"
+              }
+            },
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "Action_Description_ada3ccc9e5f545d78835739c239f3e7a",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "Stores information about roles. Roles help you to group users according to their responsibilities.",
+                "ru-RU": "Роли предназначены для группировки сотрудников по функциональным обязанностям."
+              }
+            }
+          ],
+          "Index": 0,
+          "ParentId": "ed6da497-627b-4a6d-8a71-c80286a178dd"
+        },
+        {
+          "$type": "Sungero.NoCode.Settings.Interfaces.Models.Cover.CoverEntityListActionSettings, Sungero.NoCode.Settings.Interfaces",
+          "EntityTypeId": "243c2d26-f5f7-495f-9faf-951d91215c77",
+          "ActionId": "a7e54e64-97ba-46a7-9e20-20e8b20842f4",
+          "NameGuid": "a7e54e64-97ba-46a7-9e20-20e8b20842f4",
+          "Name": null,
+          "LocalizationStrings": [
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "Action_Title_a7e54e6497ba46a79e2020e8b20842f4",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "Users",
+                "ru-RU": "Пользователи"
+              }
+            },
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "Action_Description_a7e54e6497ba46a79e2020e8b20842f4",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "List of users working in the system. To be able to access the system, each user must be associated with an account.",
+                "ru-RU": "Список пользователей системы. Для входа в систему пользователь должен быть связан с учетной записью."
+              }
+            }
+          ],
+          "Index": 1,
+          "ParentId": "ed6da497-627b-4a6d-8a71-c80286a178dd"
+        },
+        {
+          "$type": "Sungero.NoCode.Settings.Interfaces.Models.Cover.CoverEntityListActionSettings, Sungero.NoCode.Settings.Interfaces",
+          "EntityTypeId": "31b5643f-ddd7-4021-8f3c-29b43f4df51f",
+          "ActionId": "e031a17c-f2b5-4696-adb2-bd683c0a1780",
+          "NameGuid": "e031a17c-f2b5-4696-adb2-bd683c0a1780",
+          "Name": null,
+          "LocalizationStrings": [
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "Action_Title_e031a17cf2b54696adb2bd683c0a1780",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "Groups",
+                "ru-RU": "Группы"
+              }
+            },
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "Action_Description_e031a17cf2b54696adb2bd683c0a1780",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "Users can be grouped together, for example according to their departments or responsibilities. Groups are useful for access rights definition. For example, access to bill and financial reports can be granted to «Accountants» group not to each accountant separately. This way it is easy to grant required access rights to a new accountant. It is only needed to add him to «Accountants» groups.",
+                "ru-RU": "Пользователи могут быть объединены в группы, например, по организационной структуре или функциональным обязанностям. Это удобно при выдаче прав, например, чтобы выдавать права на счета и финансовые документы не отдельно каждому бухгалтеру, а только группе «Бухгалтеры», и в дальнейшем нового бухгалтера надо будет только включить в эту группу, и у него сразу будут все нужные права."
+              }
+            }
+          ],
+          "Index": 2,
+          "ParentId": "ed6da497-627b-4a6d-8a71-c80286a178dd"
+        },
+        {
+          "$type": "Sungero.NoCode.Settings.Interfaces.Models.Cover.CoverEntityListActionSettings, Sungero.NoCode.Settings.Interfaces",
+          "EntityTypeId": "55f542e9-4645-4f8d-999e-73cc71df62fd",
+          "ActionId": "9f9b1ef7-634e-4dba-92f2-4eea62956067",
+          "NameGuid": "9f9b1ef7-634e-4dba-92f2-4eea62956067",
+          "Name": null,
+          "LocalizationStrings": [
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "Action_Title_9f9b1ef7634e4dba92f24eea62956067",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "Accounts",
+                "ru-RU": "Учетные записи"
+              }
+            },
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "Action_Description_9f9b1ef7634e4dba92f24eea62956067",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "Stores information about accounts used to authenticate users.",
+                "ru-RU": "Учетные записи предназначены для входа пользователей в систему."
+              }
+            }
+          ],
+          "Index": 3,
+          "ParentId": "ed6da497-627b-4a6d-8a71-c80286a178dd"
+        },
+        {
+          "$type": "Sungero.NoCode.Settings.Interfaces.Models.Cover.CoverEntityListActionSettings, Sungero.NoCode.Settings.Interfaces",
+          "EntityTypeId": "7de28481-4d35-4502-b191-2e19ce8e4ff3",
+          "ActionId": "e0ca17d6-e6fc-4468-aa83-b6b9cec64272",
+          "NameGuid": "e0ca17d6-e6fc-4468-aa83-b6b9cec64272",
+          "Name": null,
+          "LocalizationStrings": [
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "Action_Title_e0ca17d6e6fc4468aa83b6b9cec64272",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "Account Policies",
+                "ru-RU": "Политики учетных записей"
+              }
+            },
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "Action_Description_e0ca17d6e6fc4468aa83b6b9cec64272",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "Account policies allow you to configure password complexity and rules for automatic lockout on failed login attempts.",
+                "ru-RU": "Политики учетных записей предназначены для задания сложности паролей, правил блокировки учетных записей при неудачных попытках входа в систему."
+              }
+            }
+          ],
+          "Index": 4,
+          "ParentId": "ed6da497-627b-4a6d-8a71-c80286a178dd"
+        },
+        {
+          "$type": "Sungero.NoCode.Settings.Interfaces.Models.Cover.CoverEntityListActionSettings, Sungero.NoCode.Settings.Interfaces",
+          "EntityTypeId": "afa0c3aa-50ff-453e-87a1-39a696f8917b",
+          "ActionId": "b895b19a-648f-4ada-bc38-3c32bd3c6588",
+          "NameGuid": "b895b19a-648f-4ada-bc38-3c32bd3c6588",
+          "Name": null,
+          "LocalizationStrings": [
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "Action_Title_b895b19a648f4adabc383c32bd3c6588",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "Public Key Certificates",
+                "ru-RU": "Цифровые сертификаты"
+              }
+            },
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "Action_Description_b895b19a648f4adabc383c32bd3c6588",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "Stores information about certificates used to sign documents with an electronic signature.",
+                "ru-RU": "Сертификаты предназначены для установки электронной подписи на документы."
+              }
+            }
+          ],
+          "Index": 5,
+          "ParentId": "ed6da497-627b-4a6d-8a71-c80286a178dd"
+        },
+        {
+          "$type": "Sungero.NoCode.Settings.Interfaces.Models.Cover.CoverEntityListActionSettings, Sungero.NoCode.Settings.Interfaces",
+          "EntityTypeId": "cf369908-9587-45e0-937c-206efa109d23",
+          "ActionId": "371046a8-e6f2-4b83-bd97-4e792666de1d",
+          "NameGuid": "371046a8-e6f2-4b83-bd97-4e792666de1d",
+          "Name": null,
+          "LocalizationStrings": [
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "Action_Title_371046a8e6f24b83bd974e792666de1d",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "Substitution",
+                "ru-RU": "Замещения"
+              }
+            },
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "Action_Description_371046a8e6f24b83bd974e792666de1d",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "Stores information about persons who substitute absent employees. Substitution is designed to delegate tasks, duties and access rights of an absent employee to another employee of your company.",
+                "ru-RU": "Замещение предназначено для передачи обязанностей и прав доступа сотрудника на время его отсутствия другому сотруднику компании."
+              }
+            }
+          ],
+          "Index": 6,
+          "ParentId": "ed6da497-627b-4a6d-8a71-c80286a178dd"
+        },
+        {
+          "$type": "Sungero.NoCode.Settings.Interfaces.Models.Cover.CoverEntityListActionSettings, Sungero.NoCode.Settings.Interfaces",
+          "EntityTypeId": "a6de7bb6-8c2d-425a-b35a-1d60119ecfa8",
+          "ActionId": "b21d049c-feb1-4a3a-aa6c-c0ed5f681e9f",
+          "NameGuid": "b21d049c-feb1-4a3a-aa6c-c0ed5f681e9f",
+          "Name": null,
+          "LocalizationStrings": [
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "Action_Title_b21d049cfeb14a3aaa6cc0ed5f681e9f",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "Active Users",
+                "ru-RU": "Активные пользователи"
+              }
+            },
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "Action_Description_b21d049cfeb14a3aaa6cc0ed5f681e9f",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "List of users logged on to the system.",
+                "ru-RU": "Список пользователей, подключенных к системе."
+              }
+            }
+          ],
+          "Index": 7,
+          "ParentId": "ed6da497-627b-4a6d-8a71-c80286a178dd"
+        },
+        {
+          "$type": "Sungero.NoCode.Settings.Interfaces.Models.Cover.CoverFunctionActionSettings, Sungero.NoCode.Settings.Interfaces",
+          "FunctionName": "SwitchMaintenanceMode",
+          "FunctionModuleId": "d8bb255b-db7e-41f3-b1e0-12f9f0348041",
+          "ActionId": "72f5bb6c-7aa6-4e29-8680-7da554ef0eaf",
+          "NameGuid": "72f5bb6c-7aa6-4e29-8680-7da554ef0eaf",
+          "Name": null,
+          "LocalizationStrings": [
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "Action_Title_72f5bb6c7aa64e2986807da554ef0eaf",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "Maintenance Mode",
+                "ru-RU": "Режим технического обслуживания"
+              }
+            },
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "Action_Description_72f5bb6c7aa64e2986807da554ef0eaf",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "The maintenance mode restricts user access to the system during the system update.",
+                "ru-RU": "Режим предназначен для ограничения доступа пользователей в период обновления системы."
+              }
+            }
+          ],
+          "Index": 8,
+          "ParentId": "ed6da497-627b-4a6d-8a71-c80286a178dd"
+        },
+        {
+          "$type": "Sungero.NoCode.Settings.Interfaces.Models.Cover.CoverEntityListActionSettings, Sungero.NoCode.Settings.Interfaces",
+          "EntityTypeId": "56c16259-fa13-4474-98fc-3f517cc4ed02",
+          "ActionId": "a8005c16-185f-4672-94ef-e5a74f60ce85",
+          "NameGuid": "a8005c16-185f-4672-94ef-e5a74f60ce85",
+          "Name": null,
+          "LocalizationStrings": [
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "Action_Title_a8005c16185f467294efe5a74f60ce85",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "Jobs",
+                "ru-RU": "Фоновые процессы"
+              }
+            },
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "Action_Description_a8005c16185f467294efe5a74f60ce85",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "Stores information about jobs used to perform background processes on a schedule. For example, jobs are useful for sending notifications of contract expiration or for syncing data with legal document exchange services.",
+                "ru-RU": "Используются для выполнения фоновых работ по расписанию. Например, для рассылки уведомлений о завершении сроков действия договоров или периодической синхронизации данных с сервисами обмена электронными юридически значимыми документами."
+              }
+            }
+          ],
+          "Index": 0,
+          "ParentId": "a48b71c0-17e7-42e4-a5b0-1d39bbd24dde"
+        },
+        {
+          "$type": "Sungero.NoCode.Settings.Interfaces.Models.Cover.CoverEntityListActionSettings, Sungero.NoCode.Settings.Interfaces",
+          "EntityTypeId": "89e6895a-5abb-46cf-b67e-dda9c2bbe56d",
+          "ActionId": "141269e4-af42-4401-bce8-248fe998652e",
+          "NameGuid": "141269e4-af42-4401-bce8-248fe998652e",
+          "Name": null,
+          "LocalizationStrings": [
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "Action_Title_141269e4af424401bce8248fe998652e",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "Job Log",
+                "ru-RU": "Журнал"
+              }
+            },
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "Action_Description_141269e4af424401bce8248fe998652e",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "Tool to track job events.",
+                "ru-RU": "Используется для отслеживания событий в фоновых процессах."
+              }
+            }
+          ],
+          "Index": 1,
+          "ParentId": "a48b71c0-17e7-42e4-a5b0-1d39bbd24dde"
+        },
+        {
+          "$type": "Sungero.NoCode.Settings.Interfaces.Models.Cover.CoverFunctionActionSettings, Sungero.NoCode.Settings.Interfaces",
+          "FunctionName": "ShowAccessRightsTypes",
+          "FunctionModuleId": "d8bb255b-db7e-41f3-b1e0-12f9f0348041",
+          "ActionId": "c7e6ec6a-bb5c-4082-95e8-51b53483ff22",
+          "NameGuid": "c7e6ec6a-bb5c-4082-95e8-51b53483ff22",
+          "Name": null,
+          "LocalizationStrings": [
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "Action_Title_c7e6ec6abb5c408295e851b53483ff22",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "Access Rights Types",
+                "ru-RU": "Типы прав доступа"
+              }
+            },
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "Action_Description_c7e6ec6abb5c408295e851b53483ff22",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "Access rights types define which operation a user can do with some item, if a user has such access right type for that item. For example, access rights type «Change» let users create or change items.",
+                "ru-RU": "Типы прав доступа задают, какие операции может выполнять пользователь с записью, если ему на эту запись выдан такой тип прав. Например, тип прав «Изменение» разрешает создавать и менять."
+              }
+            }
+          ],
+          "Index": 0,
+          "ParentId": "33ac7c5c-653f-4d62-9b17-263271af7927"
+        },
+        {
+          "$type": "Sungero.NoCode.Settings.Interfaces.Models.Cover.CoverFunctionActionSettings, Sungero.NoCode.Settings.Interfaces",
+          "FunctionName": "ShowAccessRightsForEntityTypes",
+          "FunctionModuleId": "d8bb255b-db7e-41f3-b1e0-12f9f0348041",
+          "ActionId": "56c36bf9-0d8a-4c81-8f18-ff2de097decb",
+          "NameGuid": "56c36bf9-0d8a-4c81-8f18-ff2de097decb",
+          "Name": null,
+          "LocalizationStrings": [
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "Action_Title_56c36bf90d8a4c818f18ff2de097decb",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "Set Access Rights to Object Types",
+                "ru-RU": "Настроить права доступа на типы объектов"
+              }
+            },
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "Action_Description_56c36bf90d8a4c818f18ff2de097decb",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "Access rights for object types allow to grant users or groups access to all objects of specific type. For example, such access rights can be defined so only accountants can create new bills.",
+                "ru-RU": "С помощью настройки прав доступа на типы объектов можно назначить права сразу на все записи, относящиеся к какому-то определенному типу. Например, можно назначить группе «Бухгалтеры» права на создание и изменение записей типа «Бухгалтерский счет» без необходимости выдавать права на каждую такую запись."
+              }
+            }
+          ],
+          "Index": 1,
+          "ParentId": "33ac7c5c-653f-4d62-9b17-263271af7927"
+        },
+        {
+          "$type": "Sungero.NoCode.Settings.Interfaces.Models.Cover.CoverFunctionActionSettings, Sungero.NoCode.Settings.Interfaces",
+          "FunctionName": "ImportNoCodeLocalization",
+          "FunctionModuleId": "d8bb255b-db7e-41f3-b1e0-12f9f0348041",
+          "ActionId": "85d31579-d216-44d8-ba4b-808263a663d3",
+          "NameGuid": "85d31579-d216-44d8-ba4b-808263a663d3",
+          "Name": "Action",
+          "LocalizationStrings": [
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "Action_Title_85d31579d21644d8ba4b808263a663d3",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "Import Localization Strings",
+                "ru-RU": "Импорт строк локализации"
+              }
+            },
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "Action_Description_85d31579d21644d8ba4b808263a663d3",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "Import localization of business process and interface settings, for example, after editing or translating into another language.",
+                "ru-RU": "Импорт позволяет загрузить локализацию настроек бизнес-процессов и интерфейса, например, после редактирования или перевода на другой язык."
+              }
+            }
+          ],
+          "Index": 0,
+          "ParentId": "c363fa8d-2d99-4abc-beb7-021699c30d18"
+        },
+        {
+          "$type": "Sungero.NoCode.Settings.Interfaces.Models.Cover.CoverFunctionActionSettings, Sungero.NoCode.Settings.Interfaces",
+          "FunctionName": "ExportNoCodeLocalization",
+          "FunctionModuleId": "d8bb255b-db7e-41f3-b1e0-12f9f0348041",
+          "ActionId": "6de602f9-db85-432a-b859-cd10c54ed15d",
+          "NameGuid": "6de602f9-db85-432a-b859-cd10c54ed15d",
+          "Name": "Action",
+          "LocalizationStrings": [
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "Action_Title_6de602f9db85432ab859cd10c54ed15d",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "Export Localization Strings",
+                "ru-RU": "Экспорт строк локализации"
+              }
+            },
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "Action_Description_6de602f9db85432ab859cd10c54ed15d",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "Export localization of business process and interface settings into a document for editing.",
+                "ru-RU": "Экспорт позволяет выгрузить локализацию настроек бизнес-процессов и интерфейса в документ для редактирования."
+              }
+            }
+          ],
+          "Index": 1,
+          "ParentId": "c363fa8d-2d99-4abc-beb7-021699c30d18"
+        },
+        {
+          "$type": "Sungero.NoCode.Settings.Interfaces.Models.Cover.CoverEntityListActionSettings, Sungero.NoCode.Settings.Interfaces",
+          "EntityTypeId": "a1c2c596-9b78-4767-8ba4-8b63e2976e2f",
+          "ActionId": "77855156-8652-4e00-85fa-126a0d9c8d04",
+          "NameGuid": "77855156-8652-4e00-85fa-126a0d9c8d04",
+          "Name": "Action",
+          "LocalizationStrings": [
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "Action_Title_7785515686524e0085fa126a0d9c8d04",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "Constant groups",
+                "ru-RU": "Группы констант"
+              }
+            },
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "Action_Description_7785515686524e0085fa126a0d9c8d04",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "Directory with groups of editable constants",
+                "ru-RU": "Справочник с группами редактируемых констант"
+              }
+            }
+          ],
+          "Index": 0,
+          "ParentId": "624be04f-9b79-494d-aa84-a3af4cc2c544"
+        },
+        {
+          "$type": "Sungero.NoCode.Settings.Interfaces.Models.Cover.CoverEntityListActionSettings, Sungero.NoCode.Settings.Interfaces",
+          "EntityTypeId": "66bb79ca-2a2c-42c9-9780-25365347c6ac",
+          "ActionId": "0115f1ad-c33c-4175-b638-2874ecc037fd",
+          "NameGuid": "0115f1ad-c33c-4175-b638-2874ecc037fd",
+          "Name": "Action",
+          "LocalizationStrings": [
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "Action_Title_0115f1adc33c4175b6382874ecc037fd",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "Constants",
+                "ru-RU": "Константы"
+              }
+            },
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "Action_Description_0115f1adc33c4175b6382874ecc037fd",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "Directory of editable constants",
+                "ru-RU": "Справочник редактируемых констант"
+              }
+            }
+          ],
+          "Index": 1,
+          "ParentId": "624be04f-9b79-494d-aa84-a3af4cc2c544"
+        },
+        {
+          "$type": "Sungero.NoCode.Settings.Interfaces.Models.Cover.CoverEntityListActionSettings, Sungero.NoCode.Settings.Interfaces",
+          "EntityTypeId": "d7c7a65b-e62b-41dd-a6d9-7df4b4273763",
+          "ActionId": "c380d683-2e33-49c3-b1af-4a23d91fdc1f",
+          "NameGuid": "c380d683-2e33-49c3-b1af-4a23d91fdc1f",
+          "Name": null,
+          "LocalizationStrings": [
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "Action_Title_c380d6832e3349c3b1af4a23d91fdc1f",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "Process Kinds",
+                "ru-RU": "Варианты процессов"
+              }
+            },
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "Action_Description_c380d6832e3349c3b1af4a23d91fdc1f",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "A process kind includes a scheme and its selection criteria. When an employee sends a task, the system automatically selects an active process kind that meets the criteria and has the maximum priority.",
+                "ru-RU": "Вариант процесса включает в себя схему и критерии ее выбора. При отправке задачи автоматически выбирается действующий вариант процесса, который подходит по критериям и имеет максимальный приоритет."
+              }
+            }
+          ],
+          "Index": 0,
+          "ParentId": "8424b252-cc6f-49e4-a8e2-b39b9079df3d"
+        },
+        {
+          "$type": "Sungero.NoCode.Settings.Interfaces.Models.Cover.CoverEntityListActionSettings, Sungero.NoCode.Settings.Interfaces",
+          "EntityTypeId": "4eee364b-a766-4a5f-8fbd-91e45c5f95ca",
+          "ActionId": "008b78ed-b946-4719-8a56-34c7ef2dc160",
+          "NameGuid": "008b78ed-b946-4719-8a56-34c7ef2dc160",
+          "Name": null,
+          "LocalizationStrings": [
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "Action_Title_008b78edb94647198a5634c7ef2dc160",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "Computed Roles",
+                "ru-RU": "Вычисляемые роли"
+              }
+            },
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "Action_Description_008b78edb94647198a5634c7ef2dc160",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "A list of computed role members is defined using expressions and depends on the objects of a specific process: initiator, document kind, etc. You can use a role in multiple schemes, blocks, expressions, as well as in other computed roles.",
+                "ru-RU": "Состав вычисляемой роли определяется с помощью выражений и зависит от объектов процесса: инициатора, вида документа и т.д. Роль можно использовать в нескольких схемах, блоках, выражениях, а также в других вычисляемых ролях."
+              }
+            }
+          ],
+          "Index": 1,
+          "ParentId": "8424b252-cc6f-49e4-a8e2-b39b9079df3d"
+        },
+        {
+          "$type": "Sungero.NoCode.Settings.Interfaces.Models.Cover.CoverEntityListActionSettings, Sungero.NoCode.Settings.Interfaces",
+          "EntityTypeId": "f7cba906-f4c9-4f02-97e8-a6c6155a8ee6",
+          "ActionId": "10558f1f-e33c-4a90-8435-ab4c62c44794",
+          "NameGuid": "10558f1f-e33c-4a90-8435-ab4c62c44794",
+          "Name": null,
+          "LocalizationStrings": [
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "Action_Title_10558f1fe33c4a908435ab4c62c44794",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "Module Views",
+                "ru-RU": "Представления модулей"
+              }
+            },
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "Action_Description_10558f1fe33c4a908435ab4c62c44794",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "A view defines the items and cover of a module, as well as the list of employees who have access to it. Depending on the defined items, the navigation panel displays different entity types and computed folders in the module.",
+                "ru-RU": "В представлении задаются элементы и обложка модуля, а также круг лиц, которым он доступен. Элементы определяют, какие типы сущностей и вычисляемые папки отображаются в модуле на панели навигации."
+              }
+            }
+          ],
+          "Index": 2,
+          "ParentId": "8424b252-cc6f-49e4-a8e2-b39b9079df3d"
+        },
+        {
+          "$type": "Sungero.NoCode.Settings.Interfaces.Models.Cover.CoverEntityListActionSettings, Sungero.NoCode.Settings.Interfaces",
+          "EntityTypeId": "f1bc9488-3907-4e85-86aa-a37232d5a558",
+          "ActionId": "0cd5cf17-fc00-45ae-9adb-c09b6daef5b0",
+          "NameGuid": "0cd5cf17-fc00-45ae-9adb-c09b6daef5b0",
+          "Name": null,
+          "LocalizationStrings": [
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "Action_Title_0cd5cf17fc0045ae9adbc09b6daef5b0",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "Explorer Views",
+                "ru-RU": "Представления проводника"
+              }
+            },
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "Action_Description_0cd5cf17fc0045ae9adbc09b6daef5b0",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "A view defines the list of system folders, startup page, and other settings of the Explorer. The configured view is displayed to a specified list of employees.",
+                "ru-RU": "В представлении задается список системных папок, стартовая страница и другие настройки проводника. Представление отображается указанному кругу лиц."
+              }
+            }
+          ],
+          "Index": 3,
+          "ParentId": "8424b252-cc6f-49e4-a8e2-b39b9079df3d"
+        },
+        {
+          "$type": "Sungero.NoCode.Settings.Interfaces.Models.Cover.CoverEntityListActionSettings, Sungero.NoCode.Settings.Interfaces",
+          "EntityTypeId": "000005ef-064d-4cbc-bc6c-d2c8cebedc9e",
+          "ActionId": "0a38c6cb-c9e5-4861-a154-dbfd9332d78d",
+          "NameGuid": "0a38c6cb-c9e5-4861-a154-dbfd9332d78d",
+          "Name": null,
+          "LocalizationStrings": [
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "Action_Title_0a38c6cbc9e54861a154dbfd9332d78d",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "Form Views",
+                "ru-RU": "Представления форм"
+              }
+            },
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "Action_Description_0a38c6cbc9e54861a154dbfd9332d78d",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "A view sets the items and their location on the card form and action panel. The criteria define what kind of conditions must be fulfilled to display the view when an employee opens the card.",
+                "ru-RU": "В представлении задается состав элементов и их расположение на форме карточки и панели действий. Критерии определяют, какие условия должны выполниться, чтобы представление отобразилось при открытии карточки."
+              }
+            }
+          ],
+          "Index": 4,
+          "ParentId": "8424b252-cc6f-49e4-a8e2-b39b9079df3d"
+        },
+        {
+          "$type": "Sungero.NoCode.Settings.Interfaces.Models.Cover.CoverFunctionActionSettings, Sungero.NoCode.Settings.Interfaces",
+          "FunctionName": "ImportNoCodeSettings",
+          "FunctionModuleId": "d8bb255b-db7e-41f3-b1e0-12f9f0348041",
+          "ActionId": "7185363d-9a94-419a-8d18-5bf8f6fb1935",
+          "NameGuid": "7185363d-9a94-419a-8d18-5bf8f6fb1935",
+          "Name": null,
+          "LocalizationStrings": [
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "Action_Title_7185363d9a94419a8d185bf8f6fb1935",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "Import Settings",
+                "ru-RU": "Импорт настроек"
+              }
+            },
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "Action_Description_7185363d9a94419a8d185bf8f6fb1935",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "Import settings, for example, settings that were exported from another system.",
+                "ru-RU": "Импорт позволяет загрузить настройки, например, переданные из другой системы."
+              }
+            }
+          ],
+          "Index": 5,
+          "ParentId": "8424b252-cc6f-49e4-a8e2-b39b9079df3d"
+        },
+        {
+          "$type": "Sungero.NoCode.Settings.Interfaces.Models.Cover.CoverFunctionActionSettings, Sungero.NoCode.Settings.Interfaces",
+          "FunctionName": "ExportNoCodeSettings",
+          "FunctionModuleId": "d8bb255b-db7e-41f3-b1e0-12f9f0348041",
+          "ActionId": "9d86eaf8-2b4c-403c-850e-d8310a881cf7",
+          "NameGuid": "9d86eaf8-2b4c-403c-850e-d8310a881cf7",
+          "Name": null,
+          "LocalizationStrings": [
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "Action_Title_9d86eaf82b4c403c850ed8310a881cf7",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "Export Settings",
+                "ru-RU": "Экспорт настроек"
+              }
+            },
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "Action_Description_9d86eaf82b4c403c850ed8310a881cf7",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "Export settings, for example, to move them to another system. You can export all settings or only settings of a particular type.",
+                "ru-RU": "Экспорт позволяет выгрузить настройки, например, чтобы перенести их в другую систему. Можно экспортировать все настройки или только выбранного типа."
+              }
+            }
+          ],
+          "Index": 6,
+          "ParentId": "8424b252-cc6f-49e4-a8e2-b39b9079df3d"
+        },
+        {
+          "$type": "Sungero.NoCode.Settings.Interfaces.Models.Cover.CoverEntityListActionSettings, Sungero.NoCode.Settings.Interfaces",
+          "EntityTypeId": "32f58d8b-2a33-4eb5-813e-5cd602356b06",
+          "ActionId": "9ff38f87-0c96-4850-b0eb-48592e94e8bf",
+          "NameGuid": "9ff38f87-0c96-4850-b0eb-48592e94e8bf",
+          "Name": "Action",
+          "LocalizationStrings": [
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "Action_Title_9ff38f870c964850b0eb48592e94e8bf",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "Action",
+                "ru-RU": "Представления списков"
+              }
+            },
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "Action_Description_9ff38f870c964850b0eb48592e94e8bf",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "ru-RU": "В представлении задаются элементы списков и их расположение на панели действий."
+              }
+            }
+          ],
+          "Index": 7,
+          "ParentId": "8424b252-cc6f-49e4-a8e2-b39b9079df3d"
+        },
+        {
+          "$type": "Sungero.NoCode.Settings.Interfaces.Models.Cover.CoverEntityListActionSettings, Sungero.NoCode.Settings.Interfaces",
+          "EntityTypeId": "cf1d3cb6-2582-4639-92f9-1d6ca8891e71",
+          "ActionId": "b30e2afe-2999-4bc1-8f3e-c5644c623fa6",
+          "NameGuid": "b30e2afe-2999-4bc1-8f3e-c5644c623fa6",
+          "Name": "Action",
+          "LocalizationStrings": [
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "Action_Title_b30e2afe29994bc18f3ec5644c623fa6",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "Group tasks settings",
+                "ru-RU": "Настройки групповых заданий"
+              }
+            },
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "Action_Description_b30e2afe29994bc18f3ec5644c623fa6",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "ru-RU": "В настройках задаются варианты процессов и блоки, в которых используются групповые (конкурентные) задания. Настройки используются для отправки заданий и уведомлений на Сервисный портал."
+              }
+            }
+          ],
+          "Index": 8,
+          "ParentId": "8424b252-cc6f-49e4-a8e2-b39b9079df3d"
+        },
+        {
+          "$type": "Sungero.NoCode.Settings.Interfaces.Models.Cover.CoverEntityListActionSettings, Sungero.NoCode.Settings.Interfaces",
+          "EntityTypeId": "d08f9a88-d230-46b1-b0cb-3ba94b45aa12",
+          "ActionId": "c8abc6b7-55eb-4b36-a96c-14db43388f1d",
+          "NameGuid": "c8abc6b7-55eb-4b36-a96c-14db43388f1d",
+          "Name": "Action",
+          "LocalizationStrings": [
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "Action_Title_c8abc6b755eb4b36a96c14db43388f1d",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "Settings up assignments validation",
+                "ru-RU": "Настройки валидации заданий"
+              }
+            },
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "Action_Description_c8abc6b755eb4b36a96c14db43388f1d",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "ru-RU": "В настройках задаются параметры проверки атрибутов при выполнении заданий в ходе выполнения варианта процесса."
+              }
+            }
+          ],
+          "Index": 0,
+          "ParentId": "a84852fa-faff-418d-923a-3be03335c128"
+        },
+        {
+          "$type": "Sungero.NoCode.Settings.Interfaces.Models.Cover.CoverEntityListActionSettings, Sungero.NoCode.Settings.Interfaces",
+          "EntityTypeId": "fc57199c-74cc-4296-a187-57508503b128",
+          "ActionId": "bd7ef10d-80dd-4a27-ab12-055995a7ee49",
+          "NameGuid": "bd7ef10d-80dd-4a27-ab12-055995a7ee49",
+          "Name": "Action",
+          "LocalizationStrings": [
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "Action_Title_bd7ef10d80dd4a27ab12055995a7ee49",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "Results of execution",
+                "ru-RU": "Результаты выполнения"
+              }
+            },
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "Action_Description_bd7ef10d80dd4a27ab12055995a7ee49",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "ru-RU": "В справочнике задаются результаты выполнения заданий, для которых настраивается валидация значений."
+              }
+            }
+          ],
+          "Index": 1,
+          "ParentId": "a84852fa-faff-418d-923a-3be03335c128"
+        },
+        {
+          "$type": "Sungero.NoCode.Settings.Interfaces.Models.Cover.CoverEntityListActionSettings, Sungero.NoCode.Settings.Interfaces",
+          "EntityTypeId": "b87dd169-eb44-4872-adbc-2e9152435530",
+          "ActionId": "b8e627a5-6782-4795-9620-e2cf8bb547a2",
+          "NameGuid": "b8e627a5-6782-4795-9620-e2cf8bb547a2",
+          "Name": "Action",
+          "LocalizationStrings": [
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "Action_Title_b8e627a5678247959620e2cf8bb547a2",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "Document name settings",
+                "ru-RU": "Настройки наименование документов"
+              }
+            },
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "Action_Description_b8e627a5678247959620e2cf8bb547a2",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "The settings specify parameters for automatic generation of document names",
+                "ru-RU": "В настройках задаются параметры для автоматического формирования имени документов"
+              }
+            }
+          ],
+          "Index": 2,
+          "ParentId": "a84852fa-faff-418d-923a-3be03335c128"
+        },
+        {
+          "$type": "Sungero.NoCode.Settings.Interfaces.Models.Cover.CoverFunctionActionSettings, Sungero.NoCode.Settings.Interfaces",
+          "FunctionName": "SaveLicenseKeyRequestToFile",
+          "FunctionModuleId": "d8bb255b-db7e-41f3-b1e0-12f9f0348041",
+          "ActionId": "2153aeff-d0e0-43e1-9820-ca6a1d5c60f6",
+          "NameGuid": "2153aeff-d0e0-43e1-9820-ca6a1d5c60f6",
+          "Name": null,
+          "LocalizationStrings": [
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "Action_Title_2153aeffd0e043e19820ca6a1d5c60f6",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "Save License Key Request to File",
+                "ru-RU": "Сохранить запрос ключа лицензии в файл"
+              }
+            },
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "Action_Description_2153aeffd0e043e19820ca6a1d5c60f6",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "Gather system information and save it to a file that can be sent to support service to receive a license key.",
+                "ru-RU": "Сбор информации о системе и сохранение ее в файл, необходимый для получения ключа лицензии от службы поддержки."
+              }
+            }
+          ],
+          "Index": 0,
+          "ParentId": "36b75684-773a-4e88-a82f-d130b68ef0e3"
+        },
+        {
+          "$type": "Sungero.NoCode.Settings.Interfaces.Models.Cover.CoverFunctionActionSettings, Sungero.NoCode.Settings.Interfaces",
+          "FunctionName": "GetLicenseKeyRequest",
+          "FunctionModuleId": "d8bb255b-db7e-41f3-b1e0-12f9f0348041",
+          "ActionId": "f420e9d4-601e-4401-bce1-287263d1552b",
+          "NameGuid": "f420e9d4-601e-4401-bce1-287263d1552b",
+          "Name": null,
+          "LocalizationStrings": [
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "Action_Title_f420e9d4601e4401bce1287263d1552b",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "Request License Key by Email",
+                "ru-RU": "Отправить запрос ключа лицензии по почте"
+              }
+            },
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "Action_Description_f420e9d4601e4401bce1287263d1552b",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "Gather system information and send it to support service by email to receive a license key.",
+                "ru-RU": "Сбор информации о системе и отправка ее в службу поддержки по электронной почте для выдачи ключа лицензии."
+              }
+            }
+          ],
+          "Index": 1,
+          "ParentId": "36b75684-773a-4e88-a82f-d130b68ef0e3"
+        },
+        {
+          "$type": "Sungero.NoCode.Settings.Interfaces.Models.Cover.CoverFunctionActionSettings, Sungero.NoCode.Settings.Interfaces",
+          "FunctionName": "UploadLicense",
+          "FunctionModuleId": "d8bb255b-db7e-41f3-b1e0-12f9f0348041",
+          "ActionId": "c93cea88-d3df-4d62-8bdc-db7753cf68a1",
+          "NameGuid": "c93cea88-d3df-4d62-8bdc-db7753cf68a1",
+          "Name": null,
+          "LocalizationStrings": [
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "Action_Title_c93cea88d3df4d628bdcdb7753cf68a1",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "Activate License",
+                "ru-RU": "Активировать ключ лицензии"
+              }
+            },
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "Action_Description_c93cea88d3df4d628bdcdb7753cf68a1",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "Activation allows you to take full advantage of all acquired system features.",
+                "ru-RU": "Активация ключа лицензии позволит использовать всю приобретенную функциональность системы"
+              }
+            }
+          ],
+          "Index": 2,
+          "ParentId": "36b75684-773a-4e88-a82f-d130b68ef0e3"
+        },
+        {
+          "$type": "Sungero.NoCode.Settings.Interfaces.Models.Cover.CoverFunctionActionSettings, Sungero.NoCode.Settings.Interfaces",
+          "FunctionName": "RequestDataSecretsReEncryption",
+          "FunctionModuleId": "d8bb255b-db7e-41f3-b1e0-12f9f0348041",
+          "ActionId": "0e25114e-2931-41ca-bf7b-90b9918f1344",
+          "NameGuid": "0e25114e-2931-41ca-bf7b-90b9918f1344",
+          "Name": null,
+          "LocalizationStrings": [
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "Action_Title_0e25114e293141cabf7b90b9918f1344",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "Re-encrypt Data Secrets",
+                "ru-RU": "Перешифровать секреты данных"
+              }
+            },
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "Action_Description_0e25114e293141cabf7b90b9918f1344",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "Launch re-encryption if the certificate used for encrypting data secrets has been replaced, for example, due to expiration.",
+                "ru-RU": "Перешифрование необходимо запускать, если изменился сертификат шифрования секретов данных. Например, истек срок действия."
+              }
+            }
+          ],
+          "Index": 0,
+          "ParentId": "f95b63b1-ff36-4e51-b19f-15230824b9e6"
+        },
+        {
+          "$type": "Sungero.NoCode.Settings.Interfaces.Models.Cover.CoverFunctionActionSettings, Sungero.NoCode.Settings.Interfaces",
+          "FunctionName": "RequestEntitiesReEncryption",
+          "FunctionModuleId": "d8bb255b-db7e-41f3-b1e0-12f9f0348041",
+          "ActionId": "41772173-2de3-4565-bf62-b92a6b5521b0",
+          "NameGuid": "41772173-2de3-4565-bf62-b92a6b5521b0",
+          "Name": null,
+          "LocalizationStrings": [
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "Action_Title_417721732de34565bf62b92a6b5521b0",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "Re-encrypt Data",
+                "ru-RU": "Перешифровать данные"
+              }
+            },
+            {
+              "$type": "Sungero.NoCode.Settings.Models.SettingsLocalizationString, Sungero.NoCode.Settings.Interfaces",
+              "StringCode": "Action_Description_417721732de34565bf62b92a6b5521b0",
+              "Hash": null,
+              "LocalizationValues": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                "en-US": "Re-encrypt data using the current service secret and new data secrets. It may take a long time.",
+                "ru-RU": "Перешифрование данных с использованием актуального секрета сервиса и новых секретов данных. Может занять продолжительное время."
+              }
+            }
+          ],
+          "Index": 1,
+          "ParentId": "f95b63b1-ff36-4e51-b19f-15230824b9e6"
+        }
+      ]
+    },
+    "RemoteControls": {
+      "$type": "System.Collections.Generic.List`1[[Sungero.NoCode.Settings.Interfaces.Models.Cover.CoverRemoteControlSettings, Sungero.NoCode.Settings.Interfaces]], System.Private.CoreLib",
+      "$values": []
+    },
+    "Background": null,
+    "BackgroundPosition": 0
+  },
+  "Priority": 10,
+  "ExplorerModule": {
+    "$type": "Sungero.DataExport.ExportingObjectId, Sungero.DataExport",
+    "TypeGuid": "4cbdfb03-5462-43c4-a033-034e3d3aa095",
+    "Identifier": "0878db81-8ceb-424e-9265-0e14fcca0fec"
+  },
+  "Items": {
+    "$type": "Sungero.DataExport.ExportingObject[], Sungero.DataExport",
+    "$values": [
+      {
+        "$type": "Sungero.DataExport.ExportingObject, Sungero.DataExport",
+        "Uuid": "4ad129b1-b8ce-49b2-8091-54fd1dec63cf",
+        "ModuleView": {
+          "$type": "Sungero.DataExport.ExportingObjectId, Sungero.DataExport",
+          "TypeGuid": "f7cba906-f4c9-4f02-97e8-a6c6155a8ee6",
+          "Identifier": "2ded195a-2016-4a16-b2f4-7a1f7afc7e00"
+        },
+        "Number": 1,
+        "ItemType": "EntityType",
+        "NameGuid": "5e9b55c2-c1f5-4e4f-aa09-7b6d461d87ed"
+      },
+      {
+        "$type": "Sungero.DataExport.ExportingObject, Sungero.DataExport",
+        "Uuid": "ed2bd3c0-b00f-43ba-bd42-98176d59e3fd",
+        "ModuleView": {
+          "$type": "Sungero.DataExport.ExportingObjectId, Sungero.DataExport",
+          "TypeGuid": "f7cba906-f4c9-4f02-97e8-a6c6155a8ee6",
+          "Identifier": "2ded195a-2016-4a16-b2f4-7a1f7afc7e00"
+        },
+        "Number": 2,
+        "ItemType": "EntityType",
+        "NameGuid": "243c2d26-f5f7-495f-9faf-951d91215c77"
+      },
+      {
+        "$type": "Sungero.DataExport.ExportingObject, Sungero.DataExport",
+        "Uuid": "1f241849-5ca8-41e7-aaa7-6bd78ab6d170",
+        "ModuleView": {
+          "$type": "Sungero.DataExport.ExportingObjectId, Sungero.DataExport",
+          "TypeGuid": "f7cba906-f4c9-4f02-97e8-a6c6155a8ee6",
+          "Identifier": "2ded195a-2016-4a16-b2f4-7a1f7afc7e00"
+        },
+        "Number": 3,
+        "ItemType": "EntityType",
+        "NameGuid": "31b5643f-ddd7-4021-8f3c-29b43f4df51f"
+      },
+      {
+        "$type": "Sungero.DataExport.ExportingObject, Sungero.DataExport",
+        "Uuid": "6be92bc4-dc48-4e98-8fb2-82145ceb2631",
+        "ModuleView": {
+          "$type": "Sungero.DataExport.ExportingObjectId, Sungero.DataExport",
+          "TypeGuid": "f7cba906-f4c9-4f02-97e8-a6c6155a8ee6",
+          "Identifier": "2ded195a-2016-4a16-b2f4-7a1f7afc7e00"
+        },
+        "Number": 4,
+        "ItemType": "EntityType",
+        "NameGuid": "55f542e9-4645-4f8d-999e-73cc71df62fd"
+      },
+      {
+        "$type": "Sungero.DataExport.ExportingObject, Sungero.DataExport",
+        "Uuid": "d5461013-d4cf-4807-872f-e33bb169d4b1",
+        "ModuleView": {
+          "$type": "Sungero.DataExport.ExportingObjectId, Sungero.DataExport",
+          "TypeGuid": "f7cba906-f4c9-4f02-97e8-a6c6155a8ee6",
+          "Identifier": "2ded195a-2016-4a16-b2f4-7a1f7afc7e00"
+        },
+        "Number": 5,
+        "ItemType": "EntityType",
+        "NameGuid": "7de28481-4d35-4502-b191-2e19ce8e4ff3"
+      },
+      {
+        "$type": "Sungero.DataExport.ExportingObject, Sungero.DataExport",
+        "Uuid": "a5c56b71-86e1-4ed1-aa7c-9752411cab57",
+        "ModuleView": {
+          "$type": "Sungero.DataExport.ExportingObjectId, Sungero.DataExport",
+          "TypeGuid": "f7cba906-f4c9-4f02-97e8-a6c6155a8ee6",
+          "Identifier": "2ded195a-2016-4a16-b2f4-7a1f7afc7e00"
+        },
+        "Number": 6,
+        "ItemType": "EntityType",
+        "NameGuid": "afa0c3aa-50ff-453e-87a1-39a696f8917b"
+      },
+      {
+        "$type": "Sungero.DataExport.ExportingObject, Sungero.DataExport",
+        "Uuid": "ef35227d-b288-4585-813b-8b89a473ea49",
+        "ModuleView": {
+          "$type": "Sungero.DataExport.ExportingObjectId, Sungero.DataExport",
+          "TypeGuid": "f7cba906-f4c9-4f02-97e8-a6c6155a8ee6",
+          "Identifier": "2ded195a-2016-4a16-b2f4-7a1f7afc7e00"
+        },
+        "Number": 7,
+        "ItemType": "EntityType",
+        "NameGuid": "34d8054f-43c0-4c6a-a1a6-7ee427d65dc8"
+      },
+      {
+        "$type": "Sungero.DataExport.ExportingObject, Sungero.DataExport",
+        "Uuid": "2be5b6cb-680b-4cc9-9238-ed4801f1302b",
+        "ModuleView": {
+          "$type": "Sungero.DataExport.ExportingObjectId, Sungero.DataExport",
+          "TypeGuid": "f7cba906-f4c9-4f02-97e8-a6c6155a8ee6",
+          "Identifier": "2ded195a-2016-4a16-b2f4-7a1f7afc7e00"
+        },
+        "Number": 8,
+        "ItemType": "EntityType",
+        "NameGuid": "cf369908-9587-45e0-937c-206efa109d23"
+      },
+      {
+        "$type": "Sungero.DataExport.ExportingObject, Sungero.DataExport",
+        "Uuid": "2075e034-21f0-4e8d-9588-5adf17001ef9",
+        "ModuleView": {
+          "$type": "Sungero.DataExport.ExportingObjectId, Sungero.DataExport",
+          "TypeGuid": "f7cba906-f4c9-4f02-97e8-a6c6155a8ee6",
+          "Identifier": "2ded195a-2016-4a16-b2f4-7a1f7afc7e00"
+        },
+        "Number": 9,
+        "ItemType": "EntityType",
+        "NameGuid": "02720bfa-107b-4d7e-baac-0cd146a4b527"
+      },
+      {
+        "$type": "Sungero.DataExport.ExportingObject, Sungero.DataExport",
+        "Uuid": "986e136a-08c6-4254-a2fa-1fd886e98718",
+        "ModuleView": {
+          "$type": "Sungero.DataExport.ExportingObjectId, Sungero.DataExport",
+          "TypeGuid": "f7cba906-f4c9-4f02-97e8-a6c6155a8ee6",
+          "Identifier": "2ded195a-2016-4a16-b2f4-7a1f7afc7e00"
+        },
+        "Number": 10,
+        "ItemType": "EntityType",
+        "NameGuid": "96d026d3-0224-4cc8-b633-67a30679b1e5"
+      },
+      {
+        "$type": "Sungero.DataExport.ExportingObject, Sungero.DataExport",
+        "Uuid": "afcbf290-e77d-488d-98d2-0a320d3dc895",
+        "ModuleView": {
+          "$type": "Sungero.DataExport.ExportingObjectId, Sungero.DataExport",
+          "TypeGuid": "f7cba906-f4c9-4f02-97e8-a6c6155a8ee6",
+          "Identifier": "2ded195a-2016-4a16-b2f4-7a1f7afc7e00"
+        },
+        "Number": 11,
+        "ItemType": "EntityType",
+        "NameGuid": "b48f5d28-2036-4529-b215-a7b531eed778"
+      },
+      {
+        "$type": "Sungero.DataExport.ExportingObject, Sungero.DataExport",
+        "Uuid": "4f23c850-ebcb-484f-9f77-d2be08023641",
+        "ModuleView": {
+          "$type": "Sungero.DataExport.ExportingObjectId, Sungero.DataExport",
+          "TypeGuid": "f7cba906-f4c9-4f02-97e8-a6c6155a8ee6",
+          "Identifier": "2ded195a-2016-4a16-b2f4-7a1f7afc7e00"
+        },
+        "Number": 12,
+        "ItemType": "EntityType",
+        "NameGuid": "56c16259-fa13-4474-98fc-3f517cc4ed02"
+      },
+      {
+        "$type": "Sungero.DataExport.ExportingObject, Sungero.DataExport",
+        "Uuid": "d7b6e660-5365-42cb-873d-b8d468cf180a",
+        "ModuleView": {
+          "$type": "Sungero.DataExport.ExportingObjectId, Sungero.DataExport",
+          "TypeGuid": "f7cba906-f4c9-4f02-97e8-a6c6155a8ee6",
+          "Identifier": "2ded195a-2016-4a16-b2f4-7a1f7afc7e00"
+        },
+        "Number": 13,
+        "ItemType": "EntityType",
+        "NameGuid": "1cafe357-1b39-4fcc-a703-9607b958f5ef"
+      },
+      {
+        "$type": "Sungero.DataExport.ExportingObject, Sungero.DataExport",
+        "Uuid": "bea8e76a-e7b9-47de-a742-6be3c9654b12",
+        "ModuleView": {
+          "$type": "Sungero.DataExport.ExportingObjectId, Sungero.DataExport",
+          "TypeGuid": "f7cba906-f4c9-4f02-97e8-a6c6155a8ee6",
+          "Identifier": "2ded195a-2016-4a16-b2f4-7a1f7afc7e00"
+        },
+        "Number": 14,
+        "ItemType": "EntityType",
+        "NameGuid": "4cbdfb03-5462-43c4-a033-034e3d3aa095"
+      },
+      {
+        "$type": "Sungero.DataExport.ExportingObject, Sungero.DataExport",
+        "Uuid": "f961afde-2bdd-4080-9789-dc8bdcc85fc1",
+        "ModuleView": {
+          "$type": "Sungero.DataExport.ExportingObjectId, Sungero.DataExport",
+          "TypeGuid": "f7cba906-f4c9-4f02-97e8-a6c6155a8ee6",
+          "Identifier": "2ded195a-2016-4a16-b2f4-7a1f7afc7e00"
+        },
+        "Number": 15,
+        "ItemType": "EntityType",
+        "NameGuid": "32f58d8b-2a33-4eb5-813e-5cd602356b06"
+      }
+    ]
+  },
+  "Recipients": {
+    "$type": "Sungero.DataExport.ExportingObject[], Sungero.DataExport",
+    "$values": [
+      {
+        "$type": "Sungero.DataExport.ExportingObject, Sungero.DataExport",
+        "Uuid": "a95eb1ed-9d67-45f5-baff-7faed40adc34",
+        "ModuleView": {
+          "$type": "Sungero.DataExport.ExportingObjectId, Sungero.DataExport",
+          "TypeGuid": "f7cba906-f4c9-4f02-97e8-a6c6155a8ee6",
+          "Identifier": "2ded195a-2016-4a16-b2f4-7a1f7afc7e00"
+        },
+        "Recipient": {
+          "$type": "Sungero.DataExport.ExportingObjectId, Sungero.DataExport",
+          "TypeGuid": "5e9b55c2-c1f5-4e4f-aa09-7b6d461d87ed",
+          "Identifier": "e434781a-976d-48fa-9d72-805a9e9bd48f"
+        }
+      }
+    ]
+  },
+  "ExceptedRecipients": {
+    "$type": "Sungero.DataExport.ExportingObject[], Sungero.DataExport",
+    "$values": []
+  },
+  "Uuid": "2ded195a-2016-4a16-b2f4-7a1f7afc7e00",
+  "ModuleNameGuid": "89878343-4df9-4bd8-ac47-7a9a0d57718a",
+  "StoreAsDefaultSetting": true,
+  "Status": "Active"
+}

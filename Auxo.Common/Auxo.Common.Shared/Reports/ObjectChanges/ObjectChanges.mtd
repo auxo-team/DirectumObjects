@@ -1,0 +1,113 @@
+{
+  "$type": "Sungero.Metadata.ReportMetadata, Sungero.Reporting.Shared",
+  "NameGuid": "2fe780df-2961-49f9-823d-1fcf175a813d",
+  "Name": "ObjectChanges",
+  "AssociatedGuid": "89c6dc08-dd81-48e2-a327-707dd86a64cd",
+  "BaseGuid": "cef9a810-3f30-4eca-9fe3-30992af0b818",
+  "DataSources": [],
+  "DefaultExportFormat": "Pdf",
+  "ExportFormats": [
+    "Pdf"
+  ],
+  "HandledEvents": [
+    "AfterExecuteServer",
+    "BeforeExecuteServer"
+  ],
+  "IconResourcesKeys": [],
+  "Overridden": [
+    "AccessRightsMode",
+    "PublicConstants",
+    "PublicStructures",
+    "Parameters",
+    "HandledEvents",
+    "Description",
+    "DisplayName",
+    "AccessRightsMode",
+    "NonVisualAuthorizationMode"
+  ],
+  "Parameters": [
+    {
+      "NameGuid": "70d095fb-9671-4ee5-b751-42d20c19ccc1",
+      "Name": "Entity",
+      "EntityType": "89c6dc08-dd81-48e2-a327-707dd86a64cd",
+      "InternalDataTypeName": "Auxo.Common.IObjType, Sungero.Domain.Interfaces",
+      "IsRequired": true
+    },
+    {
+      "NameGuid": "e338c754-a316-4003-91b6-c1411d3cd040",
+      "Name": "ReportSessionId",
+      "InternalDataTypeName": "System.String",
+      "IsRequired": true
+    },
+    {
+      "NameGuid": "0ab0c43e-012c-4ad8-b13d-79fc64456a5f",
+      "Name": "TypeName",
+      "InternalDataTypeName": "System.String",
+      "IsRequired": true
+    }
+  ],
+  "PublicStructures": [
+    {
+      "Name": "OverrideData",
+      "IsPublic": true,
+      "Properties": [
+        {
+          "Name": "ReportSessionId",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "GroupName",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "ObjectName",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "EventName",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "ActionName",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "CompanyCode",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        }
+      ],
+      "StructureNamespace": "Auxo.Common.Structures.ObjectChanges"
+    }
+  ],
+  "ResourcesKeys": [
+    "RedefinedName",
+    "AddedName",
+    "ModifiedName",
+    "CollectionName",
+    "PropertyCollection",
+    "AddedEnumsName",
+    "PageName",
+    "GroupName",
+    "ControlName",
+    "LinkName",
+    "StateViewName",
+    "PreviewName",
+    "LabelName",
+    "TabName",
+    "SwitchName",
+    "MenuButtonName",
+    "PropertySwitchName"
+  ],
+  "Versions": [
+    {
+      "Type": "ReportMetadata",
+      "Number": 1
+    }
+  ]
+}

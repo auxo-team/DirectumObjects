@@ -1,0 +1,322 @@
+{
+  "Action_Description_008b78edb94647198a5634c7ef2dc160": {
+    "en-US": "A list of computed role members is defined using expressions and depends on the objects of a specific process: initiator, document kind, etc. You can use a role in multiple schemes, blocks, expressions, as well as in other computed roles.",
+    "ru-RU": "Состав вычисляемой роли определяется с помощью выражений и зависит от объектов процесса: инициатора, вида документа и т.д. Роль можно использовать в нескольких схемах, блоках, выражениях, а также в других вычисляемых ролях."
+  },
+  "Action_Description_0115f1adc33c4175b6382874ecc037fd": {
+    "en-US": "Directory of editable constants",
+    "ru-RU": "Справочник редактируемых констант"
+  },
+  "Action_Description_0a38c6cbc9e54861a154dbfd9332d78d": {
+    "en-US": "A view sets the items and their location on the card form and action panel. The criteria define what kind of conditions must be fulfilled to display the view when an employee opens the card.",
+    "ru-RU": "В представлении задается состав элементов и их расположение на форме карточки и панели действий. Критерии определяют, какие условия должны выполниться, чтобы представление отобразилось при открытии карточки."
+  },
+  "Action_Description_0cd5cf17fc0045ae9adbc09b6daef5b0": {
+    "en-US": "A view defines the list of system folders, startup page, and other settings of the Explorer. The configured view is displayed to a specified list of employees.",
+    "ru-RU": "В представлении задается список системных папок, стартовая страница и другие настройки проводника. Представление отображается указанному кругу лиц."
+  },
+  "Action_Description_0e25114e293141cabf7b90b9918f1344": {
+    "en-US": "Launch re-encryption if the certificate used for encrypting data secrets has been replaced, for example, due to expiration.",
+    "ru-RU": "Перешифрование необходимо запускать, если изменился сертификат шифрования секретов данных. Например, истек срок действия."
+  },
+  "Action_Description_10558f1fe33c4a908435ab4c62c44794": {
+    "en-US": "A view defines the items and cover of a module, as well as the list of employees who have access to it. Depending on the defined items, the navigation panel displays different entity types and computed folders in the module.",
+    "ru-RU": "В представлении задаются элементы и обложка модуля, а также круг лиц, которым он доступен. Элементы определяют, какие типы сущностей и вычисляемые папки отображаются в модуле на панели навигации."
+  },
+  "Action_Description_141269e4af424401bce8248fe998652e": {
+    "en-US": "Tool to track job events.",
+    "ru-RU": "Используется для отслеживания событий в фоновых процессах."
+  },
+  "Action_Description_2153aeffd0e043e19820ca6a1d5c60f6": {
+    "en-US": "Gather system information and save it to a file that can be sent to support service to receive a license key.",
+    "ru-RU": "Сбор информации о системе и сохранение ее в файл, необходимый для получения ключа лицензии от службы поддержки."
+  },
+  "Action_Description_371046a8e6f24b83bd974e792666de1d": {
+    "en-US": "Stores information about persons who substitute absent employees. Substitution is designed to delegate tasks, duties and access rights of an absent employee to another employee of your company.",
+    "ru-RU": "Замещение предназначено для передачи обязанностей и прав доступа сотрудника на время его отсутствия другому сотруднику компании."
+  },
+  "Action_Description_417721732de34565bf62b92a6b5521b0": {
+    "en-US": "Re-encrypt data using the current service secret and new data secrets. It may take a long time.",
+    "ru-RU": "Перешифрование данных с использованием актуального секрета сервиса и новых секретов данных. Может занять продолжительное время."
+  },
+  "Action_Description_56c36bf90d8a4c818f18ff2de097decb": {
+    "en-US": "Access rights for object types allow to grant users or groups access to all objects of specific type. For example, such access rights can be defined so only accountants can create new bills.",
+    "ru-RU": "С помощью настройки прав доступа на типы объектов можно назначить права сразу на все записи, относящиеся к какому-то определенному типу. Например, можно назначить группе «Бухгалтеры» права на создание и изменение записей типа «Бухгалтерский счет» без необходимости выдавать права на каждую такую запись."
+  },
+  "Action_Description_6de602f9db85432ab859cd10c54ed15d": {
+    "en-US": "Export localization of business process and interface settings into a document for editing.",
+    "ru-RU": "Экспорт позволяет выгрузить локализацию настроек бизнес-процессов и интерфейса в документ для редактирования."
+  },
+  "Action_Description_7185363d9a94419a8d185bf8f6fb1935": {
+    "en-US": "Import settings, for example, settings that were exported from another system.",
+    "ru-RU": "Импорт позволяет загрузить настройки, например, переданные из другой системы."
+  },
+  "Action_Description_72f5bb6c7aa64e2986807da554ef0eaf": {
+    "en-US": "The maintenance mode restricts user access to the system during the system update.",
+    "ru-RU": "Режим предназначен для ограничения доступа пользователей в период обновления системы."
+  },
+  "Action_Description_7785515686524e0085fa126a0d9c8d04": {
+    "en-US": "Directory with groups of editable constants",
+    "ru-RU": "Справочник с группами редактируемых констант"
+  },
+  "Action_Description_85d31579d21644d8ba4b808263a663d3": {
+    "en-US": "Import localization of business process and interface settings, for example, after editing or translating into another language.",
+    "ru-RU": "Импорт позволяет загрузить локализацию настроек бизнес-процессов и интерфейса, например, после редактирования или перевода на другой язык."
+  },
+  "Action_Description_9d86eaf82b4c403c850ed8310a881cf7": {
+    "en-US": "Export settings, for example, to move them to another system. You can export all settings or only settings of a particular type.",
+    "ru-RU": "Экспорт позволяет выгрузить настройки, например, чтобы перенести их в другую систему. Можно экспортировать все настройки или только выбранного типа."
+  },
+  "Action_Description_9f9b1ef7634e4dba92f24eea62956067": {
+    "en-US": "Stores information about accounts used to authenticate users.",
+    "ru-RU": "Учетные записи предназначены для входа пользователей в систему."
+  },
+  "Action_Description_9ff38f870c964850b0eb48592e94e8bf": {
+    "ru-RU": "В представлении задаются элементы списков и их расположение на панели действий."
+  },
+  "Action_Description_a7e54e6497ba46a79e2020e8b20842f4": {
+    "en-US": "List of users working in the system. To be able to access the system, each user must be associated with an account.",
+    "ru-RU": "Список пользователей системы. Для входа в систему пользователь должен быть связан с учетной записью."
+  },
+  "Action_Description_a8005c16185f467294efe5a74f60ce85": {
+    "en-US": "Stores information about jobs used to perform background processes on a schedule. For example, jobs are useful for sending notifications of contract expiration or for syncing data with legal document exchange services.",
+    "ru-RU": "Используются для выполнения фоновых работ по расписанию. Например, для рассылки уведомлений о завершении сроков действия договоров или периодической синхронизации данных с сервисами обмена электронными юридически значимыми документами."
+  },
+  "Action_Description_ada3ccc9e5f545d78835739c239f3e7a": {
+    "en-US": "Stores information about roles. Roles help you to group users according to their responsibilities.",
+    "ru-RU": "Роли предназначены для группировки сотрудников по функциональным обязанностям."
+  },
+  "Action_Description_b21d049cfeb14a3aaa6cc0ed5f681e9f": {
+    "en-US": "List of users logged on to the system.",
+    "ru-RU": "Список пользователей, подключенных к системе."
+  },
+  "Action_Description_b30e2afe29994bc18f3ec5644c623fa6": {
+    "ru-RU": "В настройках задаются варианты процессов и блоки, в которых используются групповые (конкурентные) задания. Настройки используются для отправки заданий и уведомлений на Сервисный портал."
+  },
+  "Action_Description_b895b19a648f4adabc383c32bd3c6588": {
+    "en-US": "Stores information about certificates used to sign documents with an electronic signature.",
+    "ru-RU": "Сертификаты предназначены для установки электронной подписи на документы."
+  },
+  "Action_Description_b8e627a5678247959620e2cf8bb547a2": {
+    "en-US": "The settings specify parameters for automatic generation of document names",
+    "ru-RU": "В настройках задаются параметры для автоматического формирования имени документов"
+  },
+  "Action_Description_bd7ef10d80dd4a27ab12055995a7ee49": {
+    "ru-RU": "В справочнике задаются результаты выполнения заданий, для которых настраивается валидация значений."
+  },
+  "Action_Description_c380d6832e3349c3b1af4a23d91fdc1f": {
+    "en-US": "A process kind includes a scheme and its selection criteria. When an employee sends a task, the system automatically selects an active process kind that meets the criteria and has the maximum priority.",
+    "ru-RU": "Вариант процесса включает в себя схему и критерии ее выбора. При отправке задачи автоматически выбирается действующий вариант процесса, который подходит по критериям и имеет максимальный приоритет."
+  },
+  "Action_Description_c7e6ec6abb5c408295e851b53483ff22": {
+    "en-US": "Access rights types define which operation a user can do with some item, if a user has such access right type for that item. For example, access rights type «Change» let users create or change items.",
+    "ru-RU": "Типы прав доступа задают, какие операции может выполнять пользователь с записью, если ему на эту запись выдан такой тип прав. Например, тип прав «Изменение» разрешает создавать и менять."
+  },
+  "Action_Description_c8abc6b755eb4b36a96c14db43388f1d": {
+    "ru-RU": "В настройках задаются параметры проверки атрибутов при выполнении заданий в ходе выполнения варианта процесса."
+  },
+  "Action_Description_c93cea88d3df4d628bdcdb7753cf68a1": {
+    "en-US": "Activation allows you to take full advantage of all acquired system features.",
+    "ru-RU": "Активация ключа лицензии позволит использовать всю приобретенную функциональность системы"
+  },
+  "Action_Description_e031a17cf2b54696adb2bd683c0a1780": {
+    "en-US": "Users can be grouped together, for example according to their departments or responsibilities. Groups are useful for access rights definition. For example, access to bill and financial reports can be granted to «Accountants» group not to each accountant separately. This way it is easy to grant required access rights to a new accountant. It is only needed to add him to «Accountants» groups.",
+    "ru-RU": "Пользователи могут быть объединены в группы, например, по организационной структуре или функциональным обязанностям. Это удобно при выдаче прав, например, чтобы выдавать права на счета и финансовые документы не отдельно каждому бухгалтеру, а только группе «Бухгалтеры», и в дальнейшем нового бухгалтера надо будет только включить в эту группу, и у него сразу будут все нужные права."
+  },
+  "Action_Description_e0ca17d6e6fc4468aa83b6b9cec64272": {
+    "en-US": "Account policies allow you to configure password complexity and rules for automatic lockout on failed login attempts.",
+    "ru-RU": "Политики учетных записей предназначены для задания сложности паролей, правил блокировки учетных записей при неудачных попытках входа в систему."
+  },
+  "Action_Description_f420e9d4601e4401bce1287263d1552b": {
+    "en-US": "Gather system information and send it to support service by email to receive a license key.",
+    "ru-RU": "Сбор информации о системе и отправка ее в службу поддержки по электронной почте для выдачи ключа лицензии."
+  },
+  "Action_Title_008b78edb94647198a5634c7ef2dc160": {
+    "en-US": "Computed Roles",
+    "ru-RU": "Вычисляемые роли"
+  },
+  "Action_Title_0115f1adc33c4175b6382874ecc037fd": {
+    "en-US": "Constants",
+    "ru-RU": "Константы"
+  },
+  "Action_Title_0a38c6cbc9e54861a154dbfd9332d78d": {
+    "en-US": "Form Views",
+    "ru-RU": "Представления форм"
+  },
+  "Action_Title_0cd5cf17fc0045ae9adbc09b6daef5b0": {
+    "en-US": "Explorer Views",
+    "ru-RU": "Представления проводника"
+  },
+  "Action_Title_0e25114e293141cabf7b90b9918f1344": {
+    "en-US": "Re-encrypt Data Secrets",
+    "ru-RU": "Перешифровать секреты данных"
+  },
+  "Action_Title_10558f1fe33c4a908435ab4c62c44794": {
+    "en-US": "Module Views",
+    "ru-RU": "Представления модулей"
+  },
+  "Action_Title_141269e4af424401bce8248fe998652e": {
+    "en-US": "Job Log",
+    "ru-RU": "Журнал"
+  },
+  "Action_Title_2153aeffd0e043e19820ca6a1d5c60f6": {
+    "en-US": "Save License Key Request to File",
+    "ru-RU": "Сохранить запрос ключа лицензии в файл"
+  },
+  "Action_Title_371046a8e6f24b83bd974e792666de1d": {
+    "en-US": "Substitution",
+    "ru-RU": "Замещения"
+  },
+  "Action_Title_417721732de34565bf62b92a6b5521b0": {
+    "en-US": "Re-encrypt Data",
+    "ru-RU": "Перешифровать данные"
+  },
+  "Action_Title_56c36bf90d8a4c818f18ff2de097decb": {
+    "en-US": "Set Access Rights to Object Types",
+    "ru-RU": "Настроить права доступа на типы объектов"
+  },
+  "Action_Title_6de602f9db85432ab859cd10c54ed15d": {
+    "en-US": "Export Localization Strings",
+    "ru-RU": "Экспорт строк локализации"
+  },
+  "Action_Title_7185363d9a94419a8d185bf8f6fb1935": {
+    "en-US": "Import Settings",
+    "ru-RU": "Импорт настроек"
+  },
+  "Action_Title_72f5bb6c7aa64e2986807da554ef0eaf": {
+    "en-US": "Maintenance Mode",
+    "ru-RU": "Режим технического обслуживания"
+  },
+  "Action_Title_7785515686524e0085fa126a0d9c8d04": {
+    "en-US": "Constant groups",
+    "ru-RU": "Группы констант"
+  },
+  "Action_Title_85d31579d21644d8ba4b808263a663d3": {
+    "en-US": "Import Localization Strings",
+    "ru-RU": "Импорт строк локализации"
+  },
+  "Action_Title_9d86eaf82b4c403c850ed8310a881cf7": {
+    "en-US": "Export Settings",
+    "ru-RU": "Экспорт настроек"
+  },
+  "Action_Title_9f9b1ef7634e4dba92f24eea62956067": {
+    "en-US": "Accounts",
+    "ru-RU": "Учетные записи"
+  },
+  "Action_Title_9ff38f870c964850b0eb48592e94e8bf": {
+    "en-US": "Action",
+    "ru-RU": "Представления списков"
+  },
+  "Action_Title_a7e54e6497ba46a79e2020e8b20842f4": {
+    "en-US": "Users",
+    "ru-RU": "Пользователи"
+  },
+  "Action_Title_a8005c16185f467294efe5a74f60ce85": {
+    "en-US": "Jobs",
+    "ru-RU": "Фоновые процессы"
+  },
+  "Action_Title_ada3ccc9e5f545d78835739c239f3e7a": {
+    "en-US": "Roles",
+    "ru-RU": "Роли"
+  },
+  "Action_Title_b21d049cfeb14a3aaa6cc0ed5f681e9f": {
+    "en-US": "Active Users",
+    "ru-RU": "Активные пользователи"
+  },
+  "Action_Title_b30e2afe29994bc18f3ec5644c623fa6": {
+    "en-US": "Group tasks settings",
+    "ru-RU": "Настройки групповых заданий"
+  },
+  "Action_Title_b895b19a648f4adabc383c32bd3c6588": {
+    "en-US": "Public Key Certificates",
+    "ru-RU": "Цифровые сертификаты"
+  },
+  "Action_Title_b8e627a5678247959620e2cf8bb547a2": {
+    "en-US": "Document name settings",
+    "ru-RU": "Настройки наименование документов"
+  },
+  "Action_Title_bd7ef10d80dd4a27ab12055995a7ee49": {
+    "en-US": "Results of execution",
+    "ru-RU": "Результаты выполнения"
+  },
+  "Action_Title_c380d6832e3349c3b1af4a23d91fdc1f": {
+    "en-US": "Process Kinds",
+    "ru-RU": "Варианты процессов"
+  },
+  "Action_Title_c7e6ec6abb5c408295e851b53483ff22": {
+    "en-US": "Access Rights Types",
+    "ru-RU": "Типы прав доступа"
+  },
+  "Action_Title_c8abc6b755eb4b36a96c14db43388f1d": {
+    "en-US": "Settings up assignments validation",
+    "ru-RU": "Настройки валидации заданий"
+  },
+  "Action_Title_c93cea88d3df4d628bdcdb7753cf68a1": {
+    "en-US": "Activate License",
+    "ru-RU": "Активировать ключ лицензии"
+  },
+  "Action_Title_e031a17cf2b54696adb2bd683c0a1780": {
+    "en-US": "Groups",
+    "ru-RU": "Группы"
+  },
+  "Action_Title_e0ca17d6e6fc4468aa83b6b9cec64272": {
+    "en-US": "Account Policies",
+    "ru-RU": "Политики учетных записей"
+  },
+  "Action_Title_f420e9d4601e4401bce1287263d1552b": {
+    "en-US": "Request License Key by Email",
+    "ru-RU": "Отправить запрос ключа лицензии по почте"
+  },
+  "Description": {},
+  "Group_Title_33ac7c5c653f4d629b17263271af7927": {
+    "en-US": "Access rights",
+    "ru-RU": "Права доступа"
+  },
+  "Group_Title_36b75684773a4e88a82fd130b68ef0e3": {
+    "en-US": "License",
+    "ru-RU": "Лицензия"
+  },
+  "Group_Title_624be04f9b79494daa84a3af4cc2c544": {
+    "en-US": "Editable constants",
+    "ru-RU": "Редактируемые константы"
+  },
+  "Group_Title_8424b252cc6f49e4a8e2b39b9079df3d": {
+    "en-US": "Processes and Interface",
+    "ru-RU": "Процессы и интерфейс"
+  },
+  "Group_Title_a48b71c017e742e4a5b01d39bbd24dde": {
+    "en-US": "Jobs",
+    "ru-RU": "Фоновые процессы"
+  },
+  "Group_Title_a84852fafaff418d923a3be03335c128": {
+    "en-US": "Expanding No-Code tools",
+    "ru-RU": "Расширение инструментов No-Code"
+  },
+  "Group_Title_c363fa8d2d994abcbeb7021699c30d18": {
+    "en-US": "Localization of Settings",
+    "ru-RU": "Локализация настроек"
+  },
+  "Group_Title_ed6da497627b4a6d8a71c80286a178dd": {
+    "en-US": "Users and groups",
+    "ru-RU": "Пользователи и группы"
+  },
+  "Group_Title_f95b63b1ff364e51b19f15230824b9e6": {
+    "en-US": "Encryption",
+    "ru-RU": "Шифрование"
+  },
+  "Header_Description_d40f05812a1d49dab7e97583e0a23032": {
+    "en-US": "This module is where you can perform various administrative tasks such as register new users, manage user substitution and set access rights.",
+    "ru-RU": "Модуль предназначен для выполнения административных задач, таких как регистрация нового пользователя или настройка прав доступа."
+  },
+  "Header_Title_d40f05812a1d49dab7e97583e0a23032": {
+    "en-US": "Administration",
+    "ru-RU": "Администрирование"
+  },
+  "Name": {
+    "en-US": "Administration",
+    "ru-RU": "Администрирование"
+  },
+  "Tab_Title_9d1a463fdf1e405b814a1c3f875f60c3": {
+    "en-US": "Tab"
+  }
+}

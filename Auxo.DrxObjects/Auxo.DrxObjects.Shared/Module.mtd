@@ -1,0 +1,62 @@
+{
+  "$type": "Sungero.Metadata.SolutionMetadata, Sungero.Metadata",
+  "NameGuid": "89878343-4df9-4bd8-ac47-7a9a0d57718a",
+  "Name": "DrxObjects",
+  "AsyncHandlers": [],
+  "ClientAssemblyName": "Auxo.DrxObjects.Client",
+  "ClientBaseAssemblyName": "Auxo.DrxObjects.ClientBase",
+  "ClientBaseNamespace": "Auxo.DrxObjects.ClientBase",
+  "ClientNamespace": "Auxo.DrxObjects.Client",
+  "Code": "DrxObje",
+  "CompanyCode": "Auxo",
+  "Cover": {
+    "NameGuid": "637d1523-9a31-44ab-ae51-d8b78666b9b4",
+    "Actions": [],
+    "Background": null,
+    "Footer": {
+      "NameGuid": "40b44f36-1dfc-4fb3-b84f-1fd0da8318e7",
+      "BackgroundPosition": "Stretch"
+    },
+    "Groups": [],
+    "Header": {
+      "NameGuid": "e4995566-1dff-4721-866f-ae6b2511c68e",
+      "BackgroundPosition": "Stretch"
+    },
+    "RemoteControls": [],
+    "Tabs": []
+  },
+  "DesktopViews": [],
+  "IconResourcesKeys": [],
+  "Importance": "Medium",
+  "InterfaceAssemblyName": "Sungero.Domain.Interfaces",
+  "InterfaceNamespace": "Auxo.DrxObjects",
+  "IsolatedAssemblyName": "Auxo.DrxObjects.Isolated",
+  "IsolatedNamespace": "Auxo.DrxObjects.Isolated",
+  "IsVisible": false,
+  "OrderedSpecialFolders": [],
+  "PublicStructures": [],
+  "ResourceInterfaceAssemblyName": "Sungero.Domain.Interfaces",
+  "ResourceInterfaceNamespace": "Auxo.DrxObjects",
+  "ResourcesKeys": [],
+  "ServerAssemblyName": "Auxo.DrxObjects.Server",
+  "ServerNamespace": "Auxo.DrxObjects.Server",
+  "SharedAssemblyName": "Auxo.DrxObjects.Shared",
+  "SharedNamespace": "Auxo.DrxObjects.Shared",
+  "SpecialFolders": [],
+  "Version": "0.0.1.0",
+  "Widgets": [],
+  "Versions": [
+    {
+      "Type": "SolutionMetadata",
+      "Number": 8
+    },
+    {
+      "Type": "ModuleMetadata",
+      "Number": 8
+    },
+    {
+      "Type": "DomainApi",
+      "Number": 3
+    }
+  ]
+}

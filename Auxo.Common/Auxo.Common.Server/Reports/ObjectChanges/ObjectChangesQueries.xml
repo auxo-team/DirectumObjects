@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<queries>
+  <query key="CreateSourceTable">
+    <mssql><![CDATA[CREATE Table {0}
+([ReportSessionId] [varchar](256) NOT NULL,
+ [GroupName] [varchar](50) NULL,
+ [ObjectName] [varchar](max) NULL,
+ [EventName] [varchar](max) NULL,
+ [ActionName] [varchar](50) NULL,
+ [CompanyCode] [varchar](50) NULL)]]></mssql>
+    <postgres><![CDATA[CREATE Table {0}
+(ReportSessionId varchar(256) NOT NULL,
+ GroupName citext,
+ ObjectName citext,
+ EventName citext,
+ ActionName citext,
+ CompanyCode citext)]]></postgres>
+  </query>
+  <query key="SelectData">
+    <default><![CDATA[Select 
+  GroupName, ObjectName, EventName, ActionName, CompanyCode
+FROM 
+  Auxo_ReportChanges
+Where
+  ReportSessionId = @ReportSessionId]]></default>
+  </query>
+  <query key="SelectCompany">
+    <default><![CDATA[Select DISTINCT
+  CompanyCode
+FROM 
+  Auxo_ReportChanges
+Where
+  ReportSessionId = @ReportSessionId]]></default>
+  </query>
+</queries>

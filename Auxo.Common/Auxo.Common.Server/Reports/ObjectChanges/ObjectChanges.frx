@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReferencedAssemblies="System.dll&#13;&#10;System.Core.dll&#13;&#10;System.Drawing.dll&#13;&#10;System.Windows.Forms.dll&#13;&#10;System.Data.dll&#13;&#10;System.Xml.dll&#13;&#10;Sungero.Domain.Shared&#13;&#10;Sungero.CoreEntities.Shared&#13;&#10;Sungero.Reporting.Shared&#13;&#10;CommonLibrary&#13;&#10;Sungero.Localization&#13;&#10;Sungero.Declension&#13;&#10;Auxo.Common.Shared&#13;&#10;Auxo.Common.Server&#13;&#10;Sungero.Domain.Interfaces" ReportInfo.CreatorVersion="2020.2.12.0">
+  <ScriptText>using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text.RegularExpressions;
+using System.Windows.Forms;
+using FastReport;
+using FastReport.Data;
+using FastReport.Dialog;
+using FastReport.Barcode;
+using FastReport.Table;
+using FastReport.Utils;
+using Auxo.Common;
+using Sungero.Domain.Shared;
+using Sungero.CoreEntities;
+using Sungero.Core;
+using Resources = Auxo.Common.Reports.Resources;
+
+
+namespace FastReport
+{
+  public class ReportScript
+  {
+  }
+}
+  </ScriptText>
+  <Dictionary>
+    <SungeroSqlDataConnection Name="Sungero_Connection" Restrictions="DontModify, DontEdit, DontDelete, HideAllProperties" ConnectionStringExpression="[SungeroConnectionString]">
+      <TableDataSource Name="Table1" Alias="Data" DataType="System.Int32" Enabled="true" CanEdit="true" SelectCommand="${SelectData}">
+        <Column Name="ObjectName" DataType="System.String" PropName="Column"/>
+        <Column Name="EventName" DataType="System.String" PropName="Column1"/>
+        <Column Name="ActionName" DataType="System.String" PropName="Column2"/>
+        <Column Name="GroupName" DataType="System.String" PropName="Column"/>
+        <Column Name="CompanyCode" DataType="System.String" PropName="Column"/>
+        <CommandParameter Name="ReportSessionId" DataType="16" IsDbType="true" Expression="[ReportSessionId]"/>
+      </TableDataSource>
+      <TableDataSource Name="Table" Alias="Company" DataType="System.Int32" Enabled="true" CanEdit="true" SelectCommand="${SelectCompany}">
+        <Column Name="CompanyCode" DataType="System.String" PropName="Column"/>
+        <CommandParameter Name="ReportSessionId" DataType="16" IsDbType="true" Expression="[ReportSessionId]"/>
+      </TableDataSource>
+    </SungeroSqlDataConnection>
+    <SungeroParameter Name="SungeroConnectionString" Restrictions="DontModify, DontEdit, DontDelete, HideAllProperties, DontShow" Id="50edd469-45ed-47d6-bcca-3600f43f9001" IsRequired="false" IsCollection="false" InternalDataType="System.String" IsSimpleDataType="false" EntityTypeId="00000000-0000-0000-0000-000000000000"/>
+    <SungeroParameter Name="Entity" Restrictions="DontModify, DontEdit, DontDelete" Id="70d095fb-9671-4ee5-b751-42d20c19ccc1" IsRequired="true" IsCollection="false" InternalDataType="Auxo.Common.IObjType, Sungero.Domain.Interfaces" IsSimpleDataType="false" EntityTypeId="89c6dc08-dd81-48e2-a327-707dd86a64cd"/>
+    <SungeroParameter Name="ReportSessionId" Id="e338c754-a316-4003-91b6-c1411d3cd040" IsRequired="true" IsCollection="false" InternalDataType="System.String" IsSimpleDataType="false" EntityTypeId="00000000-0000-0000-0000-000000000000"/>
+    <SungeroParameter Name="TypeName" Id="0ab0c43e-012c-4ad8-b13d-79fc64456a5f" IsRequired="true" IsCollection="false" InternalDataType="System.String" IsSimpleDataType="false" EntityTypeId="00000000-0000-0000-0000-000000000000"/>
+  </Dictionary>
+  <ReportPage Name="Main" Watermark.Font="Arial, 60pt">
+    <ReportTitleBand Name="ReportTitle" Width="718.2" Height="75.6" CanGrow="true">
+      <TextObject Name="Title" Width="718.2" Height="18.9" CanGrow="true" Text="[TypeName] &quot;[[Entity].LocalizedName]&quot; ([[Entity].Name])" HorzAlign="Center" VertAlign="Center" Font="Arial, 12pt" TextRenderType="HtmlTags"/>
+      <TextObject Name="Empty1" Top="18.9" Width="94.5" Height="18.9" Font="Arial, 10pt" TextRenderType="HtmlTags"/>
+      <TextObject Name="DateTime" Top="37.8" Width="718.2" Height="18.9" Text="Дата и время отчета: [Calendar.Now]" VertAlign="Center" Font="Arial, 10pt" TextRenderType="HtmlTags"/>
+      <TextObject Name="Empty2" Top="56.7" Width="94.5" Height="18.9" Font="Arial, 10pt" TextRenderType="HtmlTags"/>
+    </ReportTitleBand>
+    <DataBand Name="Data1" Top="79.6" Width="718.2" Height="28.35" CanGrow="true" CanShrink="true" DataSource="Table">
+      <TextObject Name="Text38" Width="718.2" Height="18.9" Text="Код компании: [Company.CompanyCode]" Font="Arial, 12pt, style=Bold" TextRenderType="HtmlTags"/>
+      <TextObject Name="Text1" Top="18.9" Width="94.5" Height="9.45" Font="Arial, 12pt, style=Bold" TextRenderType="HtmlTags"/>
+      <DataBand Name="HandledData" Top="134.85" Width="718.2" Height="18.9" CanGrow="true" CanShrink="true" CanBreak="true" DataSource="Table1" Filter="[Data.GroupName] == &quot;HandledEvents&quot; &amp;&amp; [Data.CompanyCode] == [Company.CompanyCode]">
+        <TextObject Name="Text5" Width="519.75" Height="18.9" Border.Lines="All" CanGrow="true" CanShrink="true" GrowToBottom="true" Text="[Data.ObjectName]" Font="Arial, 10pt" TextRenderType="HtmlTags"/>
+        <TextObject Name="Text6" Left="519.75" Width="198.45" Height="18.9" Border.Lines="All" CanGrow="true" CanShrink="true" GrowToBottom="true" Text="[Data.ActionName]" Font="Arial, 10pt" TextRenderType="HtmlTags"/>
+        <DataHeaderBand Name="HandledHeader" Top="111.95" Width="718.2" Height="18.9">
+          <TextObject Name="Text3" Width="519.75" Height="18.9" Border.Lines="All" Text="Наименование события/параметра" HorzAlign="Center" Font="Arial, 10pt, style=Bold" TextRenderType="HtmlTags"/>
+          <TextObject Name="Text4" Left="519.75" Width="198.45" Height="18.9" Border.Lines="All" Text="Действие" HorzAlign="Center" Font="Arial, 10pt, style=Bold" TextRenderType="HtmlTags"/>
+        </DataHeaderBand>
+        <DataFooterBand Name="HandledFooter" Top="157.75" Width="718.2" Height="18.9">
+          <TextObject Name="Text17" Width="94.5" Height="18.9" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold" TextRenderType="HtmlTags"/>
+        </DataFooterBand>
+      </DataBand>
+      <DataBand Name="PropertiesData" Top="203.55" Width="718.2" Height="18.9" CanGrow="true" CanShrink="true" CanBreak="true" DataSource="Table1" Filter="[Data.GroupName] == &quot;Properties&quot; &amp;&amp; [Data.CompanyCode] == [Company.CompanyCode]">
+        <TextObject Name="Text13" Left="519.75" Width="198.45" Height="18.9" Border.Lines="All" CanGrow="true" CanShrink="true" GrowToBottom="true" Text="[Data.ActionName]" Font="Arial, 10pt" TextRenderType="HtmlTags"/>
+        <TextObject Name="Text15" Width="283.5" Height="18.9" Border.Lines="All" CanGrow="true" CanShrink="true" GrowToBottom="true" Text="[Data.ObjectName]" Font="Arial, 10pt" TextRenderType="HtmlTags"/>
+        <TextObject Name="Text16" Left="283.5" Width="236.25" Height="18.9" Border.Lines="All" CanGrow="true" CanShrink="true" GrowToBottom="true" Text="[Data.EventName]" Font="Arial, 10pt" TextRenderType="HtmlTags"/>
+        <DataHeaderBand Name="PropertiesHeader" Top="180.65" Width="718.2" Height="18.9">
+          <TextObject Name="Text11" Width="283.5" Height="18.9" Border.Lines="All" Text="Наименование свойства" HorzAlign="Center" Font="Arial, 10pt, style=Bold" TextRenderType="HtmlTags"/>
+          <TextObject Name="Text12" Left="519.75" Width="198.45" Height="18.9" Border.Lines="All" Text="Действие" HorzAlign="Center" Font="Arial, 10pt, style=Bold" TextRenderType="HtmlTags"/>
+          <TextObject Name="Text14" Left="283.5" Width="236.25" Height="18.9" Border.Lines="All" Text="Событие/Параметр" HorzAlign="Center" Font="Arial, 10pt, style=Bold" TextRenderType="HtmlTags"/>
+        </DataHeaderBand>
+        <DataFooterBand Name="PropertiesFooter" Top="226.45" Width="718.2" Height="18.9">
+          <TextObject Name="Text18" Width="94.5" Height="18.9" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold" TextRenderType="HtmlTags"/>
+        </DataFooterBand>
+      </DataBand>
+      <DataBand Name="ActionsData" Top="272.25" Width="718.2" Height="18.9" CanGrow="true" CanShrink="true" CanBreak="true" DataSource="Table1" Filter="[Data.GroupName] == &quot;Actions&quot; &amp;&amp; [Data.CompanyCode] == [Company.CompanyCode]">
+        <TextObject Name="Text22" Left="519.75" Width="198.45" Height="18.9" Border.Lines="All" CanGrow="true" CanShrink="true" GrowToBottom="true" Text="[Data.ActionName]" Font="Arial, 10pt" TextRenderType="HtmlTags"/>
+        <TextObject Name="Text23" Width="283.5" Height="18.9" Border.Lines="All" CanGrow="true" CanShrink="true" GrowToBottom="true" Text="[Data.ObjectName]" Font="Arial, 10pt" TextRenderType="HtmlTags"/>
+        <TextObject Name="Text24" Left="283.5" Width="236.25" Height="18.9" Border.Lines="All" CanGrow="true" CanShrink="true" GrowToBottom="true" Text="[Data.EventName]" Font="Arial, 10pt" TextRenderType="HtmlTags"/>
+        <DataHeaderBand Name="ActionsHeader" Top="249.35" Width="718.2" Height="18.9">
+          <TextObject Name="Text19" Width="283.5" Height="18.9" Border.Lines="All" Text="Наименование действия" HorzAlign="Center" Font="Arial, 10pt, style=Bold" TextRenderType="HtmlTags"/>
+          <TextObject Name="Text20" Left="519.75" Width="198.45" Height="18.9" Border.Lines="All" Text="Действие" HorzAlign="Center" Font="Arial, 10pt, style=Bold" TextRenderType="HtmlTags"/>
+          <TextObject Name="Text21" Left="283.5" Width="236.25" Height="18.9" Border.Lines="All" Text="Событие/Параметр" HorzAlign="Center" Font="Arial, 10pt, style=Bold" TextRenderType="HtmlTags"/>
+        </DataHeaderBand>
+        <DataFooterBand Name="ActionsFooter" Top="295.15" Width="718.2" Height="18.9">
+          <TextObject Name="Text25" Width="94.5" Height="18.9" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold" TextRenderType="HtmlTags"/>
+        </DataFooterBand>
+      </DataBand>
+      <GroupHeaderBand Name="FormsGroup" Top="340.95" Width="718.2" Height="18.9" Condition="[Data.EventName]">
+        <TextObject Name="Text31" Width="718.2" Height="18.9" Border.Lines="All" CanGrow="true" CanShrink="true" GrowToBottom="true" Text="[Data.EventName]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold" TextRenderType="HtmlTags"/>
+        <DataHeaderBand Name="FormsHeader" Top="318.05" Width="718.2" Height="18.9">
+          <TextObject Name="Text27" Width="519.75" Height="18.9" Border.Lines="All" Text="Наименование элемента формы" HorzAlign="Center" Font="Arial, 10pt, style=Bold" TextRenderType="HtmlTags"/>
+          <TextObject Name="Text28" Left="519.75" Width="198.45" Height="18.9" Border.Lines="All" Text="Действие" HorzAlign="Center" Font="Arial, 10pt, style=Bold" TextRenderType="HtmlTags"/>
+        </DataHeaderBand>
+        <DataBand Name="FormsData" Top="363.85" Width="718.2" Height="18.9" CanGrow="true" CanShrink="true" CanBreak="true" DataSource="Table1" Filter="[Data.GroupName] == &quot;Forms&quot; &amp;&amp; [Data.CompanyCode] == [Company.CompanyCode]">
+          <TextObject Name="Text29" Width="519.75" Height="18.9" Border.Lines="All" CanGrow="true" CanShrink="true" GrowToBottom="true" Text="[Data.ObjectName]" Font="Arial, 10pt" TextRenderType="HtmlTags"/>
+          <TextObject Name="Text30" Left="519.75" Width="198.45" Height="18.9" Border.Lines="All" CanGrow="true" CanShrink="true" GrowToBottom="true" Text="[Data.ActionName]" Font="Arial, 10pt" TextRenderType="HtmlTags"/>
+        </DataBand>
+        <DataFooterBand Name="FormsFooter" Top="386.75" Width="718.2" Height="18.9">
+          <TextObject Name="Text26" Width="94.5" Height="18.9" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold" TextRenderType="HtmlTags"/>
+        </DataFooterBand>
+      </GroupHeaderBand>
+      <GroupHeaderBand Name="RibbonGroup" Top="432.55" Width="718.2" Height="18.9" Condition="[Data.EventName]">
+        <TextObject Name="Text37" Width="718.2" Height="18.9" Border.Lines="All" CanGrow="true" CanShrink="true" GrowToBottom="true" Text="[Data.EventName]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold" TextRenderType="HtmlTags"/>
+        <DataHeaderBand Name="RibbonHeader" Top="409.65" Width="718.2" Height="18.9">
+          <TextObject Name="Text33" Width="519.75" Height="18.9" Border.Lines="All" Text="Наименование кнопки ленты" HorzAlign="Center" Font="Arial, 10pt, style=Bold" TextRenderType="HtmlTags"/>
+          <TextObject Name="Text34" Left="519.75" Width="198.45" Height="18.9" Border.Lines="All" Text="Действие" HorzAlign="Center" Font="Arial, 10pt, style=Bold" TextRenderType="HtmlTags"/>
+        </DataHeaderBand>
+        <DataBand Name="RibbonData" Top="455.45" Width="718.2" Height="18.9" CanGrow="true" CanShrink="true" CanBreak="true" DataSource="Table1" Filter="[Data.GroupName] == &quot;RibbonActions&quot; &amp;&amp; [Data.CompanyCode] == [Company.CompanyCode]">
+          <TextObject Name="Text35" Width="519.75" Height="18.9" Border.Lines="All" CanGrow="true" CanShrink="true" GrowToBottom="true" Text="[Data.ObjectName]" Font="Arial, 10pt" TextRenderType="HtmlTags"/>
+          <TextObject Name="Text36" Left="519.75" Width="198.45" Height="18.9" Border.Lines="All" CanGrow="true" CanShrink="true" GrowToBottom="true" Text="[Data.ActionName]" Font="Arial, 10pt" TextRenderType="HtmlTags"/>
+        </DataBand>
+        <DataFooterBand Name="RibbonFooter" Top="478.35" Width="718.2" Height="18.9">
+          <TextObject Name="Text32" Width="94.5" Height="18.9" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold" TextRenderType="HtmlTags"/>
+        </DataFooterBand>
+      </GroupHeaderBand>
+    </DataBand>
+  </ReportPage>
+</Report>

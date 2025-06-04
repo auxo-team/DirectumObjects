@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<queries>
+  <query key="CheckTable">
+    <default><![CDATA[SELECT 
+	Count(*) 
+FROM 
+	INFORMATION_SCHEMA.TABLES 
+WHERE 
+	TABLE_NAME = '{0}']]></default>
+  </query>
+</queries>

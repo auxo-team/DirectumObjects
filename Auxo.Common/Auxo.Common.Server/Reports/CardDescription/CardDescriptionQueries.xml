@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<queries>
+  <query key="CreateSourceTable">
+    <mssql><![CDATA[CREATE Table {0}
+([ReportSessionId] [varchar](256) NOT NULL,
+ [GroupNum] int,
+ [GroupName] [varchar](max) NULL,
+ [PropertyName] [varchar](max) NULL,
+ [TypeInfo] [varchar](max) NULL,
+ [IsRequired] [varchar](10) NOT NULL,
+ [IsEnabled] [varchar](10) NOT NULL,
+ [IsVisibility] [varchar](10) NOT NULL,
+ [CanBeSearch] [varchar](10) NOT NULL,
+ [ValuesInfo] [varchar](max) NULL)]]></mssql>
+    <postgres><![CDATA[CREATE Table {0}
+(ReportSessionId varchar(256) NOT NULL,
+ GroupNum int,
+ GroupName citext,
+ PropertyName citext,
+ TypeInfo citext,
+ IsRequired varchar(10) NOT NULL,
+ IsEnabled varchar(10) NOT NULL,
+ IsVisibility varchar(10) NOT NULL,
+ CanBeSearch varchar(10) NOT NULL,
+ ValuesInfo citext)]]></postgres>
+  </query>
+  <query key="SelectGroups">
+    <default><![CDATA[Select DISTINCT
+  GroupNum, GroupName
+FROM 
+  Auxo_ReportCardDescription
+Where
+  ReportSessionId = @ReportSessionId]]></default>
+  </query>
+  <query key="SelectData">
+    <default><![CDATA[Select 
+  GroupNum, PropertyName, TypeInfo, IsRequired, IsEnabled, IsVisibility, CanBeSearch, ValuesInfo
+FROM 
+  Auxo_ReportCardDescription
+Where
+  ReportSessionId = @ReportSessionId]]></default>
+  </query>
+</queries>

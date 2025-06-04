@@ -1,0 +1,58 @@
+{
+  "$type": "Sungero.Metadata.ReportMetadata, Sungero.Reporting.Shared",
+  "NameGuid": "e6a11255-1dce-4b2f-84ad-95b002f5f678",
+  "Name": "CardDescription",
+  "AccessRightsMode": "NoRight",
+  "AssociatedGuid": "89c6dc08-dd81-48e2-a327-707dd86a64cd",
+  "BaseGuid": "cef9a810-3f30-4eca-9fe3-30992af0b818",
+  "DataSources": [],
+  "DefaultExportFormat": "Pdf",
+  "ExportFormats": [
+    "Pdf"
+  ],
+  "HandledEvents": [
+    "AfterExecuteServer",
+    "BeforeExecuteServer"
+  ],
+  "IconResourcesKeys": [],
+  "IntegrationServiceName": "CommonCardDescription",
+  "Overridden": [
+    "AccessRightsMode",
+    "PublicConstants",
+    "PublicStructures",
+    "Description",
+    "DisplayName",
+    "HandledEvents",
+    "Parameters"
+  ],
+  "Parameters": [
+    {
+      "NameGuid": "1bfd6cab-d751-43e8-82e0-d2e9102edf72",
+      "Name": "Entity",
+      "EntityType": "89c6dc08-dd81-48e2-a327-707dd86a64cd",
+      "InternalDataTypeName": "Auxo.Common.IObjType, Sungero.Domain.Interfaces",
+      "IsRequired": true
+    },
+    {
+      "NameGuid": "70e4cd22-84be-410f-8404-ae4d3352294a",
+      "Name": "ReportSessionId",
+      "InternalDataTypeName": "System.String",
+      "IsRequired": true
+    },
+    {
+      "NameGuid": "701c63c3-d52d-4e1b-98d7-31f5170465f6",
+      "Name": "TypeName",
+      "InternalDataTypeName": "System.String",
+      "IsRequired": true
+    }
+  ],
+  "PublicStructures": [],
+  "ResourcesKeys": [
+    "MainGroupName",
+    "Yes",
+    "No",
+    "CollectionName",
+    "ReportName"
+  ],
+  "Versions": []
+}

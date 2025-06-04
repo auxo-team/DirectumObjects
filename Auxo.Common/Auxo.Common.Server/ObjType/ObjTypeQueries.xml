@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<queries>
+  <query key="SelectCleanEntityTypes">
+    <mssql><![CDATA[SELECT 
+  eType.id
+FROM 
+  auxo_validat_objtype As eType
+LEFT JOIN [dbo].[Sungero_System_EntityType] As sType ON convert(nvarchar(36), sType.[TypeGuid]) = eType.entityguid
+WHERE
+	sType.[TypeGuid] IS NULL]]></mssql>
+    <postgres><![CDATA[SELECT 
+  eType.id
+FROM 
+  auxo_nccmn_objtype As eType
+LEFT JOIN Sungero_System_EntityType As sType ON sType.TypeGuid::text = eType.entityguid
+WHERE
+	sType.TypeGuid IS NULL]]></postgres>
+  </query>
+  <query key="SelectTypeGuids">
+    <mssql><![CDATA[SELECT 
+  [TypeGuid]
+FROM 
+  [dbo].[Sungero_System_EntityType]
+WHERE
+  [TypeGuid] not in ('{0}')]]></mssql>
+    <postgres><![CDATA[SELECT 
+  TypeGuid
+FROM 
+  Sungero_System_EntityType
+WHERE
+  TypeGuid not in ('{0}')]]></postgres>
+  </query>
+</queries>

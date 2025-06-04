@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Property_Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="DisplayName" xml:space="preserve">
+    <value>Entity property</value>
+  </data>
+  <data name="AccusativeDisplayName" xml:space="preserve">
+    <value>Entity property</value>
+  </data>
+  <data name="CollectionDisplayName" xml:space="preserve">
+    <value>Entities properties</value>
+  </data>
+  <data name="Property_ObjType" xml:space="preserve">
+    <value>Type of entity</value>
+  </data>
+  <data name="Property_PropertyGuid" xml:space="preserve">
+    <value>Guid property</value>
+  </data>
+  <data name="Property_LocalizedName" xml:space="preserve">
+    <value>Localized name</value>
+  </data>
+  <data name="Property_PropertyType" xml:space="preserve">
+    <value>Property type</value>
+  </data>
+  <data name="Enum_PropertyType_AxBoolean" xml:space="preserve">
+    <value>Boolean</value>
+  </data>
+  <data name="Enum_PropertyType_AxCollection" xml:space="preserve">
+    <value>Collection</value>
+  </data>
+  <data name="Enum_PropertyType_AxDate" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="Enum_PropertyType_AxDateTime" xml:space="preserve">
+    <value>DateTime</value>
+  </data>
+  <data name="Enum_PropertyType_AxDouble" xml:space="preserve">
+    <value>Double number</value>
+  </data>
+  <data name="Enum_PropertyType_AxEnumeration" xml:space="preserve">
+    <value>Enumeration</value>
+  </data>
+  <data name="Enum_PropertyType_AxInteger" xml:space="preserve">
+    <value>Integer number</value>
+  </data>
+  <data name="Enum_PropertyType_AxNavigation" xml:space="preserve">
+    <value>Navigation</value>
+  </data>
+  <data name="Enum_PropertyType_AxString" xml:space="preserve">
+    <value>String</value>
+  </data>
+  <data name="Enum_PropertyType_AxText" xml:space="preserve">
+    <value>Text</value>
+  </data>
+  <data name="Enum_PropertyType_AxMonthYear" xml:space="preserve">
+    <value>Year and month</value>
+  </data>
+  <data name="Enum_PropertyType_AxYear" xml:space="preserve">
+    <value>Year</value>
+  </data>
+  <data name="Property_Parent" xml:space="preserve">
+    <value>Collection</value>
+  </data>
+  <data name="Property_NavigationGuid" xml:space="preserve">
+    <value>Guid type of link property</value>
+  </data>
+  <data name="Enum_PropertyType_AxLongInteger" xml:space="preserve">
+    <value>Identifier</value>
+  </data>
+  <data name="Enum_PropertyType_AxImage" xml:space="preserve">
+    <value>Image</value>
+  </data>
+  <data name="Enum_PropertyType_AxData" xml:space="preserve">
+    <value>Data</value>
+  </data>
+  <data name="Enum_PropertyType_AxEntityType" xml:space="preserve">
+    <value>Entity type</value>
+  </data>
+  <data name="Enum_PropertyType_AxBinaryData" xml:space="preserve">
+    <value>Binary data</value>
+  </data>
+  <data name="Property_PropertyTypeString" xml:space="preserve">
+    <value>Property type (string)</value>
+  </data>
+  <data name="AdditionalInfoTemplate" xml:space="preserve">
+    <value>[PropertyTypeString] - [Name]</value>
+  </data>
+  <data name="Action_ChildProperties" xml:space="preserve">
+    <value>Child properties</value>
+  </data>
+  <data name="Action_ChildPropertiesDescription" xml:space="preserve">
+    <value>Opens a list of child properties</value>
+  </data>
+  <data name="Action_ChildPropertiesHint" xml:space="preserve">
+    <value>Show child properties</value>
+  </data>
+  <data name="Action_ChildPropertiesConfirmationMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Action_ChildPropertiesConfirmationDescription" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Ribbon_RelatedData_e13cc6113a444da5b2d18c7c36d6b127" xml:space="preserve">
+    <value>Related data</value>
+  </data>
+  <data name="Action_OpenTypeLink" xml:space="preserve">
+    <value>Open link card</value>
+  </data>
+  <data name="Action_OpenTypeLinkDescription" xml:space="preserve">
+    <value>Opens the card of the type the property refers to</value>
+  </data>
+  <data name="Action_OpenTypeLinkHint" xml:space="preserve">
+    <value>Opens a link type card</value>
+  </data>
+  <data name="Action_OpenTypeLinkConfirmationMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Action_OpenTypeLinkConfirmationDescription" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Property_EnumValues" xml:space="preserve">
+    <value>Enumeration values</value>
+  </data>
+  <data name="Property_ObjTypeName" xml:space="preserve">
+    <value>Entity type name</value>
+  </data>
+  <data name="Enum_PropertyType_AxTime" xml:space="preserve">
+    <value>Time</value>
+  </data>
+  <data name="Property_IsRequired" xml:space="preserve">
+    <value>Required</value>
+  </data>
+  <data name="Property_IsUnique" xml:space="preserve">
+    <value>Unique</value>
+  </data>
+  <data name="Property_IsEnabled" xml:space="preserve">
+    <value>Allow editing</value>
+  </data>
+  <data name="ControlGroup_3c33c47ea98f4cbf940384adf677779a" xml:space="preserve">
+    <value>Property parameters</value>
+  </data>
+  <data name="Property_IsVisibility" xml:space="preserve">
+    <value>Display in card</value>
+  </data>
+  <data name="Property_IsShowedInList" xml:space="preserve">
+    <value>Display in list form</value>
+  </data>
+  <data name="Property_CanBeSearch" xml:space="preserve">
+    <value>CanBeSearch</value>
+  </data>
+  <data name="ControlGroup_acd21fd3c9ff41ce8eb01a840be6b0da" xml:space="preserve">
+    <value>Enumeration values</value>
+  </data>
+  <data name="Property_IsSystem" xml:space="preserve">
+    <value>Systemic</value>
+  </data>
+  <data name="Property_IsAvailableInIntegration" xml:space="preserve">
+    <value>Available in the integration service</value>
+  </data>
+  <data name="Property_IsDisplayValue" xml:space="preserve">
+    <value>Sets the display name</value>
+  </data>
+  <data name="Property_Length" xml:space="preserve">
+    <value>Length</value>
+  </data>
+</root>

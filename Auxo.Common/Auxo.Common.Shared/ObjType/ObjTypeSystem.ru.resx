@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Property_Name" xml:space="preserve">
+    <value>Наименование</value>
+  </data>
+  <data name="DisplayName" xml:space="preserve">
+    <value>Тип сущности</value>
+  </data>
+  <data name="AccusativeDisplayName" xml:space="preserve">
+    <value>Тип сущности</value>
+  </data>
+  <data name="CollectionDisplayName" xml:space="preserve">
+    <value>Типы сущностей</value>
+  </data>
+  <data name="Enum_Type_Document" xml:space="preserve">
+    <value>Документ</value>
+  </data>
+  <data name="Enum_Type_Databook" xml:space="preserve">
+    <value>Справочник</value>
+  </data>
+  <data name="Property_Type" xml:space="preserve">
+    <value>Тип</value>
+  </data>
+  <data name="Enum_Type_Task" xml:space="preserve">
+    <value>Задача</value>
+  </data>
+  <data name="Enum_Type_Assignement" xml:space="preserve">
+    <value>Задание</value>
+  </data>
+  <data name="Property_EntityGuid" xml:space="preserve">
+    <value>Guid объекта</value>
+  </data>
+  <data name="Property_EntityType" xml:space="preserve">
+    <value>Полное имя типа</value>
+  </data>
+  <data name="Property_LocalizedName" xml:space="preserve">
+    <value>Локализированное наименование</value>
+  </data>
+  <data name="Property_Parents" xml:space="preserve">
+    <value>Родители</value>
+  </data>
+  <data name="Property_TableNameDB" xml:space="preserve">
+    <value>Имя таблицы БД</value>
+  </data>
+  <data name="ControlGroup_d66e8bff310a45818265efb6b590c943" xml:space="preserve">
+    <value>Родители</value>
+  </data>
+  <data name="Property_TypeString" xml:space="preserve">
+    <value>Тип (строка)</value>
+  </data>
+  <data name="Property_IsAbstract" xml:space="preserve">
+    <value>Абстрактный</value>
+  </data>
+  <data name="Property_IsOverridde" xml:space="preserve">
+    <value>Перекрыт</value>
+  </data>
+  <data name="Property_AllGuids" xml:space="preserve">
+    <value>AllGuids</value>
+  </data>
+  <data name="Action_ChangesReport" xml:space="preserve">
+    <value>Изменения типа</value>
+  </data>
+  <data name="Action_ChangesReportHint" xml:space="preserve">
+    <value>Сформировать отчет "Изменения типа"</value>
+  </data>
+  <data name="Action_ChangesReportDescription" xml:space="preserve">
+    <value>Сформирует отчет с изменениями типа, сделанные в среде разработки</value>
+  </data>
+  <data name="Ribbon_ReportsGroup_837bc07c7da3434e99c926f77135b90c" xml:space="preserve">
+    <value>Отчеты</value>
+  </data>
+  <data name="Ribbon_Reports_23ecae8666ed4d57b59faab0fe100db3" xml:space="preserve">
+    <value>Отчеты</value>
+  </data>
+  <data name="Action_TypeProperties" xml:space="preserve">
+    <value>Свойства типа</value>
+  </data>
+  <data name="Action_TypePropertiesHint" xml:space="preserve">
+    <value>Показать свойства типа</value>
+  </data>
+  <data name="Action_TypePropertiesDescription" xml:space="preserve">
+    <value>Открывает список свойств типа</value>
+  </data>
+  <data name="Ribbon_RelatedData_60bde099a82c433db12c46d7663f6976" xml:space="preserve">
+    <value>Связанные данные</value>
+  </data>
+  <data name="Ribbon_RelatedData_fba5d04c3bea4d23b4252ca67b0f8db2" xml:space="preserve">
+    <value>Связанные данные</value>
+  </data>
+  <data name="Action_CardDescription" xml:space="preserve">
+    <value>Описание карточки</value>
+  </data>
+  <data name="Action_CardDescriptionHint" xml:space="preserve">
+    <value>Описание карточки типа сущности</value>
+  </data>
+  <data name="Action_CardDescriptionDescription" xml:space="preserve">
+    <value>Сформировать отчет с описанием карточки типа сущности</value>
+  </data>
+</root>

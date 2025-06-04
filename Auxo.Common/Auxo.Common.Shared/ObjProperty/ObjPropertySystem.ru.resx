@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Property_Name" xml:space="preserve">
+    <value>Наименование</value>
+  </data>
+  <data name="DisplayName" xml:space="preserve">
+    <value>Свойство сущности</value>
+  </data>
+  <data name="AccusativeDisplayName" xml:space="preserve">
+    <value>Свойство сущности</value>
+  </data>
+  <data name="CollectionDisplayName" xml:space="preserve">
+    <value>Свойства сущностей</value>
+  </data>
+  <data name="Property_ObjType" xml:space="preserve">
+    <value>Тип сущности</value>
+  </data>
+  <data name="Property_PropertyGuid" xml:space="preserve">
+    <value>Guid свойства</value>
+  </data>
+  <data name="Property_LocalizedName" xml:space="preserve">
+    <value>Локализованное наименование</value>
+  </data>
+  <data name="Enum_PropertyType_AxDateTime" xml:space="preserve">
+    <value>Дата и время</value>
+  </data>
+  <data name="Enum_PropertyType_AxDate" xml:space="preserve">
+    <value>Дата</value>
+  </data>
+  <data name="Enum_PropertyType_AxCollection" xml:space="preserve">
+    <value>Коллекция</value>
+  </data>
+  <data name="Enum_PropertyType_AxBoolean" xml:space="preserve">
+    <value>Логический</value>
+  </data>
+  <data name="Enum_PropertyType_AxEnumeration" xml:space="preserve">
+    <value>Перечисление</value>
+  </data>
+  <data name="Enum_PropertyType_AxDouble" xml:space="preserve">
+    <value>Вещественное число</value>
+  </data>
+  <data name="Enum_PropertyType_AxInteger" xml:space="preserve">
+    <value>Целое число</value>
+  </data>
+  <data name="Enum_PropertyType_AxNavigation" xml:space="preserve">
+    <value>Ссылка</value>
+  </data>
+  <data name="Enum_PropertyType_AxString" xml:space="preserve">
+    <value>Строка</value>
+  </data>
+  <data name="Enum_PropertyType_AxText" xml:space="preserve">
+    <value>Текст</value>
+  </data>
+  <data name="Enum_PropertyType_AxMonthYear" xml:space="preserve">
+    <value>Год и месяц</value>
+  </data>
+  <data name="Enum_PropertyType_AxYear" xml:space="preserve">
+    <value>Год</value>
+  </data>
+  <data name="Property_PropertyType" xml:space="preserve">
+    <value>Тип свойства</value>
+  </data>
+  <data name="Property_Parent" xml:space="preserve">
+    <value>Коллекция</value>
+  </data>
+  <data name="Property_NavigationGuid" xml:space="preserve">
+    <value>Guid типа свойства ссылки</value>
+  </data>
+  <data name="Enum_PropertyType_AxLongInteger" xml:space="preserve">
+    <value>Идентификатор</value>
+  </data>
+  <data name="Enum_PropertyType_AxImage" xml:space="preserve">
+    <value>Изображение</value>
+  </data>
+  <data name="Enum_PropertyType_AxData" xml:space="preserve">
+    <value>Бинарные данные</value>
+  </data>
+  <data name="Enum_PropertyType_AxEntityType" xml:space="preserve">
+    <value>Тип объекта</value>
+  </data>
+  <data name="Enum_PropertyType_AxBinaryData" xml:space="preserve">
+    <value>Бинарные данные в хранилище</value>
+  </data>
+  <data name="Property_PropertyTypeString" xml:space="preserve">
+    <value>Тип свойства (строка)</value>
+  </data>
+  <data name="Action_ChildProperties" xml:space="preserve">
+    <value>Дочерние свойства</value>
+  </data>
+  <data name="Action_ChildPropertiesHint" xml:space="preserve">
+    <value>Показать дочерние свойства</value>
+  </data>
+  <data name="Action_ChildPropertiesDescription" xml:space="preserve">
+    <value>Открывает список дочерних свойств</value>
+  </data>
+  <data name="Ribbon_RelatedData_e13cc6113a444da5b2d18c7c36d6b127" xml:space="preserve">
+    <value>Связанные данные</value>
+  </data>
+  <data name="Action_OpenTypeLink" xml:space="preserve">
+    <value>Открыть карточку ссылки</value>
+  </data>
+  <data name="Action_OpenTypeLinkHint" xml:space="preserve">
+    <value>Открывает карточку типа ссылки</value>
+  </data>
+  <data name="Action_OpenTypeLinkDescription" xml:space="preserve">
+    <value>Открывает карточку типа на которое ссылается свойство</value>
+  </data>
+  <data name="Property_EnumValues" xml:space="preserve">
+    <value>Значения перечислений</value>
+  </data>
+  <data name="Property_ObjTypeName" xml:space="preserve">
+    <value>Имя типа сущности</value>
+  </data>
+  <data name="Enum_PropertyType_AxTime" xml:space="preserve">
+    <value>Время</value>
+  </data>
+  <data name="Property_IsRequired" xml:space="preserve">
+    <value>Обязательное</value>
+  </data>
+  <data name="Property_IsUnique" xml:space="preserve">
+    <value>Уникальное</value>
+  </data>
+  <data name="Property_IsEnabled" xml:space="preserve">
+    <value>Разрешить редактирование</value>
+  </data>
+  <data name="ControlGroup_3c33c47ea98f4cbf940384adf677779a" xml:space="preserve">
+    <value>Параметры свойства</value>
+  </data>
+  <data name="Property_IsVisibility" xml:space="preserve">
+    <value>Отображать в карточке</value>
+  </data>
+  <data name="Property_IsShowedInList" xml:space="preserve">
+    <value>Отображать в форме-списке</value>
+  </data>
+  <data name="Property_CanBeSearch" xml:space="preserve">
+    <value>Отображать в диалоге поиска</value>
+  </data>
+  <data name="ControlGroup_acd21fd3c9ff41ce8eb01a840be6b0da" xml:space="preserve">
+    <value>Значения перечисления</value>
+  </data>
+  <data name="Property_IsSystem" xml:space="preserve">
+    <value>Системное</value>
+  </data>
+  <data name="Property_IsAvailableInIntegration" xml:space="preserve">
+    <value>Доступно в сервисе интеграции</value>
+  </data>
+  <data name="Property_IsDisplayValue" xml:space="preserve">
+    <value>Задает отображаемое имя</value>
+  </data>
+  <data name="Property_Length" xml:space="preserve">
+    <value>Длинна</value>
+  </data>
+</root>

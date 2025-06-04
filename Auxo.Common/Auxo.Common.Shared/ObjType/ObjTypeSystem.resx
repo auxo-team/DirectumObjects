@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Property_Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="DisplayName" xml:space="preserve">
+    <value>Type of entity</value>
+  </data>
+  <data name="AccusativeDisplayName" xml:space="preserve">
+    <value>Type of entity</value>
+  </data>
+  <data name="CollectionDisplayName" xml:space="preserve">
+    <value>Type of entities</value>
+  </data>
+  <data name="Property_Type" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="Enum_Type_Document" xml:space="preserve">
+    <value>Document</value>
+  </data>
+  <data name="Enum_Type_Databook" xml:space="preserve">
+    <value>Databook</value>
+  </data>
+  <data name="Enum_Type_Task" xml:space="preserve">
+    <value>Task</value>
+  </data>
+  <data name="Enum_Type_Assignement" xml:space="preserve">
+    <value>Assignement</value>
+  </data>
+  <data name="Property_EntityGuid" xml:space="preserve">
+    <value>Entity Guid</value>
+  </data>
+  <data name="Property_EntityType" xml:space="preserve">
+    <value>Type full name</value>
+  </data>
+  <data name="Property_LocalizedName" xml:space="preserve">
+    <value>Localized name</value>
+  </data>
+  <data name="Property_Parents" xml:space="preserve">
+    <value>Parents</value>
+  </data>
+  <data name="Property_TableNameDB" xml:space="preserve">
+    <value>Database table name</value>
+  </data>
+  <data name="ControlGroup_d66e8bff310a45818265efb6b590c943" xml:space="preserve">
+    <value>Parents</value>
+  </data>
+  <data name="AdditionalInfoTemplate" xml:space="preserve">
+    <value>[TypeString] - [EntityType]</value>
+  </data>
+  <data name="Property_TypeString" xml:space="preserve">
+    <value>Type (string)</value>
+  </data>
+  <data name="Property_IsAbstract" xml:space="preserve">
+    <value>Is abstract</value>
+  </data>
+  <data name="Property_IsOverridde" xml:space="preserve">
+    <value>Overridde</value>
+  </data>
+  <data name="Property_AllGuids" xml:space="preserve">
+    <value>AllGuids</value>
+  </data>
+  <data name="Action_ChangesReport" xml:space="preserve">
+    <value>Type changes</value>
+  </data>
+  <data name="Action_ChangesReportDescription" xml:space="preserve">
+    <value>Generates a report with the type changes made in the development environment</value>
+  </data>
+  <data name="Action_ChangesReportHint" xml:space="preserve">
+    <value>Generate report "Type changes"</value>
+  </data>
+  <data name="Action_ChangesReportConfirmationMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Action_ChangesReportConfirmationDescription" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Ribbon_ReportsGroup_837bc07c7da3434e99c926f77135b90c" xml:space="preserve">
+    <value>Reports</value>
+  </data>
+  <data name="Ribbon_Reports_23ecae8666ed4d57b59faab0fe100db3" xml:space="preserve">
+    <value>Reports</value>
+  </data>
+  <data name="Action_TypeProperties" xml:space="preserve">
+    <value>Type properties</value>
+  </data>
+  <data name="Action_TypePropertiesDescription" xml:space="preserve">
+    <value>Opens a list of type properties</value>
+  </data>
+  <data name="Action_TypePropertiesHint" xml:space="preserve">
+    <value>Show type properties</value>
+  </data>
+  <data name="Action_TypePropertiesConfirmationMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Action_TypePropertiesConfirmationDescription" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Ribbon_RelatedData_60bde099a82c433db12c46d7663f6976" xml:space="preserve">
+    <value>Related data</value>
+  </data>
+  <data name="Ribbon_RelatedData_fba5d04c3bea4d23b4252ca67b0f8db2" xml:space="preserve">
+    <value>Related data</value>
+  </data>
+  <data name="Action_CardDescription" xml:space="preserve">
+    <value>Card description</value>
+  </data>
+  <data name="Action_CardDescriptionDescription" xml:space="preserve">
+    <value>Generate a report with a description of the entity type card</value>
+  </data>
+  <data name="Action_CardDescriptionHint" xml:space="preserve">
+    <value>Description of the entity type card</value>
+  </data>
+  <data name="Action_CardDescriptionConfirmationMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Action_CardDescriptionConfirmationDescription" xml:space="preserve">
+    <value />
+  </data>
+</root>
