@@ -95,7 +95,8 @@ namespace Auxo.Common.Server
       record.EntityType = metadata.FullName;
       record.EntityGuid = metadata.NameGuid.ToString().ToLower();
       record.TableNameDB = metadata.DBTableName.ToLower();
-      record.IsAbstract = metadata.IsAbstract;
+      record.IsAbstract = metadata.IsAbstract;            
+      Functions.ObjType.FillAdditionalInfo(record, metadata);
       record.Save();
       
       return record;
@@ -195,9 +196,20 @@ namespace Auxo.Common.Server
 
       #endregion
       
+      this.FillAdditionalInfo(metadata);
+      
       if (_obj.State.IsChanged)
         _obj.Save();
     }
-        
+    
+    /// <summary>
+    /// Заполнить дополнительную информацию.
+    /// </summary>
+    /// <param name="metadata">Метаданные типа.</param>
+    public virtual void FillAdditionalInfo(Sungero.Metadata.EntityMetadata metadata)
+    {
+      //TODO: Метод расширения функционала.
+    }
+    
   }
 }
