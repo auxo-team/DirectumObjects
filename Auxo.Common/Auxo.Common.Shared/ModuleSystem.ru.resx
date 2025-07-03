@@ -61,4 +61,10 @@
   <data name="DisplayName" xml:space="preserve">
     <value>Модуль решения</value>
   </data>
+  <data name="JobDisplayName_aed1649b648b49a69f15c9be56861048" xml:space="preserve">
+    <value>Закрытие удаленных типов объектов</value>
+  </data>
+  <data name="JobDescription_aed1649b648b49a69f15c9be56861048" xml:space="preserve">
+    <value>Закрывает устаревшие записи в справочнике "Тип сущности"</value>
+  </data>
 </root>

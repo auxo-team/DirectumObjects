@@ -108,6 +108,15 @@
   "IsolatedAssemblyName": "Auxo.Common.Isolated",
   "IsolatedNamespace": "Auxo.Common.Isolated",
   "IsVisible": false,
+  "Jobs": [
+    {
+      "NameGuid": "aed1649b-648b-49a6-9f15-c9be56861048",
+      "Name": "ClosedNullTypes",
+      "GenerateHandler": true,
+      "MonthSchedule": "Monthly",
+      "StartAt": "1753-01-01T04:00:00"
+    }
+  ],
   "PublicFunctions": [
     {
       "Name": "DeclensionObject",

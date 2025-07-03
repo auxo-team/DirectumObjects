@@ -14,12 +14,13 @@ namespace Auxo.Common.Server
 
     public override void Initializing(Sungero.Domain.ModuleInitializingEventArgs e)
     {
-      FillEntitiesTypes();
-      ClosedNullTypes();
+      FillEntitiesTypes();      
       FillEntitiesProperties();
 
       GrantRightsOnDefault();
       CreateDefaultTables();
+      
+      ClosedNullTypes();
     }
     
     /// <summary>
@@ -61,27 +62,7 @@ namespace Auxo.Common.Server
     /// </summary>
     public virtual void ClosedNullTypes()
     {
-      InitializationLogger.Debug("Init: Cleaning the directory from old entities.");
-      
-      var closeTypes = new List<long>();
-      using (var command = SQL.GetCurrentConnection().CreateCommand())
-      {
-        command.CommandText = Queries.ObjType.SelectCleanEntityTypes;
-        using (var typesIds = command.ExecuteReader())
-        {
-          while (typesIds.Read())
-            closeTypes.Add(typesIds.GetInt64(0));
-        }
-      }
-      
-      if (!closeTypes.Any())
-        return;
-      
-      foreach (var closeType in Common.ObjTypes.GetAll().Where(_ => closeTypes.Contains(_.Id) && _.Status != Common.ObjType.Status.Closed))
-      {
-        closeType.Status = Common.ObjType.Status.Closed;
-        closeType.Save();
-      }
+      Jobs.ClosedNullTypes.Enqueue();
     }
     
     /// <summary>

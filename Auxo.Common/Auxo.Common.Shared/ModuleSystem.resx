@@ -64,4 +64,10 @@
   <data name="CoverTitle" xml:space="preserve">
     <value>Common</value>
   </data>
+  <data name="JobDisplayName_aed1649b648b49a69f15c9be56861048" xml:space="preserve">
+    <value>Closing deleted object types</value>
+  </data>
+  <data name="JobDescription_aed1649b648b49a69f15c9be56861048" xml:space="preserve">
+    <value>Closes obsolete entries in the "Entity Type" directory</value>
+  </data>
 </root>
