@@ -12,6 +12,49 @@ namespace Auxo.Common.Server
   {
 
     /// <summary>
+    /// Отправить уведомление.
+    /// </summary>
+    /// <param name="subject">Тема.</param>
+    /// <param name="text">Текст.</param>
+    /// <param name="recipient">Список адресатов.</param>
+    /// <param name="attachment">Список вложений.</param>
+    [Public, Remote]
+    public static long? SendNotice(string subject,
+                                  string text,
+                                  List<Sungero.CoreEntities.IRecipient> recipients,
+                                  List<Sungero.Domain.Shared.IEntity> attachments)
+    {
+      long? taskID = null;
+      
+      if (!recipients.Any())
+        return taskID;
+      
+      if (subject.Length > 250)
+        subject = subject.Substring(0, 250);
+      
+      Sungero.Workflow.ISimpleTask task;
+      if (attachments != null && attachments.Any() && !attachments.Any(a => a == null))
+        task = Sungero.Workflow.SimpleTasks.CreateWithNotices(subject, recipients, attachments.ToArray());
+      else
+        task = Sungero.Workflow.SimpleTasks.CreateWithNotices(subject, recipients.ToArray());
+      
+      task.ActiveText = text;
+      
+      try
+      {
+        task.Save();
+        task.Start();
+        taskID = task.Id;
+      }
+      catch (Exception ex)
+      {
+        Logger.ErrorFormat("SendNotice: {0}", ex.Message);
+      }
+      
+      return taskID;
+    }
+    
+    /// <summary>
     /// Получить объект по идентификатору.
     /// </summary>
     /// <param name="typeGuid">Guid типа объекта.</param>
@@ -120,6 +163,6 @@ namespace Auxo.Common.Server
           return objectName;
       }
     }
-    
+        
   }
 }

@@ -190,12 +190,43 @@
       "Placement": "Shared",
       "ReturnType": "global::System.Linq.IQueryable<global::Sungero.Domain.Shared.IEntity>",
       "ReturnTypeFullName": "System.Linq.IQueryable"
+    },
+    {
+      "Name": "SendNotice",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "subject",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "text",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "recipients",
+          "ParameterType": "global::System.Collections.Generic.List<global::Sungero.CoreEntities.IRecipient>",
+          "ParameterTypeFullName": "System.Collections.Generic.List"
+        },
+        {
+          "Name": "attachments",
+          "ParameterType": "global::System.Collections.Generic.List<global::Sungero.Domain.Shared.IEntity>",
+          "ParameterTypeFullName": "System.Collections.Generic.List"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "global::System.Nullable<global::System.Int64>",
+      "ReturnTypeFullName": "System.Nullable"
     }
   ],
   "PublicStructures": [],
   "ResourceInterfaceAssemblyName": "Sungero.Domain.Interfaces",
   "ResourceInterfaceNamespace": "Auxo.Common",
-  "ResourcesKeys": [],
+  "ResourcesKeys": [
+    "ErrorSubject_ClosedNullTypes"
+  ],
   "ServerAssemblyName": "Auxo.Common.Server",
   "ServerNamespace": "Auxo.Common.Server",
   "SharedAssemblyName": "Auxo.Common.Shared",

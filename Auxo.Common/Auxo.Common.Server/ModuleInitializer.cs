@@ -14,13 +14,13 @@ namespace Auxo.Common.Server
 
     public override void Initializing(Sungero.Domain.ModuleInitializingEventArgs e)
     {
-      FillEntitiesTypes();      
+      ClosedNullTypes();
+      
+      FillEntitiesTypes();
       FillEntitiesProperties();
 
       GrantRightsOnDefault();
       CreateDefaultTables();
-      
-      ClosedNullTypes();
     }
     
     /// <summary>
@@ -42,7 +42,7 @@ namespace Auxo.Common.Server
       {
         Common.ObjProperties.AccessRights.Grant(allUsers, DefaultAccessRightsTypes.Read);
         Common.ObjProperties.AccessRights.Save();
-      }      
+      }
     }
     
     /// <summary>
@@ -62,6 +62,8 @@ namespace Auxo.Common.Server
     /// </summary>
     public virtual void ClosedNullTypes()
     {
+      InitializationLogger.Debug("Init: Cleaning the directory from old entities.");
+      
       Jobs.ClosedNullTypes.Enqueue();
     }
     
@@ -219,7 +221,7 @@ namespace Auxo.Common.Server
     /// <returns>Имена справочников для обработки.</returns>
     public virtual List<string> GetHandleNames()
     {
-      return new List<string> {"Employee", "RegistrationGroup", "Department", "BusinessUnit", "Role"};
+      return new List<string> { "Employee", "RegistrationGroup", "Department", "BusinessUnit", "Role" };
     }
     
     #endregion
@@ -227,24 +229,33 @@ namespace Auxo.Common.Server
     
     #region Заполнение справочника "Свойства сущностей"
     
-    public static void FillEntitiesProperties()
+    public virtual void FillEntitiesProperties()
     {
       InitializationLogger.Debug("Init: Fill in the directory Entities properties.");
       
-      var objTypes = Functions.ObjType.GetAllActiveTypes()
-        .Where(_ => _.Type == Common.ObjType.Type.Document ||
-               _.Type == Common.ObjType.Type.Assignement ||
-               _.Type == Common.ObjType.Type.Task ||
-               _.Type == Common.ObjType.Type.Databook);
-      
-      foreach (var objectsGrp in objTypes.GroupBy(_ => _.Type))
+      var types = this.GetUpdateEntityPropertiesTypes();
+      var objTypes = Functions.ObjType.GetAllActiveTypes().Where(_ => _.Type.HasValue && types.Contains(_.Type.Value));      
+      foreach (var objType in objTypes)
       {
-        using (Sungero.Domain.Session session = new Sungero.Domain.Session(true, false))
-        {
-          foreach (var objType in objectsGrp)
-            Functions.ObjProperty.UpdateEntityProperties(objType);
-        }
+        var handler = AsyncHandlers.UpdateEntityProperties.Create();
+        handler.ObjTypeId = objType.Id;
+        handler.ExecuteAsync();
       }
+    }
+    
+    /// <summary>
+    /// Получить типы объектов для обновления свойств.
+    /// </summary>
+    /// <returns>Список типов объектов.</returns>
+    public virtual List<Enumeration> GetUpdateEntityPropertiesTypes()
+    {
+      return new List<Enumeration>
+      {
+        Common.ObjType.Type.Document,
+        Common.ObjType.Type.Assignement,
+        Common.ObjType.Type.Task,
+        Common.ObjType.Type.Databook
+      };
     }
     
     #endregion
