@@ -32,6 +32,7 @@ namespace Auxo.Common.Server
       
       if (!closeTypes.Any())
       {
+        Sungero.Docflow.PublicFunctions.Module.InsertOrUpdateDocflowParam(Constants.Module.ClosedNullTypesParamName, false.ToString());
         Logger.WithLogger(postfix).Debug("Job complite. There are no records to close.");
         return;
       }
