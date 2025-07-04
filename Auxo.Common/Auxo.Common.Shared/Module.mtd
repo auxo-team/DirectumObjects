@@ -2,7 +2,23 @@
   "$type": "Sungero.Metadata.ModuleMetadata, Sungero.Metadata",
   "NameGuid": "e41cb0de-0ad5-41f4-84a1-4b124e898c92",
   "Name": "Common",
-  "AsyncHandlers": [],
+  "AsyncHandlers": [
+    {
+      "NameGuid": "e9f2e1c5-3146-4c7d-9ff3-e5f9241eb6e0",
+      "Name": "UpdateEntityProperties",
+      "DelayPeriod": 5,
+      "DelayStrategy": "RegularDelayStrategy",
+      "IsHandlerGenerated": true,
+      "MaxRetryCount": 10,
+      "Parameters": [
+        {
+          "NameGuid": "12ad1cbf-8efd-436f-93fd-257b2460f8a3",
+          "Name": "ObjTypeId",
+          "ParameterType": "LongInteger"
+        }
+      ]
+    }
+  ],
   "ClientAssemblyName": "Auxo.Common.Client",
   "ClientBaseAssemblyName": "Auxo.Common.ClientBase",
   "ClientBaseNamespace": "Auxo.Common.ClientBase",

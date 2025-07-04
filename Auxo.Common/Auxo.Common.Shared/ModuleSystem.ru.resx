@@ -67,4 +67,7 @@
   <data name="JobDescription_aed1649b648b49a69f15c9be56861048" xml:space="preserve">
     <value>Закрывает устаревшие записи в справочнике "Тип сущности"</value>
   </data>
+  <data name="AsyncHandler_Description_e9f2e1c531464c7d9ff3e5f9241eb6e0" xml:space="preserve">
+    <value>Актуализировать свойства сущности</value>
+  </data>
 </root>
