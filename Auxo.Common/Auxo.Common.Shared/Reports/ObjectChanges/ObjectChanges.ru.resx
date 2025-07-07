@@ -110,4 +110,226 @@
   <data name="PropertySwitchName" xml:space="preserve">
     <value>Переключатель свойства - {0}</value>
   </data>
+  <data name="CollectionFormat" xml:space="preserve">
+    <value>{0}"{1}" ({2})</value>
+  </data>
+  <data name="PropertyFormat" xml:space="preserve">
+    <value>"{0}" ({1})</value>
+  </data>
+  <data name="ActionFormat" xml:space="preserve">
+    <value>{0} ({1})</value>
+  </data>
+  <data name="ResourceName_Form" xml:space="preserve">
+    <value>Form_{0}</value>
+  </data>
+  <data name="ResourceName_Control" xml:space="preserve">
+    <value>Control_{0}_DisplayValue</value>
+  </data>
+  <data name="ResourceName_Ribbon" xml:space="preserve">
+    <value>Ribbon_{0}_{1}</value>
+  </data>
+  <data name="ActionName" xml:space="preserve">
+    <value>Кнопка - {0}</value>
+  </data>
+  <data name="Event_BeforeSaveServer" xml:space="preserve">
+    <value>До сохранения</value>
+  </data>
+  <data name="Event_WriteHistoryServer" xml:space="preserve">
+    <value>До сохранения истории</value>
+  </data>
+  <data name="Event_SavingServer" xml:space="preserve">
+    <value>До сохранения (в транзакции)</value>
+  </data>
+  <data name="Event_ClosingClient" xml:space="preserve">
+    <value>Закрытие формы</value>
+  </data>
+  <data name="Event_IsRequired" xml:space="preserve">
+    <value>Обязательное</value>
+  </data>
+  <data name="Event_AllowUserDisableConfirmation" xml:space="preserve">
+    <value>Позволить пользователю отключать подтверждение</value>
+  </data>
+  <data name="Event_IsToggleAction" xml:space="preserve">
+    <value>Действие-переключатель</value>
+  </data>
+  <data name="Event_IsEmptySelectionAllowed" xml:space="preserve">
+    <value>Доступно при отсутсвии выделенных записей в списке</value>
+  </data>
+  <data name="Event_IsCreationAction" xml:space="preserve">
+    <value>Является действием создания</value>
+  </data>
+  <data name="Event_SmallIconName" xml:space="preserve">
+    <value>Маленькая иконка</value>
+  </data>
+  <data name="Event_NeedWriteHistory" xml:space="preserve">
+    <value>Вести историю изменений</value>
+  </data>
+  <data name="Event_SavedServer" xml:space="preserve">
+    <value>После сохранения (в транзакции)</value>
+  </data>
+  <data name="Event_AfterSaveServer" xml:space="preserve">
+    <value>После сохранения</value>
+  </data>
+  <data name="Event_IsVisible" xml:space="preserve">
+    <value>Отображать в проводнике</value>
+  </data>
+  <data name="Event_BeforeDeleteServer" xml:space="preserve">
+    <value>До удаления</value>
+  </data>
+  <data name="Event_DeletingServer" xml:space="preserve">
+    <value>До удаления (в транзакции)</value>
+  </data>
+  <data name="Event_AfterDeleteServer" xml:space="preserve">
+    <value>После удаления</value>
+  </data>
+  <data name="Event_CreatingFromServer" xml:space="preserve">
+    <value>Копирование</value>
+  </data>
+  <data name="Event_CreatedServer" xml:space="preserve">
+    <value>Создание</value>
+  </data>
+  <data name="Event_FilteringServer" xml:space="preserve">
+    <value>Фильтрация объекта или панели фильтрации</value>
+  </data>
+  <data name="Event_ValidateFilterPanelClient" xml:space="preserve">
+    <value>Проверка фильтра панели фильтрации</value>
+  </data>
+  <data name="Event_UiFilteringServer" xml:space="preserve">
+    <value>UI-фильтрация</value>
+  </data>
+  <data name="Event_ShowingClient" xml:space="preserve">
+    <value>Показ формы</value>
+  </data>
+  <data name="Event_RefreshClient" xml:space="preserve">
+    <value>Обновление формы</value>
+  </data>
+  <data name="Event_ChangedShared" xml:space="preserve">
+    <value>Изменение значение свойства</value>
+  </data>
+  <data name="Event_AddedShared" xml:space="preserve">
+    <value>Добавление в коллекцию</value>
+  </data>
+  <data name="Event_DeletedShared" xml:space="preserve">
+    <value>Удаление из коллекции</value>
+  </data>
+  <data name="Event_ValueInputClient" xml:space="preserve">
+    <value>Изменение значение контрола</value>
+  </data>
+  <data name="Event_IsShowedInList" xml:space="preserve">
+    <value>Отображать в форме-списке</value>
+  </data>
+  <data name="Event_CanBeSearch" xml:space="preserve">
+    <value>Отображать в диалоге поиска</value>
+  </data>
+  <data name="Event_IsVisibility" xml:space="preserve">
+    <value>Отображать в карточке</value>
+  </data>
+  <data name="Event_IsLoadEagerly" xml:space="preserve">
+    <value>Загружать значение сразу</value>
+  </data>
+  <data name="Event_IsUnique" xml:space="preserve">
+    <value>Уникальное</value>
+  </data>
+  <data name="Event_IsDisplayValue" xml:space="preserve">
+    <value>Свойство задает отображаемое имя сущности</value>
+  </data>
+  <data name="Event_IsQuickSearchAllowed" xml:space="preserve">
+    <value>Быстрый поиск в форме-списке ищет по этому свойству</value>
+  </data>
+  <data name="Event_GenerateHandler" xml:space="preserve">
+    <value>Выполнение/Возможность выполнения</value>
+  </data>
+  <data name="Event_NeedConfirmation" xml:space="preserve">
+    <value>Запрашивать подтверждение перед выполнением</value>
+  </data>
+  <data name="Event_IsEnabled" xml:space="preserve">
+    <value>Разрешить редактирование</value>
+  </data>
+  <data name="Event_IsAutoCreated" xml:space="preserve">
+    <value>Создавать только программно</value>
+  </data>
+  <data name="Event_OpenCardByDefaultInCollection" xml:space="preserve">
+    <value>Двойной клик на документе открывает карточку</value>
+  </data>
+  <data name="Event_IsCacheable" xml:space="preserve">
+    <value>Кэшировать на клиенте</value>
+  </data>
+  <data name="Event_LookupMode" xml:space="preserve">
+    <value>Способ выбора значения</value>
+  </data>
+  <data name="Event_ShowingSignDialogClient" xml:space="preserve">
+    <value>До показа диалога подписания</value>
+  </data>
+  <data name="Event_HideFromNavigationEditorCreationArea" xml:space="preserve">
+    <value>Скрыть из области создания выпадающего списка</value>
+  </data>
+  <data name="Event_HideFromCreationArea" xml:space="preserve">
+    <value>Скрыть из области создания</value>
+  </data>
+  <data name="Event_SearchDialogLookupServer" xml:space="preserve">
+    <value>Фильтрация выбора из списка при поиске</value>
+  </data>
+  <data name="Event_IsStatusEnabled" xml:space="preserve">
+    <value>Действующая/Закрытая</value>
+  </data>
+  <data name="Event_CanBeUsedInIntegration" xml:space="preserve">
+    <value>Использовать в сервисе интеграции</value>
+  </data>
+  <data name="Event_LargeIconName" xml:space="preserve">
+    <value>Большая иконка</value>
+  </data>
+  <data name="Event_IconName" xml:space="preserve">
+    <value>Иконка</value>
+  </data>
+  <data name="Event_ShowTypeNameInThread" xml:space="preserve">
+    <value>В переписке показывать тип вместо темы</value>
+  </data>
+  <data name="Event_BeforeResumeServer" xml:space="preserve">
+    <value>До возобновления</value>
+  </data>
+  <data name="Event_BeforeRestartServer" xml:space="preserve">
+    <value>До рестарта</value>
+  </data>
+  <data name="Event_BeforeStartServer" xml:space="preserve">
+    <value>До старта</value>
+  </data>
+  <data name="Event_BeforeSigningServer" xml:space="preserve">
+    <value>До подписания</value>
+  </data>
+  <data name="Event_ConvertingFromServer" xml:space="preserve">
+    <value>Смена типа</value>
+  </data>
+  <data name="Event_FlatListInStandaloneLookup" xml:space="preserve">
+    <value>Отображать как список при выборе</value>
+  </data>
+  <data name="Event_LookupServer" xml:space="preserve">
+    <value>Фильтрация выбора из списка</value>
+  </data>
+  <data name="Event_EntityBeforeResumeEvent" xml:space="preserve">
+    <value>До возобновления</value>
+  </data>
+  <data name="Event_EntityBeforeAbortEvent" xml:space="preserve">
+    <value>До прекращения</value>
+  </data>
+  <data name="Event_EntityAfterSuspendEvent" xml:space="preserve">
+    <value>После приостановки</value>
+  </data>
+  <data name="Event_UseSchemeFromSettings" xml:space="preserve">
+    <value>Схема настраивается в проводнике</value>
+  </data>
+  <data name="Event_DocumentVersionCreationSources" xml:space="preserve">
+    <value>Разрешить создание версий документа</value>
+  </data>
+  <data name="Event_IsCreateVersionsOnLayerForbidden" xml:space="preserve">
+    <value>Запретить создавать версии схемы задачи в перекрытиях</value>
+  </data>
+  <data name="Event_OnlyPerformersCanComplete" xml:space="preserve">
+    <value>Только исполнители могут выполнять задания</value>
+  </data>
+  <data name="Event_AfterSuspendServer" xml:space="preserve">
+    <value>После приостановки</value>
+  </data>
+  <data name="Event_BeforeAbortServer" xml:space="preserve">
+    <value>До прекращения</value>
+  </data>
 </root>

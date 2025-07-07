@@ -6,6 +6,7 @@ using Sungero.CoreEntities;
 using Sungero.Metadata;
 using Sungero.Domain.Shared;
 using ReportRes = Auxo.Common.Reports.Resources;
+using ReportConst = Auxo.Common.Constants.ObjectChanges;
 
 namespace Auxo.Common
 {
@@ -15,13 +16,12 @@ namespace Auxo.Common
     public override void BeforeExecute(Sungero.Reporting.Server.BeforeExecuteEventArgs e)
     {
       var objType = ObjectChanges.Entity;
-      var handlerNames = this.GetEventNames();      
+      var handlerNames = this.GetEventNames();
       var reportSessionId = Guid.NewGuid().ToString();
       ObjectChanges.ReportSessionId = reportSessionId;
-      
+
       var typeGuids = new List<string> { objType.EntityGuid };
       typeGuids.AddRange(objType.Parents.Select(_ => _.EntityGuid).ToList());
-      
       foreach (var typeGuid in typeGuids)
       {
         var changedList = ObjectChangesDataReport(Guid.Parse(typeGuid), handlerNames);
@@ -31,7 +31,7 @@ namespace Auxo.Common
         foreach (var record in changedList)
           record.ReportSessionId = reportSessionId;
         
-        Sungero.Docflow.PublicFunctions.Module.WriteStructuresToTable(Constants.ObjectChanges.SourceTableName, changedList);
+        Sungero.Docflow.PublicFunctions.Module.WriteStructuresToTable(ReportConst.SourceTableName, changedList);
       }
     }
 
@@ -43,7 +43,7 @@ namespace Auxo.Common
     /// <returns>Список измененных данных.</returns>
     [Public]
     public static List<Structures.ObjectChanges.IOverrideData> ObjectChangesDataReport(Guid entityGuid,
-                                                                                 System.Collections.Generic.HashSet<System.Collections.Generic.KeyValuePair<string, string>> handlerNames)
+                                                                                       System.Collections.Generic.HashSet<System.Collections.Generic.KeyValuePair<string, string>> handlerNames)
     {
       var changedList = new List<Structures.ObjectChanges.IOverrideData>();
       
@@ -86,7 +86,7 @@ namespace Auxo.Common
     /// <param name="handlerNames">Список событий и параметров.</param>
     /// <returns>Список измененных данных.</returns>
     private static List<Structures.ObjectChanges.IOverrideData> GetEditHandledEvents(Sungero.Metadata.EntityMetadata metadata,
-                                                                               System.Collections.Generic.HashSet<System.Collections.Generic.KeyValuePair<string, string>> handlerNames)
+                                                                                     System.Collections.Generic.HashSet<System.Collections.Generic.KeyValuePair<string, string>> handlerNames)
     {
       var changedList = new List<Structures.ObjectChanges.IOverrideData>();
       
@@ -97,11 +97,11 @@ namespace Auxo.Common
         var handlerName = handlerNames.Where(_ => _.Key == handler).FirstOrDefault();
         var itemName = handlerName.Value == null ? ResourceService.Instance.GetString(metadata, handler, true, Array.Empty<object>()) : handlerName.Value;
         changedList.Add(Structures.ObjectChanges.OverrideData.Create(string.Empty,
-                                                               "HandledEvents",
-                                                               itemName,
-                                                               string.Empty,
-                                                               ReportRes.ObjectChanges.RedefinedName,
-                                                               string.Empty));
+                                                                     ReportConst.ChaptersNames.HandledEvents,
+                                                                     itemName,
+                                                                     string.Empty,
+                                                                     ReportRes.ObjectChanges.RedefinedName,
+                                                                     string.Empty));
       }
 
       foreach (var handler in metadata.OverriddenFields)
@@ -109,11 +109,11 @@ namespace Auxo.Common
         var handlerName = handlerNames.Where(_ => _.Key == handler).FirstOrDefault();
         var itemName = handlerName.Value == null ? ResourceService.Instance.GetString(metadata, handler, true, Array.Empty<object>()) : handlerName.Value;
         changedList.Add(Structures.ObjectChanges.OverrideData.Create(string.Empty,
-                                                               "HandledEvents",
-                                                               itemName,
-                                                               string.Empty,
-                                                               ReportRes.ObjectChanges.ModifiedName,
-                                                               string.Empty));
+                                                                     ReportConst.ChaptersNames.HandledEvents,
+                                                                     itemName,
+                                                                     string.Empty,
+                                                                     ReportRes.ObjectChanges.ModifiedName,
+                                                                     string.Empty));
       }
       
       return changedList;
@@ -126,7 +126,7 @@ namespace Auxo.Common
     /// <param name="eventNames">Список событий и параметров.</param>
     /// <returns>Список измененных данных.</returns>
     private static List<Structures.ObjectChanges.IOverrideData> GetEditProperties(Sungero.Metadata.EntityMetadata metadata,
-                                                                            System.Collections.Generic.HashSet<System.Collections.Generic.KeyValuePair<string, string>> eventNames)
+                                                                                  System.Collections.Generic.HashSet<System.Collections.Generic.KeyValuePair<string, string>> eventNames)
     {
       var changedList = new List<Structures.ObjectChanges.IOverrideData>();
       
@@ -153,20 +153,21 @@ namespace Auxo.Common
       var properties = baseMetadata.Properties;
       List<string> basePropertiesNames = properties.Select(_ => _.Name).ToList();
       foreach (var propertyMetadata in metadata.Properties.Where(_ => !basePropertiesNames.Contains(_.Name)))
+      {
+        var collectionName = propertyMetadata.PropertyType == Sungero.Metadata.PropertyType.Collection ? ReportRes.ObjectChanges.CollectionName : string.Empty;
+        var propertyName = ReportRes.ObjectChanges.CollectionFormatFormat(collectionName, propertyMetadata.GetLocalizedName(), propertyMetadata.Name);
         changedList.Add(Structures.ObjectChanges.OverrideData.Create(string.Empty,
-                                                               "Properties",
-                                                               string.Format("{0}\"{1}\" ({2})",
-                                                                             propertyMetadata.PropertyType == Sungero.Metadata.PropertyType.Collection ? ReportRes.ObjectChanges.CollectionName : string.Empty,
-                                                                             propertyMetadata.GetLocalizedName(),
-                                                                             propertyMetadata.Name),
-                                                               string.Empty,
-                                                               ReportRes.ObjectChanges.AddedName,
-                                                               string.Empty));
+                                                                     ReportConst.ChaptersNames.Properties,
+                                                                     propertyName,
+                                                                     string.Empty,
+                                                                     ReportRes.ObjectChanges.AddedName,
+                                                                     string.Empty));
+      }
       
       //Найдем все измененные свойства
       foreach (var propertyMetadata in metadata.Properties.Where(_ => _.IsOverridden))
       {
-        var propertyName = string.Format("\"{0}\" ({1})", propertyMetadata.GetLocalizedName(), propertyMetadata.Name);
+        var propertyName = ReportRes.ObjectChanges.PropertyFormatFormat(propertyMetadata.GetLocalizedName(), propertyMetadata.Name);
         GetEditProperty(changedList, propertyName, propertyMetadata, eventNames);
       }
 
@@ -179,19 +180,19 @@ namespace Auxo.Common
           var basCollectionNames = baseCollectionMetadata.InterfaceMetadata.Properties.Select(_ => _.Name).ToList();
           foreach (var propertyMetadata in collectionMetadata.InterfaceMetadata.Properties.Where(_ => !basCollectionNames.Contains(_.Name)))
           {
-            var propertyName = ReportRes.ObjectChanges.PropertyCollectionFormat(propertyMetadata.GetLocalizedName(), propertyMetadata.Name, collectionMetadata.GetLocalizedName(), collectionMetadata.Name);            
+            var propertyName = ReportRes.ObjectChanges.PropertyCollectionFormat(propertyMetadata.GetLocalizedName(), propertyMetadata.Name, collectionMetadata.GetLocalizedName(), collectionMetadata.Name);
             changedList.Add(Structures.ObjectChanges.OverrideData.Create(string.Empty,
-                                                                   "Properties",
-                                                                   propertyName,
-                                                                   string.Empty,
-                                                                   ReportRes.ObjectChanges.AddedName,
-                                                                   string.Empty));
+                                                                         ReportConst.ChaptersNames.Properties,
+                                                                         propertyName,
+                                                                         string.Empty,
+                                                                         ReportRes.ObjectChanges.AddedName,
+                                                                         string.Empty));
           }
         }
 
         foreach (var propertyMetadata in collectionMetadata.InterfaceMetadata.Properties.Where(_ => _.IsOverridden))
         {
-          var propertyName = ReportRes.ObjectChanges.PropertyCollectionFormat(propertyMetadata.GetLocalizedName(), propertyMetadata.Name, collectionMetadata.GetLocalizedName(), collectionMetadata.Name);          
+          var propertyName = ReportRes.ObjectChanges.PropertyCollectionFormat(propertyMetadata.GetLocalizedName(), propertyMetadata.Name, collectionMetadata.GetLocalizedName(), collectionMetadata.Name);
           GetEditProperty(changedList, propertyName, propertyMetadata, eventNames);
         }
       }
@@ -215,11 +216,11 @@ namespace Auxo.Common
       {
         var eventName = eventNames.Where(_ => _.Key == handler).FirstOrDefault();
         changedList.Add(Structures.ObjectChanges.OverrideData.Create(string.Empty,
-                                                               "Properties",
-                                                               propertyName,
-                                                               !Equals(eventName.Value, null) ? eventName.Value : handler,
-                                                               ReportRes.ObjectChanges.RedefinedName,
-                                                               string.Empty));
+                                                                     ReportConst.ChaptersNames.Properties,
+                                                                     propertyName,
+                                                                     !Equals(eventName.Value, null) ? eventName.Value : handler,
+                                                                     ReportRes.ObjectChanges.RedefinedName,
+                                                                     string.Empty));
       }
       
       var excludeFields = new List<string> {
@@ -237,11 +238,11 @@ namespace Auxo.Common
       {
         var fieldName = eventNames.Where(_ => _.Key == field).FirstOrDefault();
         changedList.Add(Structures.ObjectChanges.OverrideData.Create(string.Empty,
-                                                               "Properties",
-                                                               propertyName,
-                                                               !Equals(fieldName.Value, null) ? fieldName.Value : field,
-                                                               ReportRes.ObjectChanges.ModifiedName,
-                                                               string.Empty));
+                                                                     ReportConst.ChaptersNames.Properties,
+                                                                     propertyName,
+                                                                     !Equals(fieldName.Value, null) ? fieldName.Value : field,
+                                                                     ReportRes.ObjectChanges.ModifiedName,
+                                                                     string.Empty));
       }
       
       if (propertyMetadata.PropertyType == Sungero.Metadata.PropertyType.Enumeration)
@@ -249,11 +250,11 @@ namespace Auxo.Common
         var enumMetadata = (Sungero.Metadata.EnumPropertyMetadata)propertyMetadata;
         if (enumMetadata.DirectValues != null && enumMetadata.DirectValues.Any())
           changedList.Add(Structures.ObjectChanges.OverrideData.Create(string.Empty,
-                                                                 "Properties",
-                                                                 propertyName,
-                                                                 string.Empty,
-                                                                 ReportRes.ObjectChanges.AddedEnumsName,
-                                                                 string.Empty));
+                                                                       ReportConst.ChaptersNames.Properties,
+                                                                       propertyName,
+                                                                       string.Empty,
+                                                                       ReportRes.ObjectChanges.AddedEnumsName,
+                                                                       string.Empty));
       }
     }
     
@@ -264,7 +265,7 @@ namespace Auxo.Common
     /// <param name="handlerNames">Список событий и параметров.</param>
     /// <returns>Список измененных данных.</returns>
     private static List<Structures.ObjectChanges.IOverrideData> GetEditActions(Sungero.Metadata.EntityMetadata metadata,
-                                                                         System.Collections.Generic.HashSet<System.Collections.Generic.KeyValuePair<string, string>> handlerNames)
+                                                                               System.Collections.Generic.HashSet<System.Collections.Generic.KeyValuePair<string, string>> handlerNames)
     {
       var changedList = new List<Structures.ObjectChanges.IOverrideData>();
 
@@ -292,29 +293,29 @@ namespace Auxo.Common
       List<string> baseActionsNames = actions.Select(_ => _.Name).ToList();
       foreach (var actionMetadata in metadata.Actions.Where(_ => !baseActionsNames.Contains(_.Name)))
       {
-        var actionName = string.Format("{0} ({1})", actionMetadata.GetLocalizedName(), actionMetadata.Name);
+        var actionName = ReportRes.ObjectChanges.ActionFormatFormat(actionMetadata.GetLocalizedName(), actionMetadata.Name);
         changedList.Add(Structures.ObjectChanges.OverrideData.Create(string.Empty,
-                                                               "Actions",
-                                                               actionName,
-                                                               string.Empty,
-                                                               ReportRes.ObjectChanges.AddedName,
-                                                               string.Empty));
+                                                                     ReportConst.ChaptersNames.Actions,
+                                                                     actionName,
+                                                                     string.Empty,
+                                                                     ReportRes.ObjectChanges.AddedName,
+                                                                     string.Empty));
       }
       
       //Найдем все измененные действия
       foreach (var actionMetadata in metadata.Actions.Where(_ => _.IsOverridden))
       {
-        var actionName = string.Format("{0} ({1})", actionMetadata.GetLocalizedName(), actionMetadata.Name);
+        var actionName = ReportRes.ObjectChanges.ActionFormatFormat(actionMetadata.GetLocalizedName(), actionMetadata.Name);
         foreach (var field in actionMetadata.OverriddenFields)
         {
           var fieldName = handlerNames.Where(_ => _.Key == field).FirstOrDefault();
           var itemName = fieldName.Value == null ? ResourceService.Instance.GetString(metadata, field, true, Array.Empty<object>()) : fieldName.Value;
           changedList.Add(Structures.ObjectChanges.OverrideData.Create(string.Empty,
-                                                                 "Actions",
-                                                                 actionName,
-                                                                 itemName,
-                                                                 ReportRes.ObjectChanges.ModifiedName,
-                                                                 string.Empty));
+                                                                       ReportConst.ChaptersNames.Actions,
+                                                                       actionName,
+                                                                       itemName,
+                                                                       ReportRes.ObjectChanges.ModifiedName,
+                                                                       string.Empty));
         }
       }
       
@@ -356,7 +357,7 @@ namespace Auxo.Common
                .Where(_ => !baseFormsNames.Contains(_.Name) || _.IsOverridden))
       {
         var action = formMetadata.IsOverridden ? ReportRes.ObjectChanges.ModifiedName : ReportRes.ObjectChanges.AddedName;
-        var resourceFormName = string.Format("Form_{0}", formMetadata.NameGuid.ToString().Replace("-", string.Empty));
+        var resourceFormName = ReportRes.ObjectChanges.ResourceName_FormFormat(formMetadata.NameGuid.ToString().Replace("-", string.Empty));
         var formName = ResourceService.Instance.GetString(formMetadata.ParentEntityMetadata, resourceFormName, true, Array.Empty<object>());
         var pageName = ReportRes.ObjectChanges.PageNameFormat(formName, formMetadata.Name);
         foreach (var controlMetadata in formMetadata.Controls)
@@ -366,11 +367,11 @@ namespace Auxo.Common
           {
             var groupCntrl = (Sungero.Metadata.ControlGroupMetadata)controlMetadata;
             changedList.Add(Structures.ObjectChanges.OverrideData.Create(string.Empty,
-                                                                   "Forms",
-                                                                   ReportRes.ObjectChanges.GroupNameFormat(groupCntrl.GetDisplayName(), groupCntrl.Name),
-                                                                   pageName,
-                                                                   action,
-                                                                   string.Empty));
+                                                                         ReportConst.ChaptersNames.Forms,
+                                                                         ReportRes.ObjectChanges.GroupNameFormat(groupCntrl.GetDisplayName(), groupCntrl.Name),
+                                                                         pageName,
+                                                                         action,
+                                                                         string.Empty));
             continue;
           }
           
@@ -378,25 +379,25 @@ namespace Auxo.Common
           {
             var control = (Sungero.Metadata.ControlMetadata)controlMetadata;
             changedList.Add(Structures.ObjectChanges.OverrideData.Create(string.Empty,
-                                                                   "Forms",
-                                                                   ReportRes.ObjectChanges.ControlNameFormat(control.Property.GetLocalizedName(), control.Name),
-                                                                   pageName,
-                                                                   action,
-                                                                   string.Empty));
+                                                                         ReportConst.ChaptersNames.Forms,
+                                                                         ReportRes.ObjectChanges.ControlNameFormat(control.Property.GetLocalizedName(), control.Name),
+                                                                         pageName,
+                                                                         action,
+                                                                         string.Empty));
             continue;
           }
           
           if (controlMetadata is Sungero.Metadata.HyperlinkControlMetadata)
           {
             var hyperlink = (Sungero.Metadata.HyperlinkControlMetadata)controlMetadata;
-            var resourceName = string.Format("Control_{0}_DisplayValue", hyperlink.NameGuid.ToString().Replace("-", string.Empty));
+            var resourceName = ReportRes.ObjectChanges.ResourceName_ControlFormat(hyperlink.NameGuid.ToString().Replace("-", string.Empty));
             var hyperlinkName = ResourceService.Instance.GetString(hyperlink.ParentFormMetadata.ParentEntityMetadata, resourceName, true, Array.Empty<object>());
             changedList.Add(Structures.ObjectChanges.OverrideData.Create(string.Empty,
-                                                                   "Forms",
-                                                                   ReportRes.ObjectChanges.LinkNameFormat(hyperlinkName, hyperlink.FunctionName),
-                                                                   pageName,
-                                                                   action,
-                                                                   string.Empty));
+                                                                         ReportConst.ChaptersNames.Forms,
+                                                                         ReportRes.ObjectChanges.LinkNameFormat(hyperlinkName, hyperlink.FunctionName),
+                                                                         pageName,
+                                                                         action,
+                                                                         string.Empty));
             continue;
           }
           
@@ -404,11 +405,11 @@ namespace Auxo.Common
           {
             var function = (Sungero.Metadata.FunctionControlMetadata)controlMetadata;
             changedList.Add(Structures.ObjectChanges.OverrideData.Create(string.Empty,
-                                                                   "Forms",
-                                                                   ReportRes.ObjectChanges.StateViewNameFormat(function.Name, function.FunctionName),
-                                                                   pageName,
-                                                                   action,
-                                                                   string.Empty));
+                                                                         ReportConst.ChaptersNames.Forms,
+                                                                         ReportRes.ObjectChanges.StateViewNameFormat(function.Name, function.FunctionName),
+                                                                         pageName,
+                                                                         action,
+                                                                         string.Empty));
             continue;
           }
           
@@ -416,11 +417,11 @@ namespace Auxo.Common
           {
             var preview = (Sungero.Metadata.PreviewControlMetadata)controlMetadata;
             changedList.Add(Structures.ObjectChanges.OverrideData.Create(string.Empty,
-                                                                   "Forms",
-                                                                   ReportRes.ObjectChanges.PreviewNameFormat(preview.Name),
-                                                                   pageName,
-                                                                   action,
-                                                                   string.Empty));
+                                                                         ReportConst.ChaptersNames.Forms,
+                                                                         ReportRes.ObjectChanges.PreviewNameFormat(preview.Name),
+                                                                         pageName,
+                                                                         action,
+                                                                         string.Empty));
             continue;
           }
 
@@ -428,11 +429,11 @@ namespace Auxo.Common
           {
             var label = (Sungero.Metadata.LabelControlMetadata)controlMetadata;
             changedList.Add(Structures.ObjectChanges.OverrideData.Create(string.Empty,
-                                                                   "Forms",
-                                                                   ReportRes.ObjectChanges.LabelNameFormat(label.Property.GetLocalizedName(), label.Name),
-                                                                   pageName,
-                                                                   action,
-                                                                   string.Empty));
+                                                                         ReportConst.ChaptersNames.Forms,
+                                                                         ReportRes.ObjectChanges.LabelNameFormat(label.Property.GetLocalizedName(), label.Name),
+                                                                         pageName,
+                                                                         action,
+                                                                         string.Empty));
           }
         }
       }
@@ -474,7 +475,7 @@ namespace Auxo.Common
       foreach (var groupMetadata in metadata.RibbonCardMetadata.AllElements.Where(_ => !baseRibbonNames.Contains(_.Name) || _.IsOverridden).GroupBy(_ => _.ParentGroup.ParentPage))
       {
         var pageMetadata = (Sungero.Metadata.RibbonPageMetadata)groupMetadata.Key;
-        var pageResourceName = string.Format("Ribbon_{0}_{1}", pageMetadata.Name, pageMetadata.NameGuid.ToString().Replace("-", string.Empty));
+        var pageResourceName = ReportRes.ObjectChanges.ResourceName_RibbonFormat(pageMetadata.Name, pageMetadata.NameGuid.ToString().Replace("-", string.Empty));
         var groupName = ReportRes.ObjectChanges.TabNameFormat(ResourceService.Instance.GetString(metadata, pageResourceName, true, Array.Empty<object>()));
         foreach (var actionMetadata in groupMetadata)
         {
@@ -483,20 +484,20 @@ namespace Auxo.Common
           if (actionMetadata is Sungero.Metadata.RibbonActionButtonMetadata)
           {
             var ribbonAction = (Sungero.Metadata.RibbonActionButtonMetadata)actionMetadata;
-            actionName = string.Format("Кнопка - {0}", ribbonAction.Action.GetLocalizedName());
+            actionName = ReportRes.ObjectChanges.ActionNameFormat(ribbonAction.Action.GetLocalizedName());
           }
           
           if (actionMetadata is Sungero.Metadata.RibbonStateToggleButtonMetadata)
           {
             var stateToggle = (Sungero.Metadata.RibbonStateToggleButtonMetadata)actionMetadata;
-            var stateToggleResourceName = string.Format("Ribbon_{0}_{1}", stateToggle.Name, stateToggle.NameGuid.ToString().Replace("-", string.Empty));
+            var stateToggleResourceName = ReportRes.ObjectChanges.ResourceName_RibbonFormat(stateToggle.Name, stateToggle.NameGuid.ToString().Replace("-", string.Empty));
             actionName = ReportRes.ObjectChanges.SwitchNameFormat(ResourceService.Instance.GetString(metadata, stateToggleResourceName, true, Array.Empty<object>()));
           }
           
           if (actionMetadata is Sungero.Metadata.RibbonStaticDropDownButtonMetadata)
           {
             var dropDownButton = (Sungero.Metadata.RibbonStaticDropDownButtonMetadata)actionMetadata;
-            var dropDownResourceName = string.Format("Ribbon_{0}_{1}", dropDownButton.Name, dropDownButton.NameGuid.ToString().Replace("-", string.Empty));
+            var dropDownResourceName = ReportRes.ObjectChanges.ResourceName_RibbonFormat(dropDownButton.Name, dropDownButton.NameGuid.ToString().Replace("-", string.Empty));
             actionName = ReportRes.ObjectChanges.MenuButtonNameFormat(ResourceService.Instance.GetString(metadata, dropDownResourceName, true, Array.Empty<object>()));
           }
           
@@ -508,11 +509,11 @@ namespace Auxo.Common
           
           if (!string.IsNullOrEmpty(actionName))
             changedList.Add(Structures.ObjectChanges.OverrideData.Create(string.Empty,
-                                                                   "RibbonActions",
-                                                                   actionName,
-                                                                   groupName,
-                                                                   actionMetadata.IsOverridden ? ReportRes.ObjectChanges.ModifiedName : ReportRes.ObjectChanges.AddedName,
-                                                                   string.Empty));
+                                                                         ReportConst.ChaptersNames.RibbonActions,
+                                                                         actionName,
+                                                                         groupName,
+                                                                         actionMetadata.IsOverridden ? ReportRes.ObjectChanges.ModifiedName : ReportRes.ObjectChanges.AddedName,
+                                                                         string.Empty));
         }
       }
       
@@ -526,80 +527,80 @@ namespace Auxo.Common
     public virtual System.Collections.Generic.HashSet<System.Collections.Generic.KeyValuePair<string, string>> GetEventNames()
     {
       return new HashSet<KeyValuePair<string, string>> {
-        new KeyValuePair<string, string> ("BeforeSaveServer", "До сохранения"),
-        new KeyValuePair<string, string> ("SavingServer", "До сохранения (в транзакции)"),
-        new KeyValuePair<string, string> ("SavedServer", "После сохранения (в транзакции)"),
-        new KeyValuePair<string, string> ("AfterSaveServer", "После сохранения"),
-        new KeyValuePair<string, string> ("WriteHistoryServer", "До сохранения истории"),
-        new KeyValuePair<string, string> ("BeforeDeleteServer", "До удаления"),
-        new KeyValuePair<string, string> ("DeletingServer", "До удаления (в транзакции)"),
-        new KeyValuePair<string, string> ("AfterDeleteServer", "После удаления"),
-        new KeyValuePair<string, string> ("CreatingFromServer", "Копирование"),
-        new KeyValuePair<string, string> ("CreatedServer", "Создание"),
-        new KeyValuePair<string, string> ("FilteringServer", "Фильтрация объекта или панели фильтрации"),
-        new KeyValuePair<string, string> ("ValidateFilterPanelClient", "Проверка фильтра панели фильтрации"),
-        new KeyValuePair<string, string> ("UiFilteringServer", "UI-фильтрация"),
-        new KeyValuePair<string, string> ("ShowingClient", "Показ формы"),
-        new KeyValuePair<string, string> ("ClosingClient", "Закрытие формы"),
-        new KeyValuePair<string, string> ("RefreshClient", "Обновление формы"),
-        new KeyValuePair<string, string> ("ChangedShared", "Изменение значение свойства"),
-        new KeyValuePair<string, string> ("AddedShared", "Добавление в коллекцию"),
-        new KeyValuePair<string, string> ("DeletedShared", "Удаление из коллекции"),
-        new KeyValuePair<string, string> ("ValueInputClient", "Изменение значение контрола"),
-        new KeyValuePair<string, string> ("IsRequired", "Обязательное"),
-        new KeyValuePair<string, string> ("IsEnabled", "Разрешить редактирование"),
-        new KeyValuePair<string, string> ("IsShowedInList", "Отображать в форме-списке"),
-        new KeyValuePair<string, string> ("CanBeSearch", "Отображать в диалоге поиска"),
-        new KeyValuePair<string, string> ("IsVisibility", "Отображать в карточке"),
-        new KeyValuePair<string, string> ("IsLoadEagerly", "Загружать значение сразу"),
-        new KeyValuePair<string, string> ("IsUnique", "Уникальное"),
-        new KeyValuePair<string, string> ("IsDisplayValue", "Свойство задает отображаемое имя сущности"),
-        new KeyValuePair<string, string> ("IsQuickSearchAllowed", "Быстрый поиск в форме-списке ищет по этому свойству"),
-        new KeyValuePair<string, string> ("GenerateHandler", "Выполнение/Возможность выполнения"),
-        new KeyValuePair<string, string> ("NeedConfirmation", "Запрашивать подтверждение перед выполнением"),
-        new KeyValuePair<string, string> ("AllowUserDisableConfirmation", "Позволить пользователю отключать подтверждение"),
-        new KeyValuePair<string, string> ("IsToggleAction", "Действие-переключатель"),
-        new KeyValuePair<string, string> ("IsEmptySelectionAllowed", "Доступнопо при отсутсвии выделенных записей в списке"),
-        new KeyValuePair<string, string> ("IsCreationAction", "Является действием создания"),
-        new KeyValuePair<string, string> ("SmallIconName", "Маленькая иконка"),
-        new KeyValuePair<string, string> ("LargeIconName", "Большая иконка"),
-        new KeyValuePair<string, string> ("IsVisible", "Отображать в проводнике"),
-        new KeyValuePair<string, string> ("CanBeSearch", "Отображать в диалоге поиска"),
-        new KeyValuePair<string, string> ("IconName", "Иконка"),
-        new KeyValuePair<string, string> ("HideFromCreationArea", "Скрыть из области создания"),
-        new KeyValuePair<string, string> ("HideFromNavigationEditorCreationArea", "Скрыть из области создания выпадающего списка"),
-        new KeyValuePair<string, string> ("ShowingSignDialogClient", "До показа диалога подписания"),
-        new KeyValuePair<string, string> ("LookupMode", "Способ выбора значения"),
-        new KeyValuePair<string, string> ("IsCacheable", "Кэшировать на клиенте"),
-        new KeyValuePair<string, string> ("OpenCardByDefaultInCollection", "Двойной клик на документе открывает карточку"),
-        new KeyValuePair<string, string> ("IsAutoCreated", "Создавать только программно"),
-        new KeyValuePair<string, string> ("NeedWriteHistory", "Вести историю изменений"),
-        new KeyValuePair<string, string> ("CanBeUsedInIntegration", "Использовать в сервисе интеграции"),
-        new KeyValuePair<string, string> ("IsStatusEnabled", "Действующая/Закрытая"),
-        new KeyValuePair<string, string> ("SearchDialogLookupServer", "Фильтрация выбора из списка при поиске"),
-        new KeyValuePair<string, string> ("LookupServer", "Фильтрация выбора из списка"),
-        new KeyValuePair<string, string> ("FlatListInStandaloneLookup", "Отображать как список при выборе"),
-        new KeyValuePair<string, string> ("ConvertingFromServer", "Смена типа"),
-        new KeyValuePair<string, string> ("BeforeSigningServer", "До подписания"),
-        new KeyValuePair<string, string> ("BeforeStartServer", "До старта"),
-        new KeyValuePair<string, string> ("BeforeRestartServer", "До рестарта"),
-        new KeyValuePair<string, string> ("BeforeResumeServer", "До возобновления"),
-        new KeyValuePair<string, string> ("BeforeAbortServer", "До прекращения"),
-        new KeyValuePair<string, string> ("AfterSuspendServer", "После приостановки"),
-        new KeyValuePair<string, string> ("OnlyPerformersCanComplete", "Только исполнители могут выполнять задания"),
-        new KeyValuePair<string, string> ("ShowTypeNameInThread", "В переписке показывать тип вместо темы"),
-        new KeyValuePair<string, string> ("IsCreateVersionsOnLayerForbidden", "Запретить создавать версии схемы задачи в перекрытиях"),
-        new KeyValuePair<string, string> ("DocumentVersionCreationSources", "Разрешить создание версий документа"),
-        new KeyValuePair<string, string> ("UseSchemeFromSettings", "Схема настраивается в проводнике"),
-        new KeyValuePair<string, string> ("EntityAfterSuspendEvent", "После приостановки"),
-        new KeyValuePair<string, string> ("EntityBeforeAbortEvent", "До прекращения"),
-        new KeyValuePair<string, string> ("EntityBeforeResumeEvent", "До возобновления")
+        new KeyValuePair<string, string> ("BeforeSaveServer", ReportRes.ObjectChanges.Event_BeforeSaveServer),
+        new KeyValuePair<string, string> ("SavingServer", ReportRes.ObjectChanges.Event_SavingServer),
+        new KeyValuePair<string, string> ("SavedServer", ReportRes.ObjectChanges.Event_SavedServer),
+        new KeyValuePair<string, string> ("AfterSaveServer", ReportRes.ObjectChanges.Event_AfterSaveServer),
+        new KeyValuePair<string, string> ("WriteHistoryServer", ReportRes.ObjectChanges.Event_WriteHistoryServer),
+        new KeyValuePair<string, string> ("BeforeDeleteServer", ReportRes.ObjectChanges.Event_BeforeDeleteServer),
+        new KeyValuePair<string, string> ("DeletingServer", ReportRes.ObjectChanges.Event_DeletingServer),
+        new KeyValuePair<string, string> ("AfterDeleteServer", ReportRes.ObjectChanges.Event_AfterDeleteServer),
+        new KeyValuePair<string, string> ("CreatingFromServer", ReportRes.ObjectChanges.Event_CreatingFromServer),
+        new KeyValuePair<string, string> ("CreatedServer", ReportRes.ObjectChanges.Event_CreatedServer),
+        new KeyValuePair<string, string> ("FilteringServer", ReportRes.ObjectChanges.Event_FilteringServer),
+        new KeyValuePair<string, string> ("ValidateFilterPanelClient", ReportRes.ObjectChanges.Event_ValidateFilterPanelClient),
+        new KeyValuePair<string, string> ("UiFilteringServer", ReportRes.ObjectChanges.Event_UiFilteringServer),
+        new KeyValuePair<string, string> ("ShowingClient", ReportRes.ObjectChanges.Event_ShowingClient),
+        new KeyValuePair<string, string> ("ClosingClient", ReportRes.ObjectChanges.Event_ClosingClient),
+        new KeyValuePair<string, string> ("RefreshClient", ReportRes.ObjectChanges.Event_RefreshClient),
+        new KeyValuePair<string, string> ("ChangedShared", ReportRes.ObjectChanges.Event_ChangedShared),
+        new KeyValuePair<string, string> ("AddedShared", ReportRes.ObjectChanges.Event_AddedShared),
+        new KeyValuePair<string, string> ("DeletedShared", ReportRes.ObjectChanges.Event_DeletedShared),
+        new KeyValuePair<string, string> ("ValueInputClient", ReportRes.ObjectChanges.Event_ValueInputClient),        
+        new KeyValuePair<string, string> ("IsRequired", ReportRes.ObjectChanges.Event_IsRequired),        
+        new KeyValuePair<string, string> ("IsEnabled", ReportRes.ObjectChanges.Event_IsEnabled),
+        new KeyValuePair<string, string> ("IsShowedInList", ReportRes.ObjectChanges.Event_IsShowedInList),
+        new KeyValuePair<string, string> ("CanBeSearch", ReportRes.ObjectChanges.Event_CanBeSearch),
+        new KeyValuePair<string, string> ("IsVisibility", ReportRes.ObjectChanges.Event_IsVisibility),
+        new KeyValuePair<string, string> ("IsLoadEagerly", ReportRes.ObjectChanges.Event_IsLoadEagerly),
+        new KeyValuePair<string, string> ("IsUnique", ReportRes.ObjectChanges.Event_IsUnique),
+        new KeyValuePair<string, string> ("IsDisplayValue", ReportRes.ObjectChanges.Event_IsDisplayValue),
+        new KeyValuePair<string, string> ("IsQuickSearchAllowed", ReportRes.ObjectChanges.Event_IsQuickSearchAllowed),
+        new KeyValuePair<string, string> ("GenerateHandler", ReportRes.ObjectChanges.Event_GenerateHandler),
+        new KeyValuePair<string, string> ("NeedConfirmation", ReportRes.ObjectChanges.Event_NeedConfirmation),
+        new KeyValuePair<string, string> ("AllowUserDisableConfirmation", ReportRes.ObjectChanges.Event_AllowUserDisableConfirmation),
+        new KeyValuePair<string, string> ("IsToggleAction", ReportRes.ObjectChanges.Event_IsToggleAction),
+        new KeyValuePair<string, string> ("IsEmptySelectionAllowed", ReportRes.ObjectChanges.Event_IsEmptySelectionAllowed),
+        new KeyValuePair<string, string> ("IsCreationAction", ReportRes.ObjectChanges.Event_IsCreationAction),
+        new KeyValuePair<string, string> ("SmallIconName", ReportRes.ObjectChanges.Event_SmallIconName),
+        new KeyValuePair<string, string> ("LargeIconName", ReportRes.ObjectChanges.Event_LargeIconName),
+        new KeyValuePair<string, string> ("IsVisible", ReportRes.ObjectChanges.Event_IsVisible),
+        new KeyValuePair<string, string> ("CanBeSearch", ReportRes.ObjectChanges.Event_CanBeSearch),
+        new KeyValuePair<string, string> ("IconName", ReportRes.ObjectChanges.Event_IconName),
+        new KeyValuePair<string, string> ("HideFromCreationArea", ReportRes.ObjectChanges.Event_HideFromCreationArea),
+        new KeyValuePair<string, string> ("HideFromNavigationEditorCreationArea", ReportRes.ObjectChanges.Event_HideFromNavigationEditorCreationArea),
+        new KeyValuePair<string, string> ("ShowingSignDialogClient", ReportRes.ObjectChanges.Event_ShowingSignDialogClient),
+        new KeyValuePair<string, string> ("LookupMode", ReportRes.ObjectChanges.Event_LookupMode),
+        new KeyValuePair<string, string> ("IsCacheable", ReportRes.ObjectChanges.Event_IsCacheable),
+        new KeyValuePair<string, string> ("OpenCardByDefaultInCollection", ReportRes.ObjectChanges.Event_OpenCardByDefaultInCollection),
+        new KeyValuePair<string, string> ("IsAutoCreated", ReportRes.ObjectChanges.Event_IsAutoCreated),
+        new KeyValuePair<string, string> ("NeedWriteHistory", ReportRes.ObjectChanges.Event_NeedWriteHistory),
+        new KeyValuePair<string, string> ("CanBeUsedInIntegration", ReportRes.ObjectChanges.Event_CanBeUsedInIntegration),
+        new KeyValuePair<string, string> ("IsStatusEnabled", ReportRes.ObjectChanges.Event_IsStatusEnabled),
+        new KeyValuePair<string, string> ("SearchDialogLookupServer", ReportRes.ObjectChanges.Event_SearchDialogLookupServer),
+        new KeyValuePair<string, string> ("LookupServer", ReportRes.ObjectChanges.Event_LookupServer),
+        new KeyValuePair<string, string> ("FlatListInStandaloneLookup", ReportRes.ObjectChanges.Event_FlatListInStandaloneLookup),
+        new KeyValuePair<string, string> ("ConvertingFromServer", ReportRes.ObjectChanges.Event_ConvertingFromServer),
+        new KeyValuePair<string, string> ("BeforeSigningServer", ReportRes.ObjectChanges.Event_BeforeSigningServer),
+        new KeyValuePair<string, string> ("BeforeStartServer", ReportRes.ObjectChanges.Event_BeforeStartServer),
+        new KeyValuePair<string, string> ("BeforeRestartServer", ReportRes.ObjectChanges.Event_BeforeRestartServer),
+        new KeyValuePair<string, string> ("BeforeResumeServer", ReportRes.ObjectChanges.Event_BeforeResumeServer),
+        new KeyValuePair<string, string> ("BeforeAbortServer", ReportRes.ObjectChanges.Event_BeforeAbortServer),
+        new KeyValuePair<string, string> ("AfterSuspendServer", ReportRes.ObjectChanges.Event_AfterSuspendServer),
+        new KeyValuePair<string, string> ("OnlyPerformersCanComplete", ReportRes.ObjectChanges.Event_OnlyPerformersCanComplete),
+        new KeyValuePair<string, string> ("ShowTypeNameInThread", ReportRes.ObjectChanges.Event_ShowTypeNameInThread),
+        new KeyValuePair<string, string> ("IsCreateVersionsOnLayerForbidden", ReportRes.ObjectChanges.Event_IsCreateVersionsOnLayerForbidden),
+        new KeyValuePair<string, string> ("DocumentVersionCreationSources", ReportRes.ObjectChanges.Event_DocumentVersionCreationSources),
+        new KeyValuePair<string, string> ("UseSchemeFromSettings", ReportRes.ObjectChanges.Event_UseSchemeFromSettings),
+        new KeyValuePair<string, string> ("EntityAfterSuspendEvent", ReportRes.ObjectChanges.Event_EntityAfterSuspendEvent),
+        new KeyValuePair<string, string> ("EntityBeforeAbortEvent", ReportRes.ObjectChanges.Event_EntityBeforeAbortEvent),
+        new KeyValuePair<string, string> ("EntityBeforeResumeEvent", ReportRes.ObjectChanges.Event_EntityBeforeResumeEvent)
       };
     }
     
     public override void AfterExecute(Sungero.Reporting.Server.AfterExecuteEventArgs e)
     {
-      Sungero.Docflow.PublicFunctions.Module.DeleteReportData(Constants.ObjectChanges.SourceTableName, ObjectChanges.ReportSessionId);
+      Sungero.Docflow.PublicFunctions.Module.DeleteReportData(ReportConst.SourceTableName, ObjectChanges.ReportSessionId);
     }
 
   }

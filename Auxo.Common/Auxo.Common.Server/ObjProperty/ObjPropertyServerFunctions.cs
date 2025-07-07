@@ -126,10 +126,10 @@ namespace Auxo.Common.Server
       {
         var dateTimeMetadata = (Sungero.Metadata.DateTimePropertyMetadata)propertyMetadata;
         var dateTimeFormat = dateTimeMetadata.DateTimeFormat.ToString();
-        objProperty.PropertyType = new Enumeration(string.Format("Ax{0}", dateTimeFormat));
+        objProperty.PropertyType = new Enumeration(ObjProperties.Resources.PropertyTypeTemplateFormat(dateTimeFormat));
       }
       else
-        objProperty.PropertyType = new Enumeration(string.Format("Ax{0}", propertyMetadata.PropertyType));
+        objProperty.PropertyType = new Enumeration(ObjProperties.Resources.PropertyTypeTemplateFormat(propertyMetadata.PropertyType));
 
       if (isNavigation)
         objProperty.NavigationGuid = ((Sungero.Metadata.NavigationPropertyMetadata)propertyMetadata).EntityGuid.ToString();
@@ -163,10 +163,10 @@ namespace Auxo.Common.Server
       {
         var dateTimeMetadata = (Sungero.Metadata.DateTimePropertyMetadata)propertyMetadata;
         var dateTimeFormat = dateTimeMetadata.DateTimeFormat.ToString();
-        type = new Enumeration(string.Format("Ax{0}", dateTimeFormat));
+        type = new Enumeration(ObjProperties.Resources.PropertyTypeTemplateFormat(dateTimeFormat));
       }
       else
-        type = new Enumeration(string.Format("Ax{0}", propertyMetadata.PropertyType));
+        type = new Enumeration(ObjProperties.Resources.PropertyTypeTemplateFormat(propertyMetadata.PropertyType));
 
       if (objProperty.PropertyType != type)
         objProperty.PropertyType = type;

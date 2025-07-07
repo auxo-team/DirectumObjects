@@ -743,7 +743,8 @@
   "PublicStructures": [],
   "ResourcesKeys": [
     "NoTypeError",
-    "DeleteErrorMessage"
+    "DeleteErrorMessage",
+    "PropertyTypeTemplate"
   ],
   "RibbonCardMetadata": {
     "NameGuid": "2a556e59-c919-49a1-a804-af9ce7acdb7e",

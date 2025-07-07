@@ -12,12 +12,15 @@ namespace Auxo.Common
 
     public override void BeforeSave(Sungero.Domain.BeforeSaveEventArgs e)
     {
-      var guids = new List<string>();
-      guids.Add(_obj.EntityGuid);
-      guids.AddRange(_obj.Parents.Select(p => p.EntityGuid));
+      var isParents = _obj.Parents.Any();
       
-      _obj.AllGuids = string.Join(", ", guids);
-      _obj.IsOverridde = _obj.Parents.Where(_ => _.EntityGuid != Constants.Module.RecipientGuid.ToString()).Any();
+      var entityGuids = new List<string>();
+      entityGuids.Add(_obj.EntityGuid);
+      if (isParents)
+        entityGuids.AddRange(_obj.Parents.Select(_ => _.EntityGuid));
+      
+      _obj.AllGuids = string.Join(", ", entityGuids);
+      _obj.IsOverridde = isParents ? _obj.Parents.Where(_ => _.EntityGuid != Constants.Module.RecipientGuid.ToString()).Any() : false;
     }
 
     public override void Created(Sungero.Domain.CreatedEventArgs e)

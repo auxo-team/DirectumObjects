@@ -100,61 +100,61 @@ namespace Auxo.Common.Server
       switch (declensionCase)
       {
           //Винительный
-        case "Accusative":
+        case Constants.Module.Declensions.Accusative:
           {
-            if (objectType == "JobTitles")
+            if (objectType == Constants.Module.ObjTypesNames.JobTitles)
               return Sungero.Content.Server.ElectronicDocumentFunctions.AccusativeJobTitle(objectName);
-            else if (objectType == "Departments")
+            else if (objectType == Constants.Module.ObjTypesNames.Departments)
               return Sungero.Content.Server.ElectronicDocumentFunctions.AccusativeDepartmentTitle(objectName);
-            else if (objectType == "People")
+            else if (objectType == Constants.Module.ObjTypesNames.People)
               return Sungero.Content.Server.ElectronicDocumentFunctions.AccusativePersonalFullName(objectName);
             else
               return Sungero.Content.Server.ElectronicDocumentFunctions.Accusative(objectName);
           }
           //Дательный
-        case "Dative":
+        case Constants.Module.Declensions.Dative:
           {
-            if (objectType == "JobTitles")
+            if (objectType == Constants.Module.ObjTypesNames.JobTitles)
               return Sungero.Content.Server.ElectronicDocumentFunctions.DativeJobTitle(objectName);
-            else if (objectType == "Departments")
+            else if (objectType == Constants.Module.ObjTypesNames.Departments)
               return Sungero.Content.Server.ElectronicDocumentFunctions.DativeDepartmentTitle(objectName);
-            else if (objectType == "People")
+            else if (objectType == Constants.Module.ObjTypesNames.People)
               return Sungero.Content.Server.ElectronicDocumentFunctions.DativePersonalFullName(objectName);
             else
               return Sungero.Content.Server.ElectronicDocumentFunctions.Dative(objectName);
           }
           //Предложный
-        case "Prepositional":
+        case Constants.Module.Declensions.Prepositional:
           {
-            if (objectType == "JobTitles")
+            if (objectType == Constants.Module.ObjTypesNames.JobTitles)
               return Sungero.Content.Server.ElectronicDocumentFunctions.PrepositionalJobTitle(objectName);
-            else if (objectType == "Departments")
+            else if (objectType == Constants.Module.ObjTypesNames.Departments)
               return Sungero.Content.Server.ElectronicDocumentFunctions.PrepositionalDepartmentTitle(objectName);
-            else if (objectType == "People")
+            else if (objectType == Constants.Module.ObjTypesNames.People)
               return Sungero.Content.Server.ElectronicDocumentFunctions.PrepositionalPersonalFullName(objectName);
             else
               return Sungero.Content.Server.ElectronicDocumentFunctions.Prepositional(objectName);
           }
           //Родительный
-        case "Genitive":
+        case Constants.Module.Declensions.Genitive:
           {
-            if (objectType == "JobTitles")
+            if (objectType == Constants.Module.ObjTypesNames.JobTitles)
               return Sungero.Content.Server.ElectronicDocumentFunctions.GenitiveJobTitle(objectName);
-            else if (objectType == "Departments")
+            else if (objectType == Constants.Module.ObjTypesNames.Departments)
               return Sungero.Content.Server.ElectronicDocumentFunctions.GenitiveDepartmentTitle(objectName);
-            else if (objectType == "People")
+            else if (objectType == Constants.Module.ObjTypesNames.People)
               return Sungero.Content.Server.ElectronicDocumentFunctions.GenitivePersonalFullName(objectName);
             else
               return Sungero.Content.Server.ElectronicDocumentFunctions.Genitive(objectName);
           }
           //Творительный
-        case "Ablative":
+        case Constants.Module.Declensions.Ablative:
           {
-            if (objectType == "JobTitles")
+            if (objectType == Constants.Module.ObjTypesNames.JobTitles)
               return Sungero.Content.Server.ElectronicDocumentFunctions.AblativeJobTitle(objectName);
-            else if (objectType == "Departments")
+            else if (objectType == Constants.Module.ObjTypesNames.Departments)
               return Sungero.Content.Server.ElectronicDocumentFunctions.AblativeDepartmentTitle(objectName);
-            else if (objectType == "People")
+            else if (objectType == Constants.Module.ObjTypesNames.People)
               return Sungero.Content.Server.ElectronicDocumentFunctions.AblativePersonalFullName(objectName);
             else
               return Sungero.Content.Server.ElectronicDocumentFunctions.Ablative(objectName);

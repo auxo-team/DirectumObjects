@@ -110,4 +110,226 @@ Collections "{2}" ({3})</value>
   <data name="PropertySwitchName" xml:space="preserve">
     <value>Property Switch - {0}</value>
   </data>
+  <data name="CollectionFormat" xml:space="preserve">
+    <value>{0}"{1}" ({2})</value>
+  </data>
+  <data name="PropertyFormat" xml:space="preserve">
+    <value>"{0}" ({1})</value>
+  </data>
+  <data name="ActionFormat" xml:space="preserve">
+    <value>{0} ({1})</value>
+  </data>
+  <data name="ResourceName_Form" xml:space="preserve">
+    <value>Form_{0}</value>
+  </data>
+  <data name="ResourceName_Control" xml:space="preserve">
+    <value>Control_{0}_DisplayValue</value>
+  </data>
+  <data name="ResourceName_Ribbon" xml:space="preserve">
+    <value>Ribbon_{0}_{1}</value>
+  </data>
+  <data name="ActionName" xml:space="preserve">
+    <value>Action - {0}</value>
+  </data>
+  <data name="Event_BeforeSaveServer" xml:space="preserve">
+    <value>Before saving</value>
+  </data>
+  <data name="Event_WriteHistoryServer" xml:space="preserve">
+    <value>Before saving history</value>
+  </data>
+  <data name="Event_SavingServer" xml:space="preserve">
+    <value>Before saving (in transaction)</value>
+  </data>
+  <data name="Event_ClosingClient" xml:space="preserve">
+    <value>Closing form</value>
+  </data>
+  <data name="Event_IsRequired" xml:space="preserve">
+    <value>Required</value>
+  </data>
+  <data name="Event_AllowUserDisableConfirmation" xml:space="preserve">
+    <value>Allow user to disable confirmation</value>
+  </data>
+  <data name="Event_IsToggleAction" xml:space="preserve">
+    <value>Action-switch</value>
+  </data>
+  <data name="Event_IsEmptySelectionAllowed" xml:space="preserve">
+    <value>Available when there are no selected entries in the list</value>
+  </data>
+  <data name="Event_IsCreationAction" xml:space="preserve">
+    <value>Is the act of creation</value>
+  </data>
+  <data name="Event_SmallIconName" xml:space="preserve">
+    <value>Small icon</value>
+  </data>
+  <data name="Event_NeedWriteHistory" xml:space="preserve">
+    <value>Keep a history of changes</value>
+  </data>
+  <data name="Event_SavedServer" xml:space="preserve">
+    <value>After saving (in transaction)</value>
+  </data>
+  <data name="Event_AfterSaveServer" xml:space="preserve">
+    <value>After saving</value>
+  </data>
+  <data name="Event_IsVisible" xml:space="preserve">
+    <value>Show in explorer</value>
+  </data>
+  <data name="Event_BeforeDeleteServer" xml:space="preserve">
+    <value>Before deletion</value>
+  </data>
+  <data name="Event_DeletingServer" xml:space="preserve">
+    <value>Before deletion (in transaction)</value>
+  </data>
+  <data name="Event_AfterDeleteServer" xml:space="preserve">
+    <value>After removal</value>
+  </data>
+  <data name="Event_CreatingFromServer" xml:space="preserve">
+    <value>Copying</value>
+  </data>
+  <data name="Event_CreatedServer" xml:space="preserve">
+    <value>Creation</value>
+  </data>
+  <data name="Event_FilteringServer" xml:space="preserve">
+    <value>Filtering an object or filter panel</value>
+  </data>
+  <data name="Event_ValidateFilterPanelClient" xml:space="preserve">
+    <value>Checking the filter panel filter</value>
+  </data>
+  <data name="Event_UiFilteringServer" xml:space="preserve">
+    <value>UI-filtering</value>
+  </data>
+  <data name="Event_ShowingClient" xml:space="preserve">
+    <value>Show form</value>
+  </data>
+  <data name="Event_RefreshClient" xml:space="preserve">
+    <value>Updating form</value>
+  </data>
+  <data name="Event_ChangedShared" xml:space="preserve">
+    <value>Changing the value of a property</value>
+  </data>
+  <data name="Event_AddedShared" xml:space="preserve">
+    <value>Add to collection</value>
+  </data>
+  <data name="Event_DeletedShared" xml:space="preserve">
+    <value>Removing from collection</value>
+  </data>
+  <data name="Event_ValueInputClient" xml:space="preserve">
+    <value>Changing the control value</value>
+  </data>
+  <data name="Event_IsShowedInList" xml:space="preserve">
+    <value>Display in list form</value>
+  </data>
+  <data name="Event_CanBeSearch" xml:space="preserve">
+    <value>Show in search dialog</value>
+  </data>
+  <data name="Event_IsVisibility" xml:space="preserve">
+    <value>Display in card</value>
+  </data>
+  <data name="Event_IsLoadEagerly" xml:space="preserve">
+    <value>Load value immediately</value>
+  </data>
+  <data name="Event_IsUnique" xml:space="preserve">
+    <value>Unique</value>
+  </data>
+  <data name="Event_IsDisplayValue" xml:space="preserve">
+    <value>The property specifies the display name of the entity</value>
+  </data>
+  <data name="Event_IsQuickSearchAllowed" xml:space="preserve">
+    <value>Quick search in the list form searches by this property</value>
+  </data>
+  <data name="Event_GenerateHandler" xml:space="preserve">
+    <value>Fulfilment/Possibility of Fulfilment</value>
+  </data>
+  <data name="Event_NeedConfirmation" xml:space="preserve">
+    <value>Ask for confirmation before executing</value>
+  </data>
+  <data name="Event_IsEnabled" xml:space="preserve">
+    <value>Allow editing</value>
+  </data>
+  <data name="Event_IsAutoCreated" xml:space="preserve">
+    <value>Create only programmatically</value>
+  </data>
+  <data name="Event_OpenCardByDefaultInCollection" xml:space="preserve">
+    <value>Double clicking on a document opens a card</value>
+  </data>
+  <data name="Event_IsCacheable" xml:space="preserve">
+    <value>Cache on the client</value>
+  </data>
+  <data name="Event_LookupMode" xml:space="preserve">
+    <value>Method of selecting a value</value>
+  </data>
+  <data name="Event_ShowingSignDialogClient" xml:space="preserve">
+    <value>Before showing the signing dialog</value>
+  </data>
+  <data name="Event_HideFromNavigationEditorCreationArea" xml:space="preserve">
+    <value>Hide from dropdown list creation area</value>
+  </data>
+  <data name="Event_HideFromCreationArea" xml:space="preserve">
+    <value>Hide from creation area</value>
+  </data>
+  <data name="Event_SearchDialogLookupServer" xml:space="preserve">
+    <value>Filtering selection from list when searching</value>
+  </data>
+  <data name="Event_IsStatusEnabled" xml:space="preserve">
+    <value>Active/Closed</value>
+  </data>
+  <data name="Event_CanBeUsedInIntegration" xml:space="preserve">
+    <value>Use in integration service</value>
+  </data>
+  <data name="Event_LargeIconName" xml:space="preserve">
+    <value>Big icon</value>
+  </data>
+  <data name="Event_IconName" xml:space="preserve">
+    <value>Icon</value>
+  </data>
+  <data name="Event_ShowTypeNameInThread" xml:space="preserve">
+    <value>Show type instead of subject in correspondence</value>
+  </data>
+  <data name="Event_BeforeResumeServer" xml:space="preserve">
+    <value>Before the resumption</value>
+  </data>
+  <data name="Event_BeforeRestartServer" xml:space="preserve">
+    <value>Before the restart</value>
+  </data>
+  <data name="Event_BeforeStartServer" xml:space="preserve">
+    <value>Before the start</value>
+  </data>
+  <data name="Event_BeforeSigningServer" xml:space="preserve">
+    <value>Before signing</value>
+  </data>
+  <data name="Event_ConvertingFromServer" xml:space="preserve">
+    <value>Change of type</value>
+  </data>
+  <data name="Event_FlatListInStandaloneLookup" xml:space="preserve">
+    <value>Display as list when selected</value>
+  </data>
+  <data name="Event_LookupServer" xml:space="preserve">
+    <value>Filtering selection from list</value>
+  </data>
+  <data name="Event_EntityBeforeResumeEvent" xml:space="preserve">
+    <value>Before the resumption</value>
+  </data>
+  <data name="Event_EntityBeforeAbortEvent" xml:space="preserve">
+    <value>Before termination</value>
+  </data>
+  <data name="Event_EntityAfterSuspendEvent" xml:space="preserve">
+    <value>After suspension</value>
+  </data>
+  <data name="Event_UseSchemeFromSettings" xml:space="preserve">
+    <value>The scheme is configured in the explorer</value>
+  </data>
+  <data name="Event_DocumentVersionCreationSources" xml:space="preserve">
+    <value>Allow document versioning</value>
+  </data>
+  <data name="Event_IsCreateVersionsOnLayerForbidden" xml:space="preserve">
+    <value>Disable creating task schema versions in overlaps</value>
+  </data>
+  <data name="Event_OnlyPerformersCanComplete" xml:space="preserve">
+    <value>Only performers can perform tasks</value>
+  </data>
+  <data name="Event_AfterSuspendServer" xml:space="preserve">
+    <value>After suspension</value>
+  </data>
+  <data name="Event_BeforeAbortServer" xml:space="preserve">
+    <value>Before termination</value>
+  </data>
 </root>

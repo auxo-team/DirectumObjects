@@ -80,8 +80,8 @@ namespace Auxo.Common.Server
         return null;
       
       var recordFindName = metadata.Name;
-      if (recordFindName == "User")
-        recordFindName = "Employee";
+      if (recordFindName == Constants.Module.ObjTypesNames.User)
+        recordFindName = Constants.Module.ObjTypesNames.Employee;
       
       var originalEntityGuid = metadata.GetOriginal().NameGuid.ToString().ToLower();
       var record = ObjTypes.GetAll().Where(_ => _.EntityGuid == originalEntityGuid || _.Parents.Any(p => p.EntityGuid == originalEntityGuid)).FirstOrDefault();
@@ -112,8 +112,8 @@ namespace Auxo.Common.Server
         return;
       
       var recordFindName = metadata.Name;
-      if (recordFindName == "User")
-        recordFindName = "Employee";
+      if (recordFindName == Constants.Module.ObjTypesNames.User)
+        recordFindName = Constants.Module.ObjTypesNames.Employee;
       
       var entityGuid = metadata.NameGuid.ToString().ToLower();
       if (_obj.Name != recordFindName && _obj.EntityGuid != entityGuid)
@@ -162,7 +162,7 @@ namespace Auxo.Common.Server
       #region Актуализация Guid-ов
       
       // Удалим устаревшие строки
-      foreach (var line in _obj.Parents.ToList())
+      foreach (var line in _obj.Parents)
       {
         var checkMetadata = Sungero.Metadata.Services.MetadataSearcher.FindEntityMetadata(Guid.Parse(line.EntityGuid));
         if (checkMetadata != null)

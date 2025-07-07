@@ -16,5 +16,31 @@ namespace Auxo.Common.Constants
     
     public const int MaxRetryIteration = 30;    
     
+    public static class Declensions
+    {
+      public const string Accusative = "Accusative";
+      
+      public const string Dative = "Dative";
+      
+      public const string Prepositional = "Prepositional";
+      
+      public const string Genitive = "Genitive";
+      
+      public const string Ablative = "Ablative";
+    }
+    
+    public static class ObjTypesNames
+    {
+      public const string JobTitles = "JobTitles";
+      
+      public const string Departments = "Departments";
+      
+      public const string People = "People";
+      
+      public const string User = "User";
+      
+      public const string Employee = "Employee";
+    }
+    
   }
 }

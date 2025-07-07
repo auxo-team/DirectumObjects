@@ -11,5 +11,21 @@ namespace Auxo.Common.Constants
     /// </summary>
     public const string SourceTableName = "Auxo_ReportChanges";
     
+    /// <summary>
+    /// Разделы объектов.
+    /// </summary>
+    public static class ChaptersNames
+    {
+      public const string HandledEvents = "HandledEvents";
+      
+      public const string Properties = "Properties";
+      
+      public const string Actions = "Actions";
+      
+      public const string Forms = "Forms";
+      
+      public const string RibbonActions = "RibbonActions";
+    }
+    
   }
 }
