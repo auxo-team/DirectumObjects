@@ -33,41 +33,22 @@ namespace Auxo.Common.Server
     }
 
     /// <summary>
-    /// Получить запись "Тип сущности" по GUID.
-    /// </summary>
-    /// <param name="entityGuid">GUID сущности.</param>
-    /// <returns>Запись "Тип сущности".</returns>
-    [Public, Remote(IsPure = true, PackResultEntityEagerly = true)]
-    public static IObjType GetTypeByGuid(string entityGuid)
-    {
-      if (string.IsNullOrWhiteSpace(entityGuid))
-        return ObjTypes.Null;
-      
-      entityGuid = entityGuid.ToLower();
-      return ObjTypes.GetAll()
-        .Where(_ => _.Status == Common.ObjType.Status.Active)
-        .Where(_ => _.EntityGuid == entityGuid || _.Parents.Any(p => p.EntityGuid == entityGuid))
-        .FirstOrDefault();
-    }
-    
-    /// <summary>
-    /// Получить запись "Тип сущности" по GUID.
+    /// Получить действующие записи справочника "Тип сущности" по GUID.
     /// </summary>
     /// <param name="entityGuid">GUID сущности.</param>
     /// <returns>Список записей "Тип сущности".</returns>
     [Public, Remote(IsPure = true, PackResultEntityEagerly = true)]
-    public static List<IObjType> GetTypesByGuid(string entityGuid)
+    public static IQueryable<IObjType> GetTypesByGuid(string entityGuid)
     {
       if (string.IsNullOrWhiteSpace(entityGuid))
-        return new List<IObjType> ();
+        return null;
       
       entityGuid = entityGuid.ToLower();
       return ObjTypes.GetAll()
         .Where(_ => _.Status == Common.ObjType.Status.Active)
-        .Where(_ => _.EntityGuid == entityGuid || _.Parents.Any(p => p.EntityGuid == entityGuid))
-        .ToList();
+        .Where(_ => _.EntityGuid == entityGuid || _.Parents.Any(p => p.EntityGuid == entityGuid));
     }
-    
+   
     /// <summary>
     /// Создать запись "Тип сущности".
     /// </summary>

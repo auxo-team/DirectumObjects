@@ -32,7 +32,7 @@ namespace Auxo.Common
     public override void BeforeDelete(Sungero.Domain.BeforeDeleteEventArgs e)
     {
       bool canDelete;
-      if (!e.Params.Contains(Constants.ObjType.CanDeleteParamName) || !(e.Params.TryGetValue(Constants.ObjType.CanDeleteParamName, out canDelete) && canDelete))
+      if (!e.Params.TryGetValue(Constants.ObjType.CanDeleteParamName, out canDelete) || !canDelete)
       {
         e.AddError(ObjTypes.Resources.DeleteErrorMessage);
         return;

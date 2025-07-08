@@ -19,7 +19,7 @@ namespace Auxo.Common.Server
       var postfix = string.Format("UpdateEntityProperties_{0}", args.ObjTypeId);
       Logger.WithLogger(postfix).Debug(string.Format("Handler starting. ObjTypeId = {0}", args.ObjTypeId));
       
-      var isClosedNullTypes = Sungero.Docflow.PublicFunctions.Module.Remote.GetDocflowParamsStringValue(Constants.Module.ClosedNullTypesParamName);
+      var isClosedNullTypes = Sungero.Docflow.PublicFunctions.Module.Remote.GetDocflowParamsStringValue(Constants.Module.OnClosedNullTypesParamName);
       if (isClosedNullTypes == true.ToString() && args.RetryIteration <= Constants.Module.MaxRetryIteration)
       {
         args.Retry = true;

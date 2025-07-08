@@ -118,7 +118,7 @@ namespace Auxo.Common
       
       return changedList;
     }
-
+    
     /// <summary>
     /// Получить список измененных свойств.
     /// </summary>
@@ -546,8 +546,8 @@ namespace Auxo.Common
         new KeyValuePair<string, string> ("ChangedShared", ReportRes.ObjectChanges.Event_ChangedShared),
         new KeyValuePair<string, string> ("AddedShared", ReportRes.ObjectChanges.Event_AddedShared),
         new KeyValuePair<string, string> ("DeletedShared", ReportRes.ObjectChanges.Event_DeletedShared),
-        new KeyValuePair<string, string> ("ValueInputClient", ReportRes.ObjectChanges.Event_ValueInputClient),        
-        new KeyValuePair<string, string> ("IsRequired", ReportRes.ObjectChanges.Event_IsRequired),        
+        new KeyValuePair<string, string> ("ValueInputClient", ReportRes.ObjectChanges.Event_ValueInputClient),
+        new KeyValuePair<string, string> ("IsRequired", ReportRes.ObjectChanges.Event_IsRequired),
         new KeyValuePair<string, string> ("IsEnabled", ReportRes.ObjectChanges.Event_IsEnabled),
         new KeyValuePair<string, string> ("IsShowedInList", ReportRes.ObjectChanges.Event_IsShowedInList),
         new KeyValuePair<string, string> ("CanBeSearch", ReportRes.ObjectChanges.Event_CanBeSearch),

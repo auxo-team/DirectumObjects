@@ -14,7 +14,7 @@ namespace Auxo.Common.Server
     /// </summary>
     public virtual void ClosedNullTypes()
     {
-      Sungero.Docflow.PublicFunctions.Module.InsertOrUpdateDocflowParam(Constants.Module.ClosedNullTypesParamName, true.ToString());
+      Sungero.Docflow.PublicFunctions.Module.InsertOrUpdateDocflowParam(Constants.Module.OnClosedNullTypesParamName, true.ToString());
       
       var postfix = "ClosedNullTypes";
       Logger.WithLogger(postfix).Debug("Job starting. Cleaning the directory from old entities.");
@@ -32,7 +32,7 @@ namespace Auxo.Common.Server
       
       if (!closeTypes.Any())
       {
-        Sungero.Docflow.PublicFunctions.Module.InsertOrUpdateDocflowParam(Constants.Module.ClosedNullTypesParamName, false.ToString());
+        Sungero.Docflow.PublicFunctions.Module.InsertOrUpdateDocflowParam(Constants.Module.OnClosedNullTypesParamName, false.ToString());
         Logger.WithLogger(postfix).Debug("Job complite. There are no records to close.");
         return;
       }
@@ -55,7 +55,7 @@ namespace Auxo.Common.Server
         }
       }
       
-      Sungero.Docflow.PublicFunctions.Module.InsertOrUpdateDocflowParam(Constants.Module.ClosedNullTypesParamName, false.ToString());
+      Sungero.Docflow.PublicFunctions.Module.InsertOrUpdateDocflowParam(Constants.Module.OnClosedNullTypesParamName, false.ToString());
       Logger.WithLogger(postfix).Debug("Job complite");
     }
 

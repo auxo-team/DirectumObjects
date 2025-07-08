@@ -411,20 +411,6 @@
       "ReturnTypeFullName": "System.Collections.Generic.List"
     },
     {
-      "Name": "GetTypeByGuid",
-      "IsRemote": true,
-      "Parameters": [
-        {
-          "Name": "entityGuid",
-          "ParameterType": "global::System.String",
-          "ParameterTypeFullName": "System.String"
-        }
-      ],
-      "Placement": "Shared",
-      "ReturnType": "global::Auxo.Common.IObjType",
-      "ReturnTypeFullName": "Auxo.Common.IObjType, Sungero.Domain.Interfaces"
-    },
-    {
       "Name": "GetTypesByGuid",
       "IsRemote": true,
       "Parameters": [
@@ -435,8 +421,8 @@
         }
       ],
       "Placement": "Shared",
-      "ReturnType": "global::System.Collections.Generic.List<global::Auxo.Common.IObjType>",
-      "ReturnTypeFullName": "System.Collections.Generic.List"
+      "ReturnType": "global::System.Linq.IQueryable<global::Auxo.Common.IObjType>",
+      "ReturnTypeFullName": "System.Linq.IQueryable"
     }
   ],
   "PublicStructures": [],

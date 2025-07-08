@@ -12,7 +12,7 @@ namespace Auxo.Common.Client
     
     public virtual void OpenTypeLink(Sungero.Domain.Client.ExecuteActionArgs e)
     {
-      var type = Functions.ObjType.Remote.GetTypeByGuid(_obj.NavigationGuid);
+      var type = Functions.ObjType.Remote.GetTypesByGuid(_obj.NavigationGuid).FirstOrDefault();
       if (type == null)
       {
         Dialogs.ShowMessage(ObjProperties.Resources.NoTypeErrorFormat(_obj.NavigationGuid));
