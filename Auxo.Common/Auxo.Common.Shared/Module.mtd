@@ -133,6 +133,98 @@
       "StartAt": "1753-01-01T04:00:00"
     }
   ],
+  "PublicConstants": [
+    {
+      "Name": "Ablative",
+      "ParentClasses": [
+        "Module",
+        "Declensions"
+      ],
+      "TypeName": "System.String",
+      "Value": "\"Ablative\""
+    },
+    {
+      "Name": "Accusative",
+      "ParentClasses": [
+        "Module",
+        "Declensions"
+      ],
+      "TypeName": "System.String",
+      "Value": "\"Accusative\""
+    },
+    {
+      "Name": "Dative",
+      "ParentClasses": [
+        "Module",
+        "Declensions"
+      ],
+      "TypeName": "System.String",
+      "Value": "\"Dative\""
+    },
+    {
+      "Name": "Departments",
+      "ParentClasses": [
+        "Module",
+        "ObjTypesNames"
+      ],
+      "TypeName": "System.String",
+      "Value": "\"Departments\""
+    },
+    {
+      "Name": "Employee",
+      "ParentClasses": [
+        "Module",
+        "ObjTypesNames"
+      ],
+      "TypeName": "System.String",
+      "Value": "\"Employee\""
+    },
+    {
+      "Name": "Genitive",
+      "ParentClasses": [
+        "Module",
+        "Declensions"
+      ],
+      "TypeName": "System.String",
+      "Value": "\"Genitive\""
+    },
+    {
+      "Name": "JobTitles",
+      "ParentClasses": [
+        "Module",
+        "ObjTypesNames"
+      ],
+      "TypeName": "System.String",
+      "Value": "\"JobTitles\""
+    },
+    {
+      "Name": "People",
+      "ParentClasses": [
+        "Module",
+        "ObjTypesNames"
+      ],
+      "TypeName": "System.String",
+      "Value": "\"People\""
+    },
+    {
+      "Name": "Prepositional",
+      "ParentClasses": [
+        "Module",
+        "Declensions"
+      ],
+      "TypeName": "System.String",
+      "Value": "\"Prepositional\""
+    },
+    {
+      "Name": "User",
+      "ParentClasses": [
+        "Module",
+        "ObjTypesNames"
+      ],
+      "TypeName": "System.String",
+      "Value": "\"User\""
+    }
+  ],
   "PublicFunctions": [
     {
       "Name": "DeclensionObject",

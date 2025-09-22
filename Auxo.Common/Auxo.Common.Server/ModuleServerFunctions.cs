@@ -90,6 +90,7 @@ namespace Auxo.Common.Server
     /// </summary>
     /// <param name="objectName">Имя объекта.</param>
     /// <param name="declensionCase">Склонение.</param>
+    /// <param name="objectType">Тип объекта.</param>
     /// <returns>Имя объекта в заданном склонении.</returns>
     [Public, Remote(IsPure = true)]
     public virtual string DeclensionObject(string objectName, string declensionCase, string objectType)

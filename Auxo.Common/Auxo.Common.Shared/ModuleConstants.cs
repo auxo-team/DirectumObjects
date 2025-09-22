@@ -18,27 +18,37 @@ namespace Auxo.Common.Constants
     
     public static class Declensions
     {
+      [Sungero.Core.Public]
       public const string Accusative = "Accusative";
       
+      [Sungero.Core.Public]
       public const string Dative = "Dative";
       
+      [Sungero.Core.Public]
       public const string Prepositional = "Prepositional";
       
+      [Sungero.Core.Public]
       public const string Genitive = "Genitive";
       
+      [Sungero.Core.Public]
       public const string Ablative = "Ablative";
     }
     
     public static class ObjTypesNames
     {
+      [Sungero.Core.Public]
       public const string JobTitles = "JobTitles";
       
+      [Sungero.Core.Public]
       public const string Departments = "Departments";
       
+      [Sungero.Core.Public]
       public const string People = "People";
       
+      [Sungero.Core.Public]
       public const string User = "User";
       
+      [Sungero.Core.Public]
       public const string Employee = "Employee";
     }
     
