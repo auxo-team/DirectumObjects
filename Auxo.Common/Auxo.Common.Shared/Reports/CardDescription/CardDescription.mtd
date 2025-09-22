@@ -2,7 +2,6 @@
   "$type": "Sungero.Metadata.ReportMetadata, Sungero.Reporting.Shared",
   "NameGuid": "e6a11255-1dce-4b2f-84ad-95b002f5f678",
   "Name": "CardDescription",
-  "AccessRightsMode": "NoRight",
   "AssociatedGuid": "89c6dc08-dd81-48e2-a327-707dd86a64cd",
   "BaseGuid": "cef9a810-3f30-4eca-9fe3-30992af0b818",
   "DataSources": [],
@@ -16,6 +15,7 @@
   ],
   "IconResourcesKeys": [],
   "IntegrationServiceName": "CommonCardDescription",
+  "NonVisualAuthorizationMode": "FullAccess",
   "Overridden": [
     "AccessRightsMode",
     "PublicConstants",
@@ -23,7 +23,9 @@
     "Description",
     "DisplayName",
     "HandledEvents",
-    "Parameters"
+    "Parameters",
+    "AccessRightsMode",
+    "NonVisualAuthorizationMode"
   ],
   "Parameters": [
     {
@@ -54,5 +56,10 @@
     "CollectionName",
     "ReportName"
   ],
-  "Versions": []
+  "Versions": [
+    {
+      "Type": "ReportMetadata",
+      "Number": 1
+    }
+  ]
 }
