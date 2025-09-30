@@ -19,7 +19,7 @@ namespace Auxo.Common.Server
     [Remote(IsPure = true)]
     public virtual string GetGenitiveName()
     {
-      return Sungero.Content.Server.ElectronicDocumentFunctions.Genitive(_obj.LocalizedName);
+      return Sungero.Content.Server.ElectronicDocumentDomainFunctions.Genitive(_obj.LocalizedName);
     }
 
     /// <summary>

@@ -217,6 +217,7 @@
       ]
     }
   ],
+  "FormViewUuid": "e7e9d775-2c0f-4168-9ed0-970c87511065",
   "HandledEvents": [
     "ShowingClient",
     "BeforeDeleteServer",

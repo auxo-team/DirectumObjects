@@ -6,7 +6,7 @@ using Sungero.CoreEntities;
 
 namespace Auxo.Common.Server
 {
-  public class ModuleAsyncHandlers
+  public partial class ModuleAsyncHandlers
   {
 
     /// <summary>

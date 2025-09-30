@@ -6,7 +6,7 @@ using Sungero.CoreEntities;
 
 namespace Auxo.DrxObjects.Server
 {
-  public class ModuleJobs
+  public partial class ModuleJobs
   {
 
   }

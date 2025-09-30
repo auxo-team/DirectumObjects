@@ -26,7 +26,6 @@
     "Tabs": []
   },
   "DesktopViews": [],
-  "IconResourcesKeys": [],
   "Importance": "Medium",
   "InterfaceAssemblyName": "Sungero.Domain.Interfaces",
   "InterfaceNamespace": "Auxo.DrxObjects",
@@ -37,7 +36,6 @@
   "PublicStructures": [],
   "ResourceInterfaceAssemblyName": "Sungero.Domain.Interfaces",
   "ResourceInterfaceNamespace": "Auxo.DrxObjects",
-  "ResourcesKeys": [],
   "ServerAssemblyName": "Auxo.DrxObjects.Server",
   "ServerNamespace": "Auxo.DrxObjects.Server",
   "SharedAssemblyName": "Auxo.DrxObjects.Shared",
@@ -48,11 +46,11 @@
   "Versions": [
     {
       "Type": "SolutionMetadata",
-      "Number": 9
+      "Number": 11
     },
     {
       "Type": "ModuleMetadata",
-      "Number": 9
+      "Number": 11
     },
     {
       "Type": "DomainApi",

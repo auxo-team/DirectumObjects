@@ -6,7 +6,7 @@ using Sungero.CoreEntities;
 
 namespace Auxo.Common.Client
 {
-  public class ModuleFunctions
+  public partial class ModuleFunctions
   {
 
   }
