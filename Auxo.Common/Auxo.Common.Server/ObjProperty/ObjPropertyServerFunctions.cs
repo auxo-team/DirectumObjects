@@ -53,7 +53,7 @@ namespace Auxo.Common.Server
         var objProperty = createdProperties.Where(_ => _.PropertyGuid == propertyMetadata.NameGuid.ToString()).FirstOrDefault();
         
         if (objProperty != null)
-          UpdateProperty(ref objProperty, propertyMetadata);
+          UpdateProperty(ref objProperty, propertyMetadata, null);
         else
           objProperty = CreateProperty(objType, propertyMetadata, null);
         
@@ -65,18 +65,24 @@ namespace Auxo.Common.Server
           {
             var collectionDocProperty = createdProperties.Where(_ => _.PropertyGuid == collectionPropertyMetadata.NameGuid.ToString()).FirstOrDefault();
             if (collectionDocProperty != null)
-              UpdateProperty(ref collectionDocProperty, collectionPropertyMetadata);
+              UpdateProperty(ref collectionDocProperty, collectionPropertyMetadata, objProperty);
             else
               collectionDocProperty = CreateProperty(objType, collectionPropertyMetadata, objProperty);
           }
           
-          var collectionClosedProperties = createdProperties.Where(_ => !collectionProperties.Any(p => _.PropertyGuid == p.NameGuid.ToString())).Where(_ => _.Parent != null);
+          var collectionClosedProperties = createdProperties
+            .Where(_ => Equals(_.Parent, objProperty))
+            .Where(_ => _.Status != Common.ObjProperty.Status.Closed)
+            .Where(_ => !collectionProperties.Any(p => _.PropertyGuid == p.NameGuid.ToString()));
           foreach (var collectionClosedProperty in collectionClosedProperties)
             CloseProperty(collectionClosedProperty);
         }
       }
       
-      var closedProperties = createdProperties.Where(_ => !properties.Any(p => _.PropertyGuid == p.NameGuid.ToString())).Where(_ => _.Parent == null);
+      var closedProperties = createdProperties
+        .Where(_ => _.Parent == null)
+        .Where(_ => _.Status != Common.ObjProperty.Status.Closed)
+        .Where(_ => !properties.Any(p => _.PropertyGuid == p.NameGuid.ToString()));
       foreach (var closedProperty in closedProperties)
         CloseProperty(closedProperty);
     }
@@ -146,7 +152,10 @@ namespace Auxo.Common.Server
     /// </summary>
     /// <param name="objProperty">Свойство сущности.</param>
     /// <param name="propertyMetadata">Метаданные свойства.</param>
-    private static void UpdateProperty(ref IObjProperty objProperty, Sungero.Metadata.PropertyMetadata propertyMetadata)
+    /// <param name="parent">Родитель.</param>
+    private static void UpdateProperty(ref IObjProperty objProperty,
+                                       Sungero.Metadata.PropertyMetadata propertyMetadata,
+                                       IObjProperty parent)
     {
       if (objProperty.ObjTypeName != objProperty.ObjType.Name)
         objProperty.ObjTypeName = objProperty.ObjType.Name;
@@ -205,7 +214,10 @@ namespace Auxo.Common.Server
       if (objProperty.IsDisplayValue != propertyMetadata.IsDisplayValue)
         objProperty.IsDisplayValue = propertyMetadata.IsDisplayValue;
       
-      var status = objProperty.ObjType.Status == Common.ObjType.Status.Active ? Common.ObjProperty.Status.Active : Common.ObjProperty.Status.Closed;
+      var status = Common.ObjProperty.Status.Active;
+      if ((parent != null && parent.Status == Common.ObjProperty.Status.Closed) || objProperty.ObjType.Status == Common.ObjType.Status.Closed)
+        status = Common.ObjProperty.Status.Closed;
+      
       if (objProperty.Status != status)
         objProperty.Status = status;
       
