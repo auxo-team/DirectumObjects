@@ -371,6 +371,7 @@
   "IntegrationServiceName": "CommonObjProperty",
   "IsAutoCreated": true,
   "IsStatusEnabled": true,
+  "ListViewUuid": "ad72c61f-d11c-451e-ad00-a3bc3ab7c241",
   "OperationsClass": "",
   "Overridden": [
     "CanBeSearch",
