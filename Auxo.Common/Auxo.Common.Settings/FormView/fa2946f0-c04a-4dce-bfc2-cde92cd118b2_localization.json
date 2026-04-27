@@ -1,0 +1,27 @@
+{
+  "Description": {},
+  "EnumerationlGroup_Caption_acd21fd3c9ff41ce8eb01a840be6b0da": {
+    "en-US": "Enumeration values",
+    "ru-RU": "Значения перечисления"
+  },
+  "MainPage_Title_6e51079928994204826f79f5a049bb42": {
+    "en-US": "Properties",
+    "ru-RU": "Свойства"
+  },
+  "Name": {
+    "en-US": "Entity property",
+    "ru-RU": "Свойство сущности"
+  },
+  "ParametersGroup_Caption_3c33c47ea98f4cbf940384adf677779a": {
+    "en-US": "Property parameters",
+    "ru-RU": "Параметры свойства"
+  },
+  "RelatedData_Caption_e13cc6113a444da5b2d18c7c36d6b127": {
+    "en-US": "Related data",
+    "ru-RU": "Связанные данные"
+  },
+  "Send_Caption_ce274de502514b0c8f8d0c61cedf5611": {
+    "en-US": "Send",
+    "ru-RU": "Отправка"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "Description": {},
+  "MainPage_Title_28e3d1db1cab419295ab821141778c3f": {
+    "en-US": "Properties",
+    "ru-RU": "Свойства"
+  },
+  "Name": {
+    "en-US": "Type of entity",
+    "ru-RU": "Тип сущности"
+  },
+  "ParentsGroup_Caption_d66e8bff310a45818265efb6b590c943": {
+    "en-US": "Parents",
+    "ru-RU": "Родители"
+  },
+  "RelatedData_Caption_60bde099a82c433db12c46d7663f6976": {
+    "en-US": "Related data",
+    "ru-RU": "Связанные данные"
+  },
+  "ReportsGroup_Caption_837bc07c7da3434e99c926f77135b90c": {
+    "en-US": "Reports",
+    "ru-RU": "Отчеты"
+  },
+  "Send_Caption_ce274de502514b0c8f8d0c61cedf5611": {
+    "en-US": "Send",
+    "ru-RU": "Отправка"
+  }
+}
